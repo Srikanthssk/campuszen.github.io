@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Deep Learning for Biomedical Applications | CampusZen Coimbatore</title>
+    <meta name="description"
+        content="Master Deep Learning for Biomedical Applications in 20 days at CampusZen. Learn CNNs, medical imaging, U-Net, genomics, LSTM, transformers, Grad-CAM and deployment.">
+    <meta name="keywords"
+        content="deep learning biomedical applications course, biomedical AI training, CNN medical imaging, U-Net, PyTorch, TensorFlow, genomics deep learning, CampusZen Coimbatore">
+    <meta name="author" content="CampusZen Learning Solutions">
+    <meta name="robots" content="index,follow">
+    <meta name="geo.region" content="IN-TN">
+    <meta name="geo.placename" content="Coimbatore">
+        <link rel="stylesheet" href="../css/common.css">
+
+    <link rel="canonical" href="https://www.campuszen.in/courses/DeepLearningForBiomedicalApplications.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Deep Learning for Biomedical Applications | CampusZen">
+    <meta property="og:description"
+        content="Hands-on 20-day deep learning course covering biomedical images, genomics, transformers and deployment.">
+    <meta property="og:url" content="https://www.campuszen.in/courses/DeepLearningForBiomedicalApplications.html">
+    <meta property="og:site_name" content="CampusZen Learning Solutions">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Deep Learning for Biomedical Applications — CampusZen">
+    <meta name="twitter:description" content="20-day practical biomedical deep learning course.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "Deep Learning for Biomedical Applications", "description": "20-day practical course in neural networks, CNNs, biomedical imaging, genomics, transformers, explainable AI and Streamlit deployment.", "provider": {"@type": "EducationalOrganization", "name": "CampusZen Learning Solutions", "url": "https://www.campuszen.in/"}, "url": "https://www.campuszen.in/courses/DeepLearningForBiomedicalApplications.html", "timeRequired": "P20D", "teaches": ["DL Foundations", "Python & NumPy", "TensorFlow / PyTorch", "First Neural Network", "Training Techniques", "Overfitting Control", "CNN Basics", "Image Preprocessing", "Transfer Learning", "Mid-Course Project", "Segmentation", "Sequence Data", "1D CNN for Genomics", "RNN & LSTM", "Attention & Transformers", "Autoencoders", "GANs Intro", "Explainability", "Deployment", "Capstone + Placement"]}</script>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --purple: #111111;
+            --purple-hover: #111111;
+            --white: #ffffff;
+            --border: rgba(41, 40, 40, .222);
+            --dot-color: rgba(36, 35, 35, .292);
+            --orange: #fe8007
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, sans-serif;
+            color: #111;
+            background: #fff
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        button {
+            font-family: inherit
+        }
+
+        .wrap {
+            width: min(1160px, 92%);
+            margin: auto
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: #101010;
+            color: white;
+            min-height: 685px;
+            display: flex;
+            align-items: center;
+            padding: 90px 0
+        }
+
+        .hero:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(#ffffff1e 1px, transparent 1px) 0 0/28px 28px;
+            mask-image: linear-gradient(90deg, transparent, #000)
+        }
+
+        .hero-grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.08fr 1fr;
+            align-items: center;
+            gap: 42px
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            color: #cf6500;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase
+        }
+
+        .hero .eyebrow {
+            color: var(--orange)
+        }
+
+        h1 {
+            font-size: clamp(42px, 5.6vw, 77px);
+            line-height: 1.06;
+            letter-spacing: -3px;
+            margin: 23px 0
+        }
+
+        h1 span {
+            color: var(--orange)
+        }
+
+        .lead {
+            font-size: 16px;
+            line-height: 1.85;
+            color: #ccc;
+            max-width: 570px
+        }
+
+        .facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 27px;
+            margin: 30px 0
+        }
+
+        .facts strong {
+            display: block;
+            font-size: 22px
+        }
+
+        .facts small {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #aaa;
+            margin-top: 5px
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 26px;
+            background: var(--orange);
+            color: #111;
+            font-size: 14px;
+            font-weight: 800;
+            border-radius: 9px;
+            transition: transform .25s, box-shadow .25s
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 13px 35px #fe800750
+        }
+
+        .visual {
+            position: relative;
+            width: min(480px, 100%);
+            height: 460px;
+            margin: auto;
+            display: grid;
+            place-items: center
+        }
+
+        .scan {
+            position: relative;
+            width: 80%;
+            aspect-ratio: 1;
+            border: 1px solid #666;
+            border-radius: 20px;
+            background: radial-gradient(circle at 50% 45%, #323232, #171717 65%);
+            box-shadow: 0 30px 80px #000a;
+            overflow: hidden;
+            transform: rotate(-5deg);
+            animation: float 6s ease-in-out infinite
+        }
+
+        .scan:before {
+            content: "";
+            position: absolute;
+            inset: 10%;
+            border: 1px solid #fe80075b;
+            border-radius: 50%;
+            box-shadow: 0 0 0 25px #fe80070c, 0 0 0 52px #fe800709
+        }
+
+        .scan svg {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 1
+        }
+
+        .scan-line {
+            position: absolute;
+            z-index: 3;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--orange);
+            box-shadow: 0 0 25px 5px #fe800777;
+            animation: scan 4s ease-in-out infinite alternate
+        }
+
+        .scan-label {
+            position: absolute;
+            z-index: 4;
+            top: 14px;
+            left: 17px;
+            color: #bbb;
+            font: 11px Consolas, monospace;
+            letter-spacing: 1px
+        }
+
+        .tile {
+            position: absolute;
+            z-index: 4;
+            background: #242424;
+            border: 1px solid #666;
+            border-radius: 12px;
+            padding: 14px 18px;
+            color: white;
+            box-shadow: 0 16px 38px #0009;
+            font-size: 12px;
+            animation: bob 5s ease-in-out infinite
+        }
+
+        .tile b {
+            display: block;
+            color: var(--orange);
+            font-size: 15px;
+            margin-bottom: 5px
+        }
+
+        .tile.one {
+            top: 5%;
+            right: 0
+        }
+
+        .tile.two {
+            bottom: 4%;
+            left: 0;
+            animation-delay: -2s
+        }
+
+        @keyframes scan {
+            0% {
+                top: 15%
+            }
+
+            100% {
+                top: 85%
+            }
+        }
+
+        @keyframes float {
+            50% {
+                transform: rotate(-2deg) translateY(-12px)
+            }
+        }
+
+        @keyframes bob {
+            50% {
+                transform: translateY(12px)
+            }
+        }
+
+        section {
+            padding: 95px 0
+        }
+
+        h2 {
+            font-size: clamp(32px, 4.3vw, 52px);
+            line-height: 1.15;
+            letter-spacing: -2px;
+            margin: 15px 0 20px
+        }
+
+        h2 span {
+            color: #d66a00
+        }
+
+        .intro {
+            max-width: 690px;
+            color: #666;
+            line-height: 1.85
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 19px;
+            margin-top: 36px
+        }
+
+        .feature {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: transform .3s, border-color .3s, box-shadow .3s
+        }
+
+        .feature:hover {
+            transform: translateY(-9px);
+            border-color: var(--orange);
+            box-shadow: 0 15px 40px #00000010
+        }
+
+        .feature .number {
+            font-size: 30px;
+            font-weight: 900;
+            color: var(--orange)
+        }
+
+        .feature h3 {
+            font-size: 19px
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8
+        }
+
+        .curriculum {
+            background: #f7f7f7
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 13px;
+            margin-top: 36px;
+            align-items: start
+        }
+
+        .lesson {
+            background: white;
+            border: 1px solid #e2e2e2;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color .25s, box-shadow .25s
+        }
+
+        .lesson[open] {
+            border-color: var(--orange);
+            box-shadow: 0 12px 32px #0000000a
+        }
+
+        .lesson summary {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            padding: 19px;
+            cursor: pointer;
+            list-style: none
+        }
+
+        .lesson summary::-webkit-details-marker {
+            display: none
+        }
+
+        .lesson summary strong {
+            flex: 1;
+            font-size: 14px
+        }
+
+        .day {
+            color: #bd5900;
+            background: #fff1e5;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 900;
+            white-space: nowrap
+        }
+
+        .plus {
+            font-size: 23px;
+            color: #bf5a00;
+            transition: transform .25s
+        }
+
+        .lesson[open] .plus {
+            transform: rotate(45deg)
+        }
+
+        .details {
+            padding: 0 19px 19px;
+            border-top: 1px solid #eee
+        }
+
+        .details p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.8
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        .tags span {
+            background: #fff1e5;
+            color: #a44d00;
+            border-radius: 30px;
+            padding: 8px 10px;
+            font-size: 10px;
+            font-weight: 800
+        }
+
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 32px
+        }
+
+        .role {
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            padding: 14px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: background .25s, color .25s
+        }
+
+        .role:hover {
+            background: #111;
+            color: white
+        }
+
+        .cta {
+            background: #111;
+            color: white;
+            text-align: center
+        }
+
+        .cta h2 {
+            max-width: 770px;
+            margin: 15px auto 20px
+        }
+
+        .cta h2 span {
+            color: var(--orange)
+        }
+
+        .cta p {
+            max-width: 610px;
+            color: #bbb;
+            line-height: 1.85;
+            margin: 0 auto 30px
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity .75s ease, transform .75s ease
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .feature:nth-child(2) {
+            transition-delay: .08s
+        }
+
+        .feature:nth-child(3) {
+            transition-delay: .16s
+        }
+
+        @media(max-width:850px) {
+            .hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .hero {
+                padding: 70px 0
+            }
+
+            .visual {
+                height: 360px;
+                max-width: 400px
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:580px) {
+            section {
+                padding: 65px 0
+            }
+
+            h1 {
+                letter-spacing: -2px
+            }
+
+            .features,
+            .lessons {
+                grid-template-columns: 1fr
+            }
+
+            .visual {
+                height: 310px;
+                max-width: 330px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *:before,
+            *:after {
+                animation: none !important;
+                transition: none !important
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+    <main>
+        <div class="hero">
+            <div class="wrap hero-grid">
+                <div class="reveal">
+                    <div class="eyebrow">✦ Bioscience Program / Course 10</div>
+                    <h1>Deep Learning for <span>Biomedical Breakthroughs.</span></h1>
+                    <p class="lead">Build neural networks for medical imaging, genomics, biosignals and explainable
+                        biomedical AI—then turn your models into interactive applications.</p>
+                    <div class="facts">
+                        <div><strong>20 Days</strong><small>Duration</small></div>
+                        <div><strong>PyTorch + Keras</strong><small>Core Frameworks</small></div>
+                        <div><strong>Capstone</strong><small>Final Project</small></div>
+                    </div><a class="btn" href="./Enroll.html">Enroll Now ↗</a>
+                </div>
+                <div class="visual" role="img"
+                    aria-label="Animated biomedical scan interface with glowing neural connections">
+                    <div class="scan"><span class="scan-label">BIOMEDICAL_AI / SCAN_01</span><svg viewBox="0 0 400 400"
+                            aria-hidden="true">
+                            <defs>
+                                <radialGradient id="g">
+                                    <stop stop-color="#fe8007" stop-opacity=".3" />
+                                    <stop offset="1" stop-color="#fe8007" stop-opacity="0" />
+                                </radialGradient>
+                            </defs>
+                            <circle cx="200" cy="205" r="130" fill="url(#g)" />
+                            <path
+                                d="M200 78 C160 95 135 125 143 168 C113 188 128 227 148 237 C125 281 160 316 200 326 C245 320 277 285 253 237 C279 220 280 187 257 168 C265 123 239 93 200 78Z"
+                                fill="#fe800720" stroke="#fe8007" stroke-width="2.5" />
+                            <path
+                                d="M200 80 V325 M144 169 L200 190 L256 169 M147 238 L200 225 L254 238 M170 115 L200 150 L230 115 M164 284 L200 265 L237 284"
+                                fill="none" stroke="#fe8007" stroke-width="2" />
+                            <circle cx="200" cy="80" r="6" fill="#fe8007" />
+                            <circle cx="170" cy="115" r="6" fill="white" />
+                            <circle cx="230" cy="115" r="6" fill="white" />
+                            <circle cx="144" cy="169" r="6" fill="#fe8007" />
+                            <circle cx="256" cy="169" r="6" fill="#fe8007" />
+                            <circle cx="200" cy="190" r="6" fill="white" />
+                            <circle cx="147" cy="238" r="6" fill="white" />
+                            <circle cx="254" cy="238" r="6" fill="white" />
+                            <circle cx="200" cy="225" r="6" fill="#fe8007" />
+                            <circle cx="164" cy="284" r="6" fill="#fe8007" />
+                            <circle cx="237" cy="284" r="6" fill="#fe8007" />
+                            <circle cx="200" cy="325" r="6" fill="white" />
+                        </svg>
+                        <div class="scan-line"></div>
+                    </div>
+                    <div class="tile one"><b>CNN + U-NET</b>Classify · Segment</div>
+                    <div class="tile two"><b>EXPLAINABLE AI</b>Grad-CAM · SHAP</div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="wrap">
+                <div class="eyebrow reveal">✦ What you'll master</div>
+                <h2 class="reveal">Turn Biomedical Data into <span>Intelligent Models.</span></h2>
+                <p class="intro reveal">Learn the essential techniques behind modern deep learning applications in
+                    biomedical research.</p>
+                <div class="features">
+                    <div class="feature reveal">
+                        <div class="number">01 /</div>
+                        <h3>Medical Image AI</h3>
+                        <p>Build CNNs, use transfer learning and explore U-Net segmentation for biomedical images.</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="number">02 /</div>
+                        <h3>Genomics &amp; Biosignals</h3>
+                        <p>Explore 1D CNNs for DNA motifs, RNN/LSTM models for ECG signals and transformer
+                            architectures.</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="number">03 /</div>
+                        <h3>Explainability &amp; Deployment</h3>
+                        <p>Practice Grad-CAM, SHAP and Streamlit to interpret and present your biomedical models.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="curriculum">
+            <div class="wrap">
+                <div class="eyebrow reveal">✦ Course planner</div>
+                <h2 class="reveal">Your <span>20-Day</span> Curriculum</h2>
+                <p class="intro reveal">Explore the complete day-wise learning plan, tools and practical activities from
+                    the CampusZen course planner.</p>
+                <div class="lessons">
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 01</span><strong>DL Foundations</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>neurons, activations, backprop</p>
+                            <div class="tags"><span>TOOLS · Python + Colab</span><span>LAB · Concept lab</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 02</span><strong>Python &amp; NumPy</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>tensors, vectorisation</p>
+                            <div class="tags"><span>TOOLS · NumPy</span><span>LAB · Array lab</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 03</span><strong>TensorFlow / PyTorch</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>tensors, autograd, datasets</p>
+                            <div class="tags"><span>TOOLS · PyTorch</span><span>LAB · Framework setup</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 04</span><strong>First Neural Network</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>MLP on tabular data</p>
+                            <div class="tags"><span>TOOLS · Keras</span><span>LAB · Classifier build</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 05</span><strong>Training Techniques</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>loss, optimisers, batches</p>
+                            <div class="tags"><span>TOOLS · Keras</span><span>LAB · Tuning lab</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 06</span><strong>Overfitting Control</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>dropout, regularisation, early stopping</p>
+                            <div class="tags"><span>TOOLS · Keras</span><span>LAB · Regularisation lab</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 07</span><strong>CNN Basics</strong><span class="plus">+</span>
+                        </summary>
+                        <div class="details">
+                            <p>convolution, pooling</p>
+                            <div class="tags"><span>TOOLS · Keras</span><span>LAB · CNN build</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 08</span><strong>Image Preprocessing</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>augmentation, normalisation</p>
+                            <div class="tags"><span>TOOLS · OpenCV</span><span>LAB · Data pipeline</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 09</span><strong>Transfer Learning</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>ResNet, VGG, fine-tuning</p>
+                            <div class="tags"><span>TOOLS · Keras Applications</span><span>LAB · Fine-tune model</span>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 10</span><strong>Mid-Course Project</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>chest X-ray classifier</p>
+                            <div class="tags"><span>TOOLS · Keras</span><span>LAB · Mid-course review</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 11</span><strong>Segmentation</strong><span class="plus">+</span>
+                        </summary>
+                        <div class="details">
+                            <p>U-Net, masks, Dice score</p>
+                            <div class="tags"><span>TOOLS · PyTorch</span><span>LAB · Segmentation lab</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 12</span><strong>Sequence Data</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>one-hot encoding, DNA as input</p>
+                            <div class="tags"><span>TOOLS · Python</span><span>LAB · Sequence prep</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 13</span><strong>1D CNN for Genomics</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>motif detection</p>
+                            <div class="tags"><span>TOOLS · Keras</span><span>LAB · Motif model</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 14</span><strong>RNN &amp; LSTM</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>time series, signals</p>
+                            <div class="tags"><span>TOOLS · Keras</span><span>LAB · ECG classifier</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 15</span><strong>Attention &amp; Transformers</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>self-attention, protein language models</p>
+                            <div class="tags"><span>TOOLS · Hugging Face</span><span>LAB · Transformer demo</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 16</span><strong>Autoencoders</strong><span class="plus">+</span>
+                        </summary>
+                        <div class="details">
+                            <p>denoising, latent space</p>
+                            <div class="tags"><span>TOOLS · Keras</span><span>LAB · Autoencoder lab</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 17</span><strong>GANs Intro</strong><span class="plus">+</span>
+                        </summary>
+                        <div class="details">
+                            <p>synthetic biomedical data</p>
+                            <div class="tags"><span>TOOLS · PyTorch</span><span>LAB · GAN demo</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 18</span><strong>Explainability</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>Grad-CAM, SHAP</p>
+                            <div class="tags"><span>TOOLS · SHAP / Grad-CAM</span><span>LAB · Explain model</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 19</span><strong>Deployment</strong><span class="plus">+</span>
+                        </summary>
+                        <div class="details">
+                            <p>saving models, Streamlit apps</p>
+                            <div class="tags"><span>TOOLS · Streamlit</span><span>LAB · App build</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">DAY 20</span><strong>Capstone + Placement</strong><span
+                                class="plus">+</span></summary>
+                        <div class="details">
+                            <p>demo, portfolio, interview prep</p>
+                            <div class="tags"><span>TOOLS · All tools</span><span>LAB · Final assessment + mock
+                                    interview</span></div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="wrap">
+                <div class="eyebrow reveal">✦ Target roles</div>
+                <h2 class="reveal">Build Toward <span>Biomedical AI Careers.</span></h2>
+                <p class="intro reveal">The course planner identifies these target career paths.</p>
+                <div class="roles reveal"><span class="role">Deep Learning Engineer Trainee</span><span
+                        class="role">Biomedical AI Associate</span><span class="role">Computer Vision
+                        Associate</span><span class="role">Research Associate</span></div>
+            </div>
+        </section>
+        <section class="cta">
+            <div class="wrap reveal">
+                <div class="eyebrow">✦ Begin your journey</div>
+                <h2>Build AI That <span>Understands Biomedical Data.</span></h2>
+                <p>From your first neural network to a final biomedical deep learning capstone, develop practical skills
+                    through hands-on projects.</p><a class="btn" href="./Enroll.html">Enroll Now ↗</a>
+            </div>
+        </section>
+    </main>
+    <script>(() => { const els = document.querySelectorAll('.reveal'); if ('IntersectionObserver' in window) { const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } }), { threshold: .08 }); els.forEach(e => io.observe(e)); } else els.forEach(e => e.classList.add('visible')); })();</script>
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,1572 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Python DSA Course | Data Structures & Algorithms Training – CampusZen</title>
+
+<!-- Primary SEO -->
+<meta name="description" content="Learn Python programming, Data Structures and Algorithms with CampusZen Learning Solutions. A 20-day hands-on, placement-oriented program covering coding, problem-solving, projects and technical interview preparation." />
+<meta name="keywords" content="Python DSA course, Python DSA training, Data Structures and Algorithms course, Python programming course, Python developer training, coding interview preparation, DSA training Coimbatore, software training Tamil Nadu, CampusZen Learning Solutions" />
+<meta name="author" content="CampusZen Learning Solutions" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.campuszen.in/courses/PythonDSA.html" />
+    <link rel="stylesheet" href="../css/common.css">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Python DSA Course | Data Structures & Algorithms – CampusZen" />
+<meta property="og:description" content="Master Python fundamentals and Data Structures and Algorithms through a 20-day practical, coding-focused and interview-oriented training program." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000&q=85" />
+<meta property="og:url" content="https://www.campuszen.in/courses/PythonDSA.html" />
+<meta property="og:site_name" content="CampusZen Learning Solutions" />
+<meta property="og:locale" content="en_IN" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Python DSA Course | Data Structures & Algorithms – CampusZen" />
+<meta name="twitter:description" content="Learn Python, Data Structures and Algorithms in a 20-day practical program with coding exercises, projects and interview preparation." />
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000&q=85" />
+
+<!-- Geo / Local SEO -->
+<meta name="geo.region" content="IN-TN" />
+<meta name="geo.placename" content="Coimbatore" />
+
+<!-- Course structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Python Data Structures and Algorithms (DSA) Program",
+  "description": "A 20-day, hands-on training program covering Python fundamentals, built-in data structures, object-oriented programming, algorithms, problem-solving, capstone work and technical interview preparation.",
+  "provider": {
+    "@type": "EducationalOrganization",
+    "name": "CampusZen Learning Solutions",
+    "sameAs": "https://www.linkedin.com/company/campuszenin/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Coimbatore",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91-93604-05503",
+    "email": "info@campuszen.in"
+  },
+  "url": "https://www.campuszen.in/courses/PythonDSA.html",
+  "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000&q=85",
+  "timeRequired": "P20D",
+  "educationalLevel": "Beginner to Intermediate",
+  "teaches": [
+    "Python Programming Fundamentals",
+    "Python Built-in Data Structures",
+    "Strings and Pattern Problems",
+    "Object-Oriented Programming in Python",
+    "Exception Handling and File I/O",
+    "Time and Space Complexity",
+    "Searching and Sorting",
+    "Linked Lists",
+    "Stacks and Queues",
+    "Recursion and Backtracking",
+    "Trees and Binary Search Trees",
+    "Hashing with Dictionaries and Sets",
+    "Heaps and Priority Queues",
+    "Graphs and Graph Traversal",
+    "Dynamic Programming",
+    "Technical Interview Problem Solving"
+  ],
+  "occupationalCategory": [
+    "Software Engineer Trainee",
+    "SDE-1",
+    "Python Developer",
+    "Backend Developer"
+  ],
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "Onsite",
+    "courseWorkload": "20-day intensive training program"
+  },
+  "offers": {
+    "@type": "Offer",
+    "category": "Paid",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.campuszen.in/courses/Enroll.html"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===============================
+   GLOBAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #032156;
+    --orange: #fe8007;
+    --dark: #0a0a0a;
+    --white: #ffffff;
+    --light: #f7f8fb;
+    --gray: #777;
+    --border: rgba(0,0,0,0.09);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+
+.hero {
+    position: relative;
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    padding: 90px 7%;
+    background: var(--dark);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(rgba(254,128,7,0.12) 1px, transparent 1px);
+    background-size: 28px 28px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -120px;
+    top: -120px;
+    background: radial-gradient(
+        circle,
+        rgba(254,128,7,0.18),
+        transparent 70%
+    );
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 9px 18px;
+    border: 1px solid rgba(254,128,7,.35);
+    background: rgba(254,128,7,.12);
+    color: var(--orange);
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    color: white;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.08;
+    font-weight: 900;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.hero-title span {
+    color: var(--orange);
+}
+
+.hero-desc {
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 30px;
+}
+
+.hero-facts {
+    display: flex;
+    max-width: 470px;
+    border: 1px solid #303030;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+
+.fact {
+    flex: 1;
+    padding: 17px 15px;
+    background: #151515;
+    border-right: 1px solid #303030;
+}
+
+.fact:last-child {
+    border-right: none;
+}
+
+.fact h3 {
+    color: white;
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.fact h3 span {
+    color: var(--orange);
+}
+
+.fact p {
+    color: #777;
+    font-size: 10px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 28px;
+    background: var(--orange);
+    color: white;
+    border-radius: 9px;
+    font-weight: 800;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(254,128,7,.3);
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 14px 27px;
+    border: 1px solid #555;
+    color: white;
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.btn-outline:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+.hero-visual {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 22px;
+    border: 1px solid #333;
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 25px;
+    left: -25px;
+    background: white;
+    padding: 20px 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 35px rgba(0,0,0,.3);
+}
+
+.floating-card h2 {
+    color: var(--purple);
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.floating-card p {
+    color: #777;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+/* ===============================
+   COMMON SECTION
+================================ */
+
+.section {
+    padding: 95px 7%;
+}
+
+.section-inner {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading span {
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    font-size: clamp(29px, 4vw, 43px);
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    margin: 13px 0;
+}
+
+.section-heading p {
+    color: var(--gray);
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* ===============================
+   COURSE OVERVIEW
+================================ */
+
+.overview {
+    background: var(--light);
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.overview-card {
+    padding: 30px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: .3s;
+}
+
+.overview-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--orange);
+    box-shadow: 0 12px 35px rgba(0,0,0,.06);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(254,128,7,.12);
+    color: var(--orange);
+    border-radius: 12px;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.overview-card h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.overview-card p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--gray);
+}
+
+/* ===============================
+   CURRICULUM
+================================ */
+
+.curriculum {
+    background: white;
+}
+
+.curriculum-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.curriculum-top h3 {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.curriculum-top span {
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.day-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.day-card {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    padding: 23px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: white;
+    transition: .3s;
+}
+
+.day-card:hover {
+    border-color: var(--orange);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.05);
+}
+
+.day-number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--purple);
+    color: white;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.day-content {
+    flex: 1;
+}
+
+.day-content h4 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 9px;
+}
+
+.day-content p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--gray);
+    margin-bottom: 12px;
+}
+
+.day-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.day-meta span {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background: #fff5eb;
+    color: #bd5a00;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.project-card {
+    background: var(--purple);
+    border-radius: 15px;
+    padding: 28px;
+    color: white;
+    margin-top: 22px;
+}
+
+.project-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #c8d3e5;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ===============================
+   LEARNING OUTCOMES
+================================ */
+
+.outcomes {
+    background: var(--light);
+}
+
+.outcome-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.outcome-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.check {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(254,128,7,.12);
+    color: var(--orange);
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+.outcome-item p {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+/* ===============================
+   CAREER ROLES
+================================ */
+
+.roles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.role {
+    padding: 14px 22px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.role:hover {
+    background: var(--purple);
+    color: white;
+    border-color: var(--purple);
+}
+
+/* ===============================
+   COMPANIES
+================================ */
+
+.companies {
+    background: white;
+}
+
+.company-groups {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.company-box {
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background: var(--light);
+}
+
+.company-box h3 {
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: var(--purple);
+}
+
+.company-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.company-list span {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 7px;
+    padding: 10px 13px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ===============================
+   FINAL CTA
+================================ */
+
+.cta {
+    padding: 90px 7%;
+    background: var(--dark);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta h2 {
+    color: white;
+    font-size: clamp(30px, 4vw, 45px);
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.cta h2 span {
+    color: var(--orange);
+}
+
+.cta p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* ===============================
+   SCROLL ANIMATION
+================================ */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media(max-width: 900px) {
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hero {
+        padding: 80px 6%;
+    }
+
+    .hero-image {
+        height: 380px;
+    }
+
+    .overview-grid,
+    .company-groups {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    .hero {
+        padding: 70px 6%;
+    }
+
+    .hero-title {
+        font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+    .hero-image {
+        height: 280px;
+    }
+
+    .floating-card {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .hero-facts {
+        flex-wrap: wrap;
+    }
+
+    .fact {
+        min-width: 33.33%;
+    }
+
+    .section {
+        padding: 70px 6%;
+    }
+
+    .overview-grid,
+    .day-grid,
+    .outcome-grid,
+    .company-groups {
+        grid-template-columns: 1fr;
+    }
+
+    .day-card {
+        padding: 18px;
+        gap: 13px;
+    }
+
+    .day-number {
+        width: 42px;
+        height: 42px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+<!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+<!-- ===============================
+     HERO
+================================ -->
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+● Industry Focused Training
+</div>
+
+<h1 class="hero-title">
+Master <span>Python</span><br>
+Data Structures<br>
+& Algorithms
+</h1>
+
+<p class="hero-desc">
+Build strong Python programming foundations and master Data Structures and Algorithms through practical coding, problem-solving and interview-focused training.
+</p>
+
+<div class="hero-facts">
+
+<div class="fact">
+<h3>20 <span>Days</span></h3>
+<p>Intensive Program</p>
+</div>
+
+<div class="fact">
+<h3>5 <span>Outcomes</span></h3>
+<p>Job Ready Skills</p>
+</div>
+
+<div class="fact">
+<h3>1 <span>Project</span></h3>
+<p>Capstone</p>
+</div>
+
+</div>
+
+<div class="hero-buttons">
+
+<a href="https://www.campuszen.in/courses/Enroll.html"
+class="btn-primary">
+Enroll Now →
+</a>
+
+<a href="#curriculum" class="btn-outline">
+Explore Curriculum
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-visual">
+
+<img
+class="hero-image"
+src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000&q=85"
+alt="Python programming and software development"
+>
+
+<div class="floating-card">
+<h2>Python + DSA</h2>
+<p>CODE • PRACTICE • BUILD</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ===============================
+     COURSE OVERVIEW
+================================ -->
+
+<section class="section overview">
+
+<div class="section-inner">
+
+<div class="section-heading reveal">
+
+<span>COURSE OVERVIEW</span>
+
+<h2>Build Your Python Programming Foundation</h2>
+
+<p>
+A practical Python training program designed to prepare students for software development roles and technical coding interviews.
+</p>
+
+</div>
+
+<div class="overview-grid">
+
+<div class="overview-card reveal">
+<div class="card-icon">☕</div>
+<h3>Core Python Programming</h3>
+<p>
+Understand Python variables, data types, operators, input/output, functions, control flow, OOP and exception handling.
+</p>
+</div>
+
+<div class="overview-card reveal">
+<div class="card-icon">⌘</div>
+<h3>Data Structures</h3>
+<p>
+Learn Python lists, tuples, dictionaries, sets, strings, linked lists, stacks, queues, trees, hashing, heaps and graphs.
+</p>
+</div>
+
+<div class="overview-card reveal">
+<div class="card-icon">⚡</div>
+<h3>Algorithms</h3>
+<p>
+Develop problem-solving skills through searching, sorting, recursion, backtracking and dynamic programming.
+</p>
+</div>
+
+<div class="overview-card reveal">
+<div class="card-icon">◈</div>
+<h3>Problem Solving</h3>
+<p>
+Practise coding problems and learn to develop efficient solutions using algorithmic techniques.
+</p>
+</div>
+
+<div class="overview-card reveal">
+<div class="card-icon">◎</div>
+<h3>Interview Preparation</h3>
+<p>
+Prepare for technical interviews through coding challenges, mock assessments and interview practice.
+</p>
+</div>
+
+<div class="overview-card reveal">
+<div class="card-icon">🚀</div>
+<h3>Capstone Project</h3>
+<p>
+Build a custom data structure library and complete a final coding assessment.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ===============================
+     CURRICULUM
+================================ -->
+
+<section class="section curriculum" id="curriculum">
+
+<div class="section-inner">
+
+<div class="section-heading reveal">
+
+<span>20-DAY LEARNING ROADMAP</span>
+
+<h2>Course Curriculum</h2>
+
+<p>
+A structured journey from Python fundamentals to advanced data structures and algorithms.
+</p>
+
+</div>
+
+
+<!-- DAYS 1 - 10 -->
+
+<div class="curriculum-top">
+<h3>Phase 01 — Programming Foundations</h3>
+<span>DAY 01 – DAY 10</span>
+</div>
+
+<div class="day-grid">
+
+<div class="day-card reveal">
+<div class="day-number">01</div>
+<div class="day-content">
+<h4>Python Foundations</h4>
+<p>Variables, data types, operators and input/output.</p>
+<div class="day-meta">
+<span>Python + Jupyter / Colab</span>
+<span>Setup & Hello World</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">02</div>
+<div class="day-content">
+<h4>Control Flow & Functions</h4>
+<p>Loops, conditionals, functions and recursion basics.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Coding Drills</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">03</div>
+<div class="day-content">
+<h4>Built-in Data Structures</h4>
+<p>Lists, tuples, dictionaries and sets.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Built-in DS Exercise</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">04</div>
+<div class="day-content">
+<h4>Strings & Pattern Problems</h4>
+<p>String methods, slicing and pattern programs.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Pattern Problems</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">05</div>
+<div class="day-content">
+<h4>OOP in Python</h4>
+<p>Classes, objects, inheritance and polymorphism.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>OOP Exercise</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">06</div>
+<div class="day-content">
+<h4>Exception Handling & File I/O</h4>
+<p>Try-except, custom exceptions and file handling.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Exception Lab</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">07</div>
+<div class="day-content">
+<h4>Complexity Analysis</h4>
+<p>Big-O, best, worst and average cases, and space complexity.</p>
+<div class="day-meta">
+<span>Whiteboard</span>
+<span>Complexity Analysis</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">08</div>
+<div class="day-content">
+<h4>Searching & Sorting</h4>
+<p>Linear and binary search, bubble, merge and quick sort.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Sorting Visualizer</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">09</div>
+<div class="day-content">
+<h4>Linked Lists</h4>
+<p>Singly, doubly and circular linked lists.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Linked List Problems</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">10</div>
+<div class="day-content">
+<h4>Mid-Course Project</h4>
+<p>Build a custom data structure library.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Mid-Course Review</span>
+</div>
+</div>
+</div>
+
+</div>
+
+
+<!-- DAYS 11 - 20 -->
+
+<div class="curriculum-top" style="margin-top:65px;">
+
+<h3>Phase 02 — Advanced DSA & Placement</h3>
+
+<span>DAY 11 – DAY 20</span>
+
+</div>
+
+<div class="day-grid">
+
+<div class="day-card reveal">
+<div class="day-number">11</div>
+<div class="day-content">
+<h4>Stacks & Queues</h4>
+<p>Implementation, applications and monotonic stack.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Stack / Queue Problems</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">12</div>
+<div class="day-content">
+<h4>Recursion & Backtracking</h4>
+<p>Recursion trees and backtracking patterns.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Backtracking Problems</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">13</div>
+<div class="day-content">
+<h4>Trees I</h4>
+<p>Binary trees, traversals and binary search trees.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Tree Traversal Lab</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">14</div>
+<div class="day-content">
+<h4>Trees II</h4>
+<p>Balanced trees, height, diameter and lowest common ancestor.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Tree Problems</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">15</div>
+<div class="day-content">
+<h4>Hashing</h4>
+<p>Dictionaries, hash sets and collision handling.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Hashing Problems</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">16</div>
+<div class="day-content">
+<h4>Heaps & Priority Queues</h4>
+<p>heapq module, heap sort and top-K problems.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Heap Problems</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">17</div>
+<div class="day-content">
+<h4>Graphs I</h4>
+<p>Graph representation, breadth-first search and depth-first search.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Graph Traversal Lab</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">18</div>
+<div class="day-content">
+<h4>Graphs II & Dynamic Programming</h4>
+<p>Shortest path, topological sort and memoization.</p>
+<div class="day-meta">
+<span>Python</span>
+<span>Graph + DP Problems</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">19</div>
+<div class="day-content">
+<h4>Capstone Build</h4>
+<p>Mixed problem set and mock online assessment.</p>
+<div class="day-meta">
+<span>Python + Online Judge</span>
+<span>Capstone Development</span>
+</div>
+</div>
+</div>
+
+<div class="day-card reveal">
+<div class="day-number">20</div>
+<div class="day-content">
+<h4>Capstone + Placement</h4>
+<p>Mock coding interviews, resume and portfolio preparation.</p>
+<div class="day-meta">
+<span>All Tools</span>
+<span>Final Assessment + Mock Interview</span>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="project-card reveal">
+<h3>🎯 Final Capstone & Assessment</h3>
+<p>
+Students complete a custom data structure library, solve mixed Python coding problems, participate in a mock online assessment and prepare their portfolio and resume for technical interviews.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ===============================
+     LEARNING OUTCOMES
+================================ -->
+
+<section class="section outcomes">
+
+<div class="section-inner">
+
+<div class="section-heading reveal">
+
+<span>YOUR CAREER ADVANTAGE</span>
+
+<h2>What You Will Achieve</h2>
+
+<p>
+Develop practical programming and problem-solving skills for software engineering careers.
+</p>
+
+</div>
+
+<div class="outcome-grid">
+
+<div class="outcome-item reveal">
+<div class="check">✓</div>
+<p>Write efficient Python programs using core programming constructs.</p>
+</div>
+
+<div class="outcome-item reveal">
+<div class="check">✓</div>
+<p>Implement core data structures from scratch.</p>
+</div>
+
+<div class="outcome-item reveal">
+<div class="check">✓</div>
+<p>Apply algorithmic techniques to solve problems.</p>
+</div>
+
+<div class="outcome-item reveal">
+<div class="check">✓</div>
+<p>Analyse time and space complexity.</p>
+</div>
+
+<div class="outcome-item reveal">
+<div class="check">✓</div>
+<p>Crack coding and technical interviews.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ===============================
+     CAREER ROLES
+================================ -->
+
+<section class="section">
+
+<div class="section-inner">
+
+<div class="section-heading reveal">
+
+<span>CAREER OPPORTUNITIES</span>
+
+<h2>Explore Your Career Paths</h2>
+
+<p>
+Build the skills required for entry-level software development positions.
+</p>
+
+</div>
+
+<div class="roles reveal">
+
+<div class="role">Software Engineer Trainee</div>
+
+<div class="role">SDE-1</div>
+
+<div class="role">Python Developer</div>
+
+<div class="role">Backend Developer</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ===============================
+     COMPANIES
+================================ -->
+
+<section class="section companies">
+
+<div class="section-inner">
+
+<div class="section-heading reveal">
+
+<span>CAREER DESTINATIONS</span>
+
+<h2>Companies Students Can Target</h2>
+
+<p>
+Explore organizations across IT services, product companies and startups.
+</p>
+
+</div>
+
+<div class="company-groups">
+
+<div class="company-box reveal">
+
+<h3>IT Services</h3>
+
+<div class="company-list">
+<span>TCS</span>
+<span>Infosys</span>
+<span>Wipro</span>
+<span>Cognizant</span>
+<span>Capgemini</span>
+</div>
+
+</div>
+
+<div class="company-box reveal">
+
+<h3>Product Companies</h3>
+
+<div class="company-list">
+<span>Amazon</span>
+<span>Microsoft</span>
+<span>Flipkart</span>
+<span>Zoho</span>
+</div>
+
+</div>
+
+<div class="company-box reveal">
+
+<h3>Startups / Fintech</h3>
+
+<div class="company-list">
+<span>Paytm</span>
+<span>PhonePe</span>
+<span>Freshworks</span>
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ===============================
+     FINAL CTA
+================================ -->
+
+<section class="cta">
+
+<h2>
+Start Your <span>Python DSA</span> Journey
+</h2>
+
+<p>
+Learn. Practise. Build. Prepare for your software development career with CampusZen Learning Solutions.
+</p>
+
+<a
+href="https://www.campuszen.in/courses/Enroll.html"
+class="btn-primary">
+Start Your Learning Journey →
+</a>
+
+</section>
+
+
+<!-- ===============================
+     JAVASCRIPT
+================================ -->
+
+<script>
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting) {
+
+            entry.target.classList.add("active");
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.12
+});
+
+document.querySelectorAll(".reveal").forEach(element => {
+    observer.observe(element);
+});
+
+</script>
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>

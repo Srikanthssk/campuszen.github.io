@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Python for Biotechnology Course in Coimbatore | CampusZen</title>
+      <meta name="description"
+            content="Learn Python for biotechnology in 20 days at CampusZen. Work with DNA sequences, FASTA files, NumPy, Pandas, Biopython, NCBI APIs and biological data projects.">
+      <meta name="keywords"
+            content="Python for biotechnology course, bioinformatics Python Coimbatore, Biopython training, DNA sequence analysis, FASTA parser, NumPy Pandas biotechnology, CampusZen">
+      <meta name="author" content="CampusZen Learning Solutions">
+      <meta name="robots" content="index, follow">
+      <meta name="geo.region" content="IN-TN">
+      <meta name="geo.placename" content="Coimbatore">
+          <link rel="stylesheet" href="../css/common.css">
+
+      <link rel="canonical" href="https://www.campuszen.in/courses/PythonForBiotechnology.html">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="Python for Biotechnology | CampusZen">
+      <meta property="og:description"
+            content="Hands-on 20-day Python for Biotechnology program with biological data analysis and capstone projects.">
+      <meta property="og:url" content="https://www.campuszen.in/courses/PythonForBiotechnology.html">
+      <meta property="og:site_name" content="CampusZen Learning Solutions">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Python for Biotechnology — CampusZen">
+      <meta name="twitter:description" content="20-day practical Python and biological data analysis course.">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+      <script
+            type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "Python for Biotechnology", "description": "20-day Python for Biotechnology course covering biological sequences, FASTA, NumPy, Pandas, Biopython, APIs, statistics and introductory machine learning.", "provider": {"@type": "EducationalOrganization", "name": "CampusZen Learning Solutions", "url": "https://www.campuszen.in/"}, "url": "https://www.campuszen.in/courses/PythonForBiotechnology.html", "timeRequired": "P20D", "teaches": ["Python Setup", "Variables & Data Types", "Control Flow", "Functions", "Strings for Sequences", "Dictionaries & Sets", "File Handling", "Error Handling", "OOP Basics", "Mid-Course Project", "NumPy", "Pandas I", "Pandas II", "Visualisation", "Biopython", "Working with APIs", "Statistics in Python", "Intro to ML", "Capstone Build", "Capstone + Placement"]}</script>
+      <style>
+            :root {
+                  --bg: #ffffff;
+                  --purple: #111111;
+                  --purple-hover: #111111;
+                  --white: #ffffff;
+                  --border: rgba(41, 40, 40, .222);
+                  --dot-color: rgba(36, 35, 35, .292);
+                  --orange: #fe8007
+            }
+
+            * {
+                  box-sizing: border-box
+            }
+
+            html {
+                  scroll-behavior: smooth
+            }
+
+            body {
+                  margin: 0;
+                  font-family: 'Inter', sans-serif;
+                  background: var(--bg);
+                  color: #111
+            }
+
+            a {
+                  text-decoration: none
+            }
+
+            button {
+                  font-family: inherit
+            }
+
+            .container {
+                  width: min(1160px, 92%);
+                  margin: auto
+            }
+
+            .hero {
+                  position: relative;
+                  overflow: hidden;
+                  background: #111;
+                  color: white;
+                  padding: 100px 0 95px;
+                  min-height: 680px;
+                  display: flex;
+                  align-items: center
+            }
+
+            .hero:before {
+                  content: "";
+                  position: absolute;
+                  inset: 0;
+                  background: radial-gradient(#ffffff18 1px, transparent 1px) 0 0/25px 25px;
+                  mask-image: linear-gradient(to right, transparent, #000)
+            }
+
+            .hero-inner {
+                  position: relative;
+                  display: grid;
+                  grid-template-columns: 1.08fr 1fr;
+                  align-items: center;
+                  gap: 35px
+            }
+
+            .eyebrow {
+                  font-size: 12px;
+                  font-weight: 800;
+                  letter-spacing: 2px;
+                  text-transform: uppercase;
+                  color: #df7100
+            }
+
+            .hero .eyebrow {
+                  color: var(--orange)
+            }
+
+            h1 {
+                  font-size: clamp(43px, 5.8vw, 76px);
+                  line-height: 1.07;
+                  letter-spacing: -3.4px;
+                  margin: 20px 0
+            }
+
+            h1 em {
+                  color: var(--orange);
+                  font-style: normal
+            }
+
+            .hero p {
+                  color: #c7c7c7;
+                  line-height: 1.85;
+                  font-size: 16px;
+                  max-width: 560px
+            }
+
+            .facts {
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 25px;
+                  margin: 30px 0
+            }
+
+            .fact strong {
+                  display: block;
+                  font-size: 23px
+            }
+
+            .fact span {
+                  display: block;
+                  color: #999;
+                  font-size: 11px;
+                  letter-spacing: 1px;
+                  text-transform: uppercase;
+                  margin-top: 5px
+            }
+
+            .btn {
+                  display: inline-block;
+                  background: var(--orange);
+                  color: #111;
+                  border-radius: 9px;
+                  padding: 16px 27px;
+                  font-weight: 800;
+                  transition: transform .25s, box-shadow .25s
+            }
+
+            .btn:hover {
+                  transform: translateY(-4px);
+                  box-shadow: 0 13px 34px #fe800755
+            }
+
+            .visual {
+                  position: relative;
+                  width: min(470px, 100%);
+                  height: 450px;
+                  margin: auto;
+                  display: grid;
+                  place-items: center
+            }
+
+            .code-window {
+                  width: 85%;
+                  background: #191919;
+                  border: 1px solid #444;
+                  border-radius: 17px;
+                  overflow: hidden;
+                  box-shadow: 0 28px 75px #000b;
+                  transform: perspective(800px) rotateY(-9deg) rotateX(5deg);
+                  animation: float 6s ease-in-out infinite
+            }
+
+            .window-bar {
+                  display: flex;
+                  gap: 7px;
+                  background: #292929;
+                  padding: 14px 17px;
+                  border-bottom: 1px solid #444
+            }
+
+            .window-bar span {
+                  width: 9px;
+                  height: 9px;
+                  border-radius: 50%;
+                  background: #777
+            }
+
+            .window-bar span:first-child {
+                  background: var(--orange)
+            }
+
+            .code-window pre {
+                  margin: 0;
+                  padding: 22px 17px 27px;
+                  font-size: clamp(11px, 1.2vw, 14px);
+                  line-height: 2;
+                  color: #f3f3f3;
+                  white-space: pre-wrap;
+                  font-family: Consolas, monospace
+            }
+
+            .kw {
+                  color: #fe8007
+            }
+
+            .comment {
+                  color: #999
+            }
+
+            .str {
+                  color: #ffd19d
+            }
+
+            .dna {
+                  position: absolute;
+                  inset: 0;
+                  pointer-events: none
+            }
+
+            .strand {
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  width: 95px;
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-evenly;
+                  animation: drift 5s ease-in-out infinite
+            }
+
+            .rung {
+                  width: 78px;
+                  height: 7px;
+                  background: linear-gradient(90deg, #fe8007, #fff, #fe8007);
+                  border-radius: 9px;
+                  transform: rotate(var(--r));
+                  box-shadow: 0 0 18px #fe80074c;
+                  animation: twist 3s ease-in-out infinite alternate
+            }
+
+            .rung:nth-child(2n) {
+                  animation-delay: -1.5s
+            }
+
+            .rung:nth-child(3n) {
+                  animation-delay: -.8s
+            }
+
+            .float-tag {
+                  position: absolute;
+                  left: 0;
+                  bottom: 8%;
+                  padding: 14px 18px;
+                  background: #292929;
+                  border: 1px solid #555;
+                  border-radius: 11px;
+                  box-shadow: 0 14px 30px #0008;
+                  font-size: 12px;
+                  animation: drift 4s ease-in-out infinite
+            }
+
+            .float-tag b {
+                  color: var(--orange);
+                  display: block;
+                  margin-bottom: 4px
+            }
+
+            @keyframes float {
+                  50% {
+                        transform: perspective(800px) rotateY(-5deg) rotateX(2deg) translateY(-16px)
+                  }
+            }
+
+            @keyframes drift {
+                  50% {
+                        transform: translateY(-12px)
+                  }
+            }
+
+            @keyframes twist {
+                  to {
+                        transform: rotate(calc(var(--r) * -1))
+                  }
+            }
+
+            section {
+                  padding: 95px 0
+            }
+
+            h2 {
+                  font-size: clamp(32px, 4.3vw, 52px);
+                  letter-spacing: -2px;
+                  line-height: 1.13;
+                  margin: 15px 0
+            }
+
+            h2 span {
+                  color: #d66c00
+            }
+
+            .intro {
+                  color: #686868;
+                  line-height: 1.85;
+                  max-width: 700px
+            }
+
+            .grid {
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 18px;
+                  margin-top: 37px
+            }
+
+            .feature {
+                  background: #fff;
+                  border: 1px solid var(--border);
+                  border-radius: 16px;
+                  padding: 30px;
+                  transition: transform .3s, border-color .3s, box-shadow .3s
+            }
+
+            .feature:hover {
+                  transform: translateY(-9px);
+                  border-color: var(--orange);
+                  box-shadow: 0 18px 40px #00000012
+            }
+
+            .feature .symbol {
+                  font-size: 33px;
+                  color: var(--orange);
+                  font-weight: 900
+            }
+
+            .feature h3 {
+                  font-size: 19px
+            }
+
+            .feature p {
+                  color: #666;
+                  font-size: 14px;
+                  line-height: 1.8
+            }
+
+            .curriculum {
+                  background: #f7f7f7
+            }
+
+            .curr-grid {
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  gap: 13px;
+                  margin-top: 38px;
+                  align-items: start
+            }
+
+            .lesson {
+                  background: #fff;
+                  border: 1px solid #e4e4e4;
+                  border-radius: 12px;
+                  overflow: hidden;
+                  transition: border-color .25s, box-shadow .25s
+            }
+
+            .lesson[open] {
+                  border-color: #fe8007;
+                  box-shadow: 0 9px 28px #0000000a
+            }
+
+            .lesson summary {
+                  list-style: none;
+                  cursor: pointer;
+                  display: flex;
+                  align-items: center;
+                  gap: 14px;
+                  padding: 20px
+            }
+
+            .lesson summary::-webkit-details-marker {
+                  display: none
+            }
+
+            .day {
+                  color: #c45f00;
+                  font-size: 11px;
+                  font-weight: 900;
+                  white-space: nowrap
+            }
+
+            .lesson-title {
+                  font-size: 14px;
+                  font-weight: 800;
+                  flex: 1
+            }
+
+            .chevron {
+                  font-size: 23px;
+                  color: #b96300;
+                  transition: transform .3s
+            }
+
+            .lesson[open] .chevron {
+                  transform: rotate(180deg)
+            }
+
+            .lesson-body {
+                  padding: 0 20px 20px;
+                  border-top: 1px solid #f1f1f1
+            }
+
+            .lesson-body p {
+                  font-size: 13px;
+                  color: #666;
+                  line-height: 1.8
+            }
+
+            .lesson-meta {
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 8px
+            }
+
+            .lesson-meta span {
+                  background: #fff4e8;
+                  color: #a64d00;
+                  border-radius: 30px;
+                  padding: 7px 10px;
+                  font-size: 10px;
+                  font-weight: 800
+            }
+
+            .roles {
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 12px;
+                  margin-top: 32px
+            }
+
+            .role {
+                  padding: 14px 19px;
+                  border: 1px solid #ddd;
+                  border-radius: 40px;
+                  font-weight: 700;
+                  font-size: 13px;
+                  transition: background .25s, color .25s
+            }
+
+            .role:hover {
+                  background: #111;
+                  color: #fff
+            }
+
+            .cta {
+                  background: #111;
+                  text-align: center;
+                  color: white
+            }
+
+            .cta h2 {
+                  max-width: 740px;
+                  margin: 15px auto 20px
+            }
+
+            .cta p {
+                  color: #bbb;
+                  max-width: 590px;
+                  margin: 0 auto 30px;
+                  line-height: 1.8
+            }
+
+            .reveal {
+                  opacity: 0;
+                  transform: translateY(28px);
+                  transition: opacity .75s ease, transform .75s ease
+            }
+
+            .reveal.visible {
+                  opacity: 1;
+                  transform: translateY(0)
+            }
+
+            .grid>*:nth-child(2) {
+                  transition-delay: .08s
+            }
+
+            .grid>*:nth-child(3) {
+                  transition-delay: .16s
+            }
+
+            @media(max-width:850px) {
+                  .hero-inner {
+                        grid-template-columns: 1fr
+                  }
+
+                  .visual {
+                        height: 360px;
+                        max-width: 390px
+                  }
+
+                  .hero {
+                        padding: 75px 0
+                  }
+
+                  .grid {
+                        grid-template-columns: repeat(2, 1fr)
+                  }
+            }
+
+            @media(max-width:580px) {
+                  section {
+                        padding: 65px 0
+                  }
+
+                  h1 {
+                        letter-spacing: -2px
+                  }
+
+                  .grid,
+                  .curr-grid {
+                        grid-template-columns: 1fr
+                  }
+
+                  .visual {
+                        height: 320px;
+                        max-width: 330px
+                  }
+
+                  .code-window {
+                        width: 90%
+                  }
+
+                  .strand {
+                        right: -12px
+                  }
+            }
+
+            @media(prefers-reduced-motion:reduce) {
+
+                  *,
+                  *:before,
+                  *:after {
+                        animation: none !important;
+                        transition: none !important
+                  }
+
+                  .reveal {
+                        opacity: 1;
+                        transform: none
+                  }
+            }
+      </style>
+</head>
+
+<body>
+      <!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+      <main>
+            <div class="hero">
+                  <div class="container hero-inner">
+                        <div class="reveal">
+                              <div class="eyebrow">✦ Bioscience Program / Course 05</div>
+                              <h1>Write Code.<br>Decode <em>Biology.</em></h1>
+                              <p>Master Python fundamentals and apply them to biological sequences, datasets, scientific
+                                    visualization, and automated analysis workflows.</p>
+                              <div class="facts">
+                                    <div class="fact"><strong>20 Days</strong><span>Duration</span></div>
+                                    <div class="fact"><strong>Practical</strong><span>Coding Labs</span></div>
+                                    <div class="fact"><strong>Capstone</strong><span>Project</span></div>
+                              </div><a class="btn" href="./Enroll.html">Enroll Now ↗</a>
+                        </div>
+                        <div class="visual" aria-label="Animated Python code editor with DNA sequence illustration">
+                              <div class="code-window">
+                                    <div class="window-bar"><span></span><span></span><span></span></div>
+                                    <pre><span class="comment"># Python meets biotechnology</span>
+<span class="kw">from</span> Bio.Seq <span class="kw">import</span> Seq
+
+dna = Seq(<span class="str">"ATGCGTACGTTAGC"</span>)
+<span class="kw">print</span>(dna.reverse_complement())
+
+<span class="comment"># Analyze a DNA sequence</span>
+gc = (dna.count(<span class="str">"G"</span>) +
+      dna.count(<span class="str">"C"</span>)) / len(dna)
+<span class="kw">print</span>(f<span class="str">"GC: {gc:.1%}"</span>)</pre>
+                              </div>
+                              <div class="dna">
+                                    <div class="strand" style="right:0px;opacity:1.0">
+                                          <div class="rung" style="--r:20deg"></div>
+                                          <div class="rung" style="--r:-20deg"></div>
+                                          <div class="rung" style="--r:20deg"></div>
+                                          <div class="rung" style="--r:-20deg"></div>
+                                          <div class="rung" style="--r:20deg"></div>
+                                          <div class="rung" style="--r:-20deg"></div>
+                                          <div class="rung" style="--r:20deg"></div>
+                                    </div>
+                                    <div class="strand" style="right:18px;opacity:0.8">
+                                          <div class="rung" style="--r:27deg"></div>
+                                          <div class="rung" style="--r:-27deg"></div>
+                                          <div class="rung" style="--r:27deg"></div>
+                                          <div class="rung" style="--r:-27deg"></div>
+                                          <div class="rung" style="--r:27deg"></div>
+                                          <div class="rung" style="--r:-27deg"></div>
+                                          <div class="rung" style="--r:27deg"></div>
+                                    </div>
+                              </div>
+                              <div class="float-tag"><b>SEQUENCE ANALYSIS</b>Python · DNA · Data</div>
+                        </div>
+                  </div>
+            </div>
+            <section>
+                  <div class="container">
+                        <div class="eyebrow reveal">✦ Core capabilities</div>
+                        <h2 class="reveal">Learn Python. <span>Explore Life Sciences.</span></h2>
+                        <p class="intro reveal">Move from foundational programming to real biological data processing
+                              and practical scientific analysis.</p>
+                        <div class="grid">
+                              <div class="feature reveal">
+                                    <div class="symbol">01 /</div>
+                                    <h3>Sequence Analysis</h3>
+                                    <p>Build DNA/RNA sequence tools, calculate GC content, parse FASTA files and use
+                                          Biopython.</p>
+                              </div>
+                              <div class="feature reveal">
+                                    <div class="symbol">02 /</div>
+                                    <h3>Scientific Data</h3>
+                                    <p>Clean, transform and visualize biological datasets using NumPy, Pandas,
+                                          Matplotlib and Seaborn.</p>
+                              </div>
+                              <div class="feature reveal">
+                                    <div class="symbol">03 /</div>
+                                    <h3>Research Automation</h3>
+                                    <p>Retrieve data through NCBI APIs, apply statistics and build an automated bio-data
+                                          capstone.</p>
+                              </div>
+                        </div>
+                  </div>
+            </section>
+            <section class="curriculum">
+                  <div class="container">
+                        <div class="eyebrow reveal">✦ Day-wise learning plan</div>
+                        <h2 class="reveal">Your <span>20-Day</span> Curriculum</h2>
+                        <p class="intro reveal">Select any day to explore its topics, tools and practical activities.
+                        </p>
+                        <div class="curr-grid">
+                              <details class="lesson reveal" open>
+                                    <summary><span class="day">DAY 01</span><span class="lesson-title">Python
+                                                Setup</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>Colab, Jupyter, syntax</p>
+                                          <div class="lesson-meta"><span>TOOL · Python + Colab</span><span>LAB ·
+                                                      Environment setup</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 02</span><span class="lesson-title">Variables &amp;
+                                                Data Types</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>numbers, strings, lists</p>
+                                          <div class="lesson-meta"><span>TOOL · Python</span><span>LAB · Coding
+                                                      lab</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 03</span><span class="lesson-title">Control
+                                                Flow</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>if, loops, comprehensions</p>
+                                          <div class="lesson-meta"><span>TOOL · Python</span><span>LAB · Logic
+                                                      drills</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 04</span><span
+                                                class="lesson-title">Functions</span><span class="chevron">⌄</span>
+                                    </summary>
+                                    <div class="lesson-body">
+                                          <p>arguments, return, modules</p>
+                                          <div class="lesson-meta"><span>TOOL · Python</span><span>LAB · Function
+                                                      lab</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 05</span><span class="lesson-title">Strings for
+                                                Sequences</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>DNA/RNA, complement, GC%</p>
+                                          <div class="lesson-meta"><span>TOOL · Python</span><span>LAB · Sequence
+                                                      toolkit</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 06</span><span class="lesson-title">Dictionaries
+                                                &amp; Sets</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>codon tables, counting</p>
+                                          <div class="lesson-meta"><span>TOOL · Python</span><span>LAB · Codon
+                                                      counter</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 07</span><span class="lesson-title">File
+                                                Handling</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>read/write, FASTA parsing</p>
+                                          <div class="lesson-meta"><span>TOOL · Python</span><span>LAB · FASTA
+                                                      parser</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 08</span><span class="lesson-title">Error
+                                                Handling</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>try/except, debugging</p>
+                                          <div class="lesson-meta"><span>TOOL · Python</span><span>LAB · Debug
+                                                      lab</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 09</span><span class="lesson-title">OOP
+                                                Basics</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>classes, objects</p>
+                                          <div class="lesson-meta"><span>TOOL · Python</span><span>LAB · Sequence
+                                                      class</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 10</span><span class="lesson-title">Mid-Course
+                                                Project</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>sequence analysis tool</p>
+                                          <div class="lesson-meta"><span>TOOL · Python</span><span>LAB · Mid-course
+                                                      review</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 11</span><span class="lesson-title">NumPy</span><span
+                                                class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>arrays, math operations</p>
+                                          <div class="lesson-meta"><span>TOOL · NumPy</span><span>LAB · Array lab</span>
+                                          </div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 12</span><span class="lesson-title">Pandas
+                                                I</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>DataFrames, cleaning</p>
+                                          <div class="lesson-meta"><span>TOOL · Pandas</span><span>LAB · Data
+                                                      cleaning</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 13</span><span class="lesson-title">Pandas
+                                                II</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>grouping, merging, filtering</p>
+                                          <div class="lesson-meta"><span>TOOL · Pandas</span><span>LAB · Expression
+                                                      table</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 14</span><span
+                                                class="lesson-title">Visualisation</span><span class="chevron">⌄</span>
+                                    </summary>
+                                    <div class="lesson-body">
+                                          <p>Matplotlib, Seaborn plots</p>
+                                          <div class="lesson-meta"><span>TOOL · Matplotlib / Seaborn</span><span>LAB ·
+                                                      Plot making</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 15</span><span
+                                                class="lesson-title">Biopython</span><span class="chevron">⌄</span>
+                                    </summary>
+                                    <div class="lesson-body">
+                                          <p>SeqIO, alignment, BLAST</p>
+                                          <div class="lesson-meta"><span>TOOL · Biopython</span><span>LAB · Biopython
+                                                      lab</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 16</span><span class="lesson-title">Working with
+                                                APIs</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>NCBI Entrez, REST, JSON</p>
+                                          <div class="lesson-meta"><span>TOOL · Requests / Entrez</span><span>LAB · Data
+                                                      fetch</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 17</span><span class="lesson-title">Statistics in
+                                                Python</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>t-test, correlation</p>
+                                          <div class="lesson-meta"><span>TOOL · SciPy</span><span>LAB · Stats lab</span>
+                                          </div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 18</span><span class="lesson-title">Intro to
+                                                ML</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>scikit-learn basics</p>
+                                          <div class="lesson-meta"><span>TOOL · scikit-learn</span><span>LAB · First
+                                                      model</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 19</span><span class="lesson-title">Capstone
+                                                Build</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>automated bio-data workflow</p>
+                                          <div class="lesson-meta"><span>TOOL · Full toolset</span><span>LAB · Capstone
+                                                      development</span></div>
+                                    </div>
+                              </details>
+                              <details class="lesson reveal">
+                                    <summary><span class="day">DAY 20</span><span class="lesson-title">Capstone +
+                                                Placement</span><span class="chevron">⌄</span></summary>
+                                    <div class="lesson-body">
+                                          <p>demo, portfolio, interview prep</p>
+                                          <div class="lesson-meta"><span>TOOL · All tools</span><span>LAB · Final
+                                                      assessment + mock interview</span></div>
+                                    </div>
+                              </details>
+                        </div>
+                  </div>
+            </section>
+            <section>
+                  <div class="container">
+                        <div class="eyebrow reveal">✦ Career pathways</div>
+                        <h2 class="reveal">Where Your Skills <span>Can Take You.</span></h2>
+                        <p class="intro reveal">This course builds foundational skills relevant to the following
+                              entry-level roles.</p>
+                        <div class="roles reveal"><span class="role">Bioinformatics Associate</span><span
+                                    class="role">Research Assistant</span><span class="role">Data Analyst
+                                    Trainee</span><span class="role">Python Developer Trainee</span></div>
+                  </div>
+            </section>
+            <section class="cta">
+                  <div class="container reveal">
+                        <div class="eyebrow">✦ Start your journey</div>
+                        <h2>Turn Biological Data Into <span>Meaningful Insights.</span></h2>
+                        <p>Start with Python fundamentals, practice on biological datasets and complete a bio-data
+                              automation capstone.</p><a class="btn" href="./Enroll.html">Enroll Now ↗</a>
+                  </div>
+            </section>
+      </main>
+      <script>
+            (() => { const els = document.querySelectorAll('.reveal'); if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('visible')); return } const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } }), { threshold: .08 }); els.forEach(e => io.observe(e)); })();
+      </script>
+      <!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Medical Image Analysis using AI Course | CampusZen Coimbatore</title>
+    <meta name="description"
+        content="Join CampusZen's 20-day Medical Image Analysis using AI course. Learn DICOM, OpenCV, CNNs, ResNet, U-Net, MRI, Grad-CAM and medical imaging workflows.">
+    <meta name="keywords"
+        content="medical image analysis using AI, medical imaging AI course, DICOM, OpenCV, U-Net, CNN, MRI, Grad-CAM, CampusZen Coimbatore">
+    <meta name="author" content="CampusZen Learning Solutions">
+    <meta name="robots" content="index,follow">
+    <meta name="geo.region" content="IN-TN">
+    <meta name="geo.placename" content="Coimbatore">
+        <link rel="stylesheet" href="../css/common.css">
+
+    <link rel="canonical" href="https://www.campuszen.in/courses/MedicalImageAnalysisUsingAI.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Medical Image Analysis using AI | CampusZen">
+    <meta property="og:description" content="A practical 20-day medical image analysis and AI course.">
+    <meta property="og:url" content="https://www.campuszen.in/courses/MedicalImageAnalysisUsingAI.html">
+    <meta property="og:site_name" content="CampusZen Learning Solutions">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Medical Image Analysis using AI — CampusZen">
+    <meta name="twitter:description"
+        content="Learn medical image preprocessing, classification, segmentation and explainable AI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "Medical Image Analysis using AI", "description": "20-day practical course in medical image processing, DICOM, CNN classification, U-Net segmentation, explainable AI and biomedical imaging.", "provider": {"@type": "EducationalOrganization", "name": "CampusZen Learning Solutions", "url": "https://www.campuszen.in/"}, "url": "https://www.campuszen.in/courses/MedicalImageAnalysisUsingAI.html", "timeRequired": "P20D", "teaches": ["Medical Imaging Basics", "DICOM & Formats", "Python for Images", "Image Preprocessing", "Enhancement", "Classical Segmentation", "Feature Extraction", "ML on Image Features", "CNN Basics", "Mid-Course Project", "Transfer Learning", "Data Augmentation", "Evaluation Metrics", "Segmentation with U-Net", "3D & MRI Data", "Histopathology", "Explainable AI", "Ethics & Regulation", "Capstone Build", "Capstone + Placement"]}</script>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --purple: #111111;
+            --purple-hover: #111111;
+            --white: #ffffff;
+            --border: rgba(41, 40, 40, .222);
+            --dot-color: rgba(36, 35, 35, .292);
+            --orange: #fe8007
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: white;
+            color: #111;
+            font-family: Inter, sans-serif
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        .wrap {
+            width: min(1150px, 92%);
+            margin: auto
+        }
+
+        .hero {
+            background: #111;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            padding: 92px 0;
+            min-height: 680px;
+            display: flex;
+            align-items: center
+        }
+
+        .hero:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(#ffffff24 1px, transparent 1px);
+            background-size: 26px 26px;
+            mask-image: linear-gradient(90deg, transparent, #000)
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.08fr 1fr;
+            gap: 42px;
+            align-items: center;
+            position: relative
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #d66a00;
+            font-weight: 800
+        }
+
+        .hero .eyebrow {
+            color: var(--orange)
+        }
+
+        h1 {
+            font-size: clamp(43px, 5.6vw, 75px);
+            letter-spacing: -3px;
+            line-height: 1.07;
+            margin: 24px 0
+        }
+
+        h1 span {
+            color: var(--orange)
+        }
+
+        .lead {
+            font-size: 16px;
+            line-height: 1.85;
+            color: #c8c8c8;
+            max-width: 560px
+        }
+
+        .stats {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin: 30px 0
+        }
+
+        .stats strong {
+            display: block;
+            font-size: 22px
+        }
+
+        .stats small {
+            display: block;
+            margin-top: 5px;
+            color: #aaa;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 26px;
+            background: var(--orange);
+            color: #111;
+            font-weight: 800;
+            border-radius: 9px;
+            transition: transform .3s, box-shadow .3s
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px #fe800750
+        }
+
+        .visual {
+            height: 450px;
+            position: relative;
+            width: min(475px, 100%);
+            margin: auto;
+            display: grid;
+            place-items: center
+        }
+
+        .viewer {
+            width: 84%;
+            height: 350px;
+            background: #1b1b1b;
+            border: 1px solid #666;
+            border-radius: 18px;
+            box-shadow: 0 30px 70px #000a;
+            overflow: hidden;
+            position: relative;
+            transform: perspective(800px) rotateY(-8deg);
+            animation: float 6s ease-in-out infinite
+        }
+
+        .viewer-head {
+            height: 43px;
+            background: #292929;
+            border-bottom: 1px solid #555;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            color: #bbb;
+            font: 11px Consolas, monospace
+        }
+
+        .viewer-head b {
+            color: var(--orange)
+        }
+
+        .scan-area {
+            position: relative;
+            height: calc(100% - 43px);
+            display: grid;
+            place-items: center;
+            background: radial-gradient(circle, #363636 0, #191919 70%)
+        }
+
+        .scan-area svg {
+            height: 92%;
+            max-width: 100%;
+            filter: drop-shadow(0 0 9px #fe80073b)
+        }
+
+        .scanline {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--orange);
+            box-shadow: 0 0 25px 7px #fe800760;
+            animation: sweep 4.2s ease-in-out infinite alternate
+        }
+
+        .corner {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            border: 2px solid var(--orange)
+        }
+
+        .tl {
+            top: 17px;
+            left: 17px;
+            border-right: 0;
+            border-bottom: 0
+        }
+
+        .br {
+            bottom: 17px;
+            right: 17px;
+            border-left: 0;
+            border-top: 0
+        }
+
+        .floatcard {
+            position: absolute;
+            z-index: 3;
+            background: #252525;
+            border: 1px solid #666;
+            border-radius: 11px;
+            padding: 13px 17px;
+            font-size: 12px;
+            color: #eee;
+            box-shadow: 0 15px 30px #0009;
+            animation: bob 4s ease-in-out infinite
+        }
+
+        .floatcard b {
+            display: block;
+            color: var(--orange);
+            margin-bottom: 5px
+        }
+
+        .floatcard.top {
+            top: 10px;
+            right: 0
+        }
+
+        .floatcard.bottom {
+            bottom: 8px;
+            left: 0;
+            animation-delay: -2s
+        }
+
+        @keyframes sweep {
+            from {
+                top: 12%
+            }
+
+            to {
+                top: 88%
+            }
+        }
+
+        @keyframes float {
+            50% {
+                transform: perspective(800px) rotateY(-3deg) translateY(-12px)
+            }
+        }
+
+        @keyframes bob {
+            50% {
+                transform: translateY(12px)
+            }
+        }
+
+        section {
+            padding: 95px 0
+        }
+
+        h2 {
+            font-size: clamp(32px, 4.3vw, 52px);
+            letter-spacing: -2px;
+            line-height: 1.15;
+            margin: 15px 0 20px
+        }
+
+        h2 span {
+            color: #d66a00
+        }
+
+        .intro {
+            color: #666;
+            line-height: 1.85;
+            max-width: 710px
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 36px
+        }
+
+        .feature {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: transform .3s, border-color .3s, box-shadow .3s
+        }
+
+        .feature:hover {
+            transform: translateY(-9px);
+            border-color: var(--orange);
+            box-shadow: 0 17px 38px #00000010
+        }
+
+        .feature .num {
+            font-size: 30px;
+            color: var(--orange);
+            font-weight: 900
+        }
+
+        .feature h3 {
+            font-size: 19px
+        }
+
+        .feature p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #666
+        }
+
+        .curriculum {
+            background: #f7f7f7
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 13px;
+            margin-top: 36px;
+            align-items: start
+        }
+
+        .lesson {
+            background: white;
+            border: 1px solid #e1e1e1;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color .25s, box-shadow .25s
+        }
+
+        .lesson[open] {
+            border-color: var(--orange);
+            box-shadow: 0 12px 28px #0000000a
+        }
+
+        .lesson summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 19px
+        }
+
+        .lesson summary::-webkit-details-marker {
+            display: none
+        }
+
+        .lesson summary strong {
+            font-size: 14px;
+            flex: 1
+        }
+
+        .day {
+            color: #b95500;
+            background: #fff0e1;
+            padding: 10px;
+            border-radius: 9px;
+            font-size: 12px;
+            font-weight: 900
+        }
+
+        .expand {
+            color: #bd5b00;
+            font-size: 22px;
+            transition: transform .25s
+        }
+
+        .lesson[open] .expand {
+            transform: rotate(45deg)
+        }
+
+        .detail {
+            padding: 0 19px 19px;
+            border-top: 1px solid #eee
+        }
+
+        .detail p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.8
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        .tags span {
+            background: #fff1e4;
+            color: #994800;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 8px 10px;
+            border-radius: 25px
+        }
+
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px
+        }
+
+        .role {
+            border: 1px solid #ddd;
+            padding: 14px 18px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: background .25s, color .25s
+        }
+
+        .role:hover {
+            background: #111;
+            color: #fff
+        }
+
+        .cta {
+            background: #111;
+            color: white;
+            text-align: center
+        }
+
+        .cta h2 {
+            max-width: 800px;
+            margin: 15px auto 20px
+        }
+
+        .cta h2 span {
+            color: var(--orange)
+        }
+
+        .cta p {
+            color: #bbb;
+            max-width: 640px;
+            margin: 0 auto 30px;
+            line-height: 1.85
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity .75s ease, transform .75s ease
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .feature:nth-child(2) {
+            transition-delay: .08s
+        }
+
+        .feature:nth-child(3) {
+            transition-delay: .16s
+        }
+
+        @media(max-width:850px) {
+            .hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .hero {
+                padding: 70px 0
+            }
+
+            .visual {
+                max-width: 410px;
+                height: 390px
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:580px) {
+            section {
+                padding: 65px 0
+            }
+
+            h1 {
+                letter-spacing: -2px
+            }
+
+            .features,
+            .lessons {
+                grid-template-columns: 1fr
+            }
+
+            .visual {
+                max-width: 340px;
+                height: 320px
+            }
+
+            .viewer {
+                height: 290px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *:before,
+            *:after {
+                animation: none !important;
+                transition: none !important
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+    <main>
+        <div class="hero">
+            <div class="wrap hero-grid">
+                <div class="reveal">
+                    <div class="eyebrow">✦ Bioscience Program · Course 11</div>
+                    <h1>See Beyond the Image with <span>AI.</span></h1>
+                    <p class="lead">Learn to process X-rays, CT and MRI scans, build imaging classifiers, segment
+                        structures and explain biomedical AI predictions.</p>
+                    <div class="stats">
+                        <div><strong>20 Days</strong><small>Duration</small></div>
+                        <div><strong>Hands-on</strong><small>Imaging Labs</small></div>
+                        <div><strong>Capstone</strong><small>Final Project</small></div>
+                    </div><a class="btn" href="./Enroll.html">Enroll Now ↗</a>
+                </div>
+                <div class="visual" role="img" aria-label="Animated medical scan with orange AI detection overlay">
+                    <div class="viewer">
+                        <div class="viewer-head"><span>SCAN_VIEWER / MRI_001</span><b>AI ACTIVE ●</b></div>
+                        <div class="scan-area"><svg viewBox="0 0 320 280" aria-hidden="true">
+                                <defs>
+                                    <radialGradient id="tissue">
+                                        <stop stop-color="#a0a0a0" />
+                                        <stop offset=".55" stop-color="#575757" />
+                                        <stop offset="1" stop-color="#1c1c1c" />
+                                    </radialGradient>
+                                </defs>
+                                <ellipse cx="160" cy="140" rx="102" ry="117" fill="url(#tissue)" stroke="#b8b8b8"
+                                    stroke-width="3" />
+                                <path
+                                    d="M160 43 C107 55 94 101 109 125 C81 149 109 204 158 238 C210 208 234 150 212 123 C228 88 203 53 160 43Z"
+                                    fill="#252525" stroke="#bbb" stroke-width="2" />
+                                <path
+                                    d="M158 54 Q129 82 148 110 T147 158 T160 222 M169 58 Q197 91 177 122 T181 176 T166 219"
+                                    fill="none" stroke="#aaa" stroke-width="8" opacity=".7" />
+                                <path
+                                    d="M121 100 Q145 75 161 96 Q178 77 200 102 M112 174 Q138 153 161 170 Q183 152 208 172"
+                                    fill="none" stroke="#ddd" stroke-width="4" opacity=".6" />
+                                <circle cx="196" cy="113" r="27" fill="#fe800735" stroke="#fe8007" stroke-width="2.5"
+                                    stroke-dasharray="5 4" />
+                                <path d="M190 113h12m-6-6v12" stroke="#fe8007" stroke-width="2" />
+                            </svg>
+                            <div class="scanline"></div><i class="corner tl"></i><i class="corner br"></i>
+                        </div>
+                    </div>
+                    <div class="floatcard top"><b>U-NET SEGMENTATION</b>Detect · Outline · Analyse</div>
+                    <div class="floatcard bottom"><b>GRAD-CAM</b>Visualise model attention</div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="wrap">
+                <div class="eyebrow reveal">✦ What you'll learn</div>
+                <h2 class="reveal">From Medical Scans to <span>Actionable Insights.</span></h2>
+                <p class="intro reveal">Build practical skills in imaging formats, preprocessing, computer vision,
+                    neural networks and model interpretation.</p>
+                <div class="features">
+                    <article class="feature reveal">
+                        <div class="num">01 /</div>
+                        <h3>Image Processing</h3>
+                        <p>Explore DICOM and NIfTI, clean images, enhance contrast and extract useful features.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="num">02 /</div>
+                        <h3>Classification &amp; Segmentation</h3>
+                        <p>Train CNN and transfer-learning models, and practice U-Net for biomedical image masks.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="num">03 /</div>
+                        <h3>Explainable Medical AI</h3>
+                        <p>Evaluate sensitivity and AUC, explore Grad-CAM and examine privacy, bias and validation.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="curriculum">
+            <div class="wrap">
+                <div class="eyebrow reveal">✦ Day-by-day course planner</div>
+                <h2 class="reveal">Your <span>20-Day</span> Curriculum</h2>
+                <p class="intro reveal">Expand any day to see its topics, tools and hands-on activities from the
+                    CampusZen bioscience planner.</p>
+                <div class="lessons">
+                    <details class="lesson reveal">
+                        <summary><span class="day">01</span><strong>Medical Imaging Basics</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>X-ray, CT, MRI, ultrasound</p>
+                            <div class="tags"><span>TOOL · 3D Slicer</span><span>ACTIVITY · Image exploration</span>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">02</span><strong>DICOM &amp; Formats</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>DICOM, NIfTI, metadata</p>
+                            <div class="tags"><span>TOOL · pydicom</span><span>ACTIVITY · DICOM handling</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">03</span><strong>Python for Images</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>NumPy, OpenCV, Matplotlib</p>
+                            <div class="tags"><span>TOOL · OpenCV</span><span>ACTIVITY · Image lab</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">04</span><strong>Image Preprocessing</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>resize, normalise, denoise</p>
+                            <div class="tags"><span>TOOL · OpenCV</span><span>ACTIVITY · Preprocess lab</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">05</span><strong>Enhancement</strong><span class="expand">+</span>
+                        </summary>
+                        <div class="detail">
+                            <p>histogram equalisation, filtering</p>
+                            <div class="tags"><span>TOOL · OpenCV</span><span>ACTIVITY · Enhancement lab</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">06</span><strong>Classical Segmentation</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>threshold, edges, watershed</p>
+                            <div class="tags"><span>TOOL · scikit-image</span><span>ACTIVITY · Segment lab</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">07</span><strong>Feature Extraction</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>texture, shape, intensity</p>
+                            <div class="tags"><span>TOOL · scikit-image</span><span>ACTIVITY · Feature table</span>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">08</span><strong>ML on Image Features</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>SVM, random forest</p>
+                            <div class="tags"><span>TOOL · scikit-learn</span><span>ACTIVITY · Feature classifier</span>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">09</span><strong>CNN Basics</strong><span class="expand">+</span>
+                        </summary>
+                        <div class="detail">
+                            <p>convolution, training</p>
+                            <div class="tags"><span>TOOL · Keras</span><span>ACTIVITY · CNN build</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">10</span><strong>Mid-Course Project</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>X-ray classification</p>
+                            <div class="tags"><span>TOOL · Keras</span><span>ACTIVITY · Mid-course review</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">11</span><strong>Transfer Learning</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>ResNet, DenseNet</p>
+                            <div class="tags"><span>TOOL · Keras</span><span>ACTIVITY · Fine-tune model</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">12</span><strong>Data Augmentation</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>imbalance, augmentation</p>
+                            <div class="tags"><span>TOOL · Albumentations</span><span>ACTIVITY · Augmentation lab</span>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">13</span><strong>Evaluation Metrics</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>ROC, AUC, sensitivity</p>
+                            <div class="tags"><span>TOOL · scikit-learn</span><span>ACTIVITY · Metrics lab</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">14</span><strong>Segmentation with U-Net</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>masks, Dice loss</p>
+                            <div class="tags"><span>TOOL · PyTorch</span><span>ACTIVITY · U-Net lab</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">15</span><strong>3D &amp; MRI Data</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>volumes, slices, NIfTI</p>
+                            <div class="tags"><span>TOOL · nibabel / MONAI</span><span>ACTIVITY · MRI handling</span>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">16</span><strong>Histopathology</strong><span class="expand">+</span>
+                        </summary>
+                        <div class="detail">
+                            <p>patches, tissue classification</p>
+                            <div class="tags"><span>TOOL · Python</span><span>ACTIVITY · Patch classifier</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">17</span><strong>Explainable AI</strong><span class="expand">+</span>
+                        </summary>
+                        <div class="detail">
+                            <p>Grad-CAM, heatmaps</p>
+                            <div class="tags"><span>TOOL · Grad-CAM</span><span>ACTIVITY · Explain model</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">18</span><strong>Ethics &amp; Regulation</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>privacy, bias, validation</p>
+                            <div class="tags"><span>TOOL · Case reading</span><span>ACTIVITY · Risk audit</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">19</span><strong>Capstone Build</strong><span class="expand">+</span>
+                        </summary>
+                        <div class="detail">
+                            <p>imaging diagnosis pipeline</p>
+                            <div class="tags"><span>TOOL · Full toolset</span><span>ACTIVITY · Capstone
+                                    development</span></div>
+                        </div>
+                    </details>
+                    <details class="lesson reveal">
+                        <summary><span class="day">20</span><strong>Capstone + Placement</strong><span
+                                class="expand">+</span></summary>
+                        <div class="detail">
+                            <p>demo, portfolio, interview prep</p>
+                            <div class="tags"><span>TOOL · All tools</span><span>ACTIVITY · Final assessment + mock
+                                    interview</span></div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="wrap">
+                <div class="eyebrow reveal">✦ Target career roles</div>
+                <h2 class="reveal">Explore Opportunities in <span>Medical Imaging AI.</span></h2>
+                <p class="intro reveal">The course planner identifies these career pathways for learners.</p>
+                <div class="roles reveal"><span class="role">Medical Imaging AI Associate</span><span
+                        class="role">Computer Vision Associate</span><span class="role">Healthcare AI
+                        Trainee</span><span class="role">Research Assistant</span></div>
+            </div>
+        </section>
+        <section class="cta">
+            <div class="wrap reveal">
+                <div class="eyebrow">✦ Start your journey</div>
+                <h2>Build AI That Can <span>Interpret Medical Images.</span></h2>
+                <p>From image preprocessing to a complete imaging capstone, develop practical experience in medical
+                    computer vision.</p><a class="btn" href="./Enroll.html">Enroll Now ↗</a>
+            </div>
+        </section>
+    </main>
+    <script>(() => { const nodes = document.querySelectorAll('.reveal'); if (!('IntersectionObserver' in window)) { nodes.forEach(n => n.classList.add('visible')); return } const observer = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target) } }), { threshold: .08 }); nodes.forEach(n => observer.observe(n)) })();</script>
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generative AI Course in Coimbatore | 20-Day Training | CampusZen</title>
+  <meta name="description"
+    content="Join CampusZen's 20-day Generative AI course in Coimbatore. Learn prompt engineering, LLM APIs, RAG, AI agents, multimodal AI and deploy practical projects.">
+  <meta name="keywords"
+    content="Generative AI course Coimbatore, GenAI training, prompt engineering course, LLM API, RAG course, AI agents, CampusZen Learning Solutions, Tamil Nadu">
+  <meta name="author" content="CampusZen Learning Solutions">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.campuszen.in/courses/GenerativeAI.html">
+  <meta property="og:type" content="website">
+      <link rel="stylesheet" href="../css/common.css">
+
+  <meta property="og:site_name" content="CampusZen Learning Solutions">
+  <meta property="og:title" content="Generative AI Course | CampusZen Learning Solutions">
+  <meta property="og:description"
+    content="20-day hands-on Generative AI training: prompts, LLMs, RAG, AI agents and capstone project.">
+  <meta property="og:url" content="https://www.campuszen.in/courses/GenerativeAI.html">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Generative AI Course in Coimbatore | CampusZen">
+  <meta name="twitter:description" content="Learn to build Generative AI applications in 20 days with CampusZen.">
+  <meta name="geo.region" content="IN-TN">
+  <meta name="geo.placename" content="Coimbatore, Tamil Nadu">
+  <meta name="theme-color" content="#0a0a0a">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "Generative AI — 20-Day Intensive Course", "description": "Hands-on training in Generative AI, prompt engineering, Python, LLM APIs, RAG, AI agents, multimodal AI, responsible AI and deployment.", "provider": {"@type": "Organization", "name": "CampusZen Learning Solutions", "url": "https://www.campuszen.in/", "address": {"@type": "PostalAddress", "addressLocality": "Coimbatore", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "educationalLevel": "Beginner to Intermediate", "inLanguage": "en", "timeRequired": "P20D", "url": "https://www.campuszen.in/courses/GenerativeAI.html"}
+// Same reveal-on-scroll and staggered card animation as the supplied reference.
+const revealElements = document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){entry.target.classList.add('in-view');observer.unobserve(entry.target);}
+    });
+  }, {threshold:0.08,rootMargin:'0px 0px -20px 0px'});
+  document.querySelectorAll('.features,.days,.stats-grid').forEach(grid => {
+    [...grid.children].forEach((item,index) => {
+      item.style.transitionDelay = Math.min(index % 6, 5) * 0.085 + 's';
+    });
+  });
+  revealElements.forEach(el => observer.observe(el));
+} else {revealElements.forEach(el => el.classList.add('in-view'));}
+// Keep only one curriculum accordion day expanded at a time.
+days.forEach(day => day.addEventListener('toggle', () => {
+  if(day.open) days.forEach(other => {if(other !== day) other.open = false;});
+}));
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --black: #0b0b0b;
+      --white: #fff;
+      --orange: #ff6b19;
+      --ink: #171717;
+      --muted: #737373;
+      --line: #e9e9e9
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+      background: #fff
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: auto;
+      padding: 0 24px
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 800;
+      color: var(--orange)
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -.05em
+    }
+
+    h1 {
+      font-size: clamp(52px, 7.5vw, 102px);
+      line-height: 1.01;
+      margin: 20px 0 24px
+    }
+
+    h2 {
+      font-size: clamp(32px, 4vw, 54px);
+      line-height: 1.08;
+      margin: 14px 0 18px
+    }
+
+    h3 {
+      font-size: 21px
+    }
+
+    p {
+      line-height: 1.75
+    }
+
+    .hero {
+      background: var(--black);
+      color: white;
+      overflow: hidden;
+      position: relative
+    }
+
+    .hero:before {
+      content: '';
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border: 1px solid #ffffff1c;
+      border-radius: 50%;
+      right: -160px;
+      top: -130px;
+      box-shadow: 0 0 0 80px #ffffff08, 0 0 0 160px #ffffff05
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      align-items: center;
+      min-height: 650px;
+      gap: 40px;
+      padding-top: 80px;
+      padding-bottom: 90px;
+      position: relative
+    }
+
+    .hero p {
+      max-width: 610px;
+      color: #b9b9b9;
+      font-size: 17px
+    }
+
+    .accent {
+      color: var(--orange)
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      padding: 15px 23px;
+      font-weight: 800;
+      font-size: 14px;
+      transition: transform .2s
+    }
+
+    .btn:hover {
+      transform: translateY(-3px)
+    }
+
+    .primary {
+      background: var(--orange);
+      color: #111
+    }
+
+    .secondary {
+      border: 1px solid #626262;
+      color: #fff
+    }
+
+    .art {
+      height: 380px;
+      position: relative;
+      display: grid;
+      place-items: center
+    }
+
+    .art-circle {
+      height: 290px;
+      width: 290px;
+      border-radius: 50%;
+      border: 2px solid var(--orange);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 0 0 28px #ff6b1913, 0 0 0 57px #ff6b1909, 0 0 100px #ff6b1936;
+      animation: pulse 4s ease-in-out infinite
+    }
+
+    .art-circle strong {
+      font-size: 85px;
+      font-family: 'Space Grotesk';
+      letter-spacing: -9px
+    }
+
+    .art-label {
+      position: absolute;
+      background: #1c1c1c;
+      border: 1px solid #444;
+      padding: 12px 15px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700
+    }
+
+    .l1 {
+      left: 0;
+      top: 42px
+    }
+
+    .l2 {
+      right: 0;
+      bottom: 42px
+    }
+
+    @keyframes pulse {
+      50% {
+        transform: scale(1.035);
+        box-shadow: 0 0 0 36px #ff6b1913, 0 0 0 68px #ff6b1909, 0 0 100px #ff6b1950
+      }
+    }
+
+    .stats {
+      background: var(--orange);
+      color: #141414
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr)
+    }
+
+    .stat {
+      padding: 25px 20px;
+      border-right: 1px solid #0002
+    }
+
+    .stat:last-child {
+      border: 0
+    }
+
+    .stat strong {
+      display: block;
+      font: 700 35px 'Space Grotesk'
+    }
+
+    .stat span {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      font-weight: 800
+    }
+
+    section {
+      padding: 90px 0
+    }
+
+    .section-intro {
+      max-width: 700px;
+      margin-bottom: 36px
+    }
+
+    .section-intro p {
+      color: var(--muted)
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .feature {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fafafa;
+      transition: .2s
+    }
+
+    .feature:hover {
+      border-color: var(--orange);
+      transform: translateY(-4px)
+    }
+
+    .feature .icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      background: #ff6b191a;
+      color: #ed5b09;
+      display: grid;
+      place-items: center;
+      font-size: 23px
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 0
+    }
+
+    .curriculum {
+      background: #f6f6f6
+    }
+
+    .curriculum-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 25px
+    }
+
+    .curriculum-head p {
+      color: var(--muted);
+      max-width: 410px
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 25px 0
+    }
+
+    .tab {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 11px 17px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 800
+    }
+
+    .tab.active {
+      background: #101010;
+      color: white;
+      border-color: #101010
+    }
+
+    .days {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      align-items: start
+    }
+
+    .day {
+      background: #fff;
+      border: 1px solid #e4e4e4;
+      border-radius: 9px;
+      overflow: hidden
+    }
+
+    .day[hidden] {
+      display: none
+    }
+
+    .day[open] {
+      border-color: var(--orange)
+    }
+
+    .day summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 21px
+    }
+
+    .day summary::-webkit-details-marker {
+      display: none
+    }
+
+    .num {
+      font: 800 13px 'Space Grotesk';
+      color: var(--orange)
+    }
+
+    .dayname {
+      font: 700 17px 'Space Grotesk';
+      flex: 1
+    }
+
+    .chev {
+      font-size: 22px;
+      color: var(--orange)
+    }
+
+    .day[open] .chev {
+      transform: rotate(45deg)
+    }
+
+    .daybody {
+      border-top: 1px solid #eee;
+      padding: 0 21px 22px
+    }
+
+    .daybody p {
+      font-size: 14px;
+      color: #555
+    }
+
+    .pill-row {
+      display: grid;
+      gap: 8px
+    }
+
+    .pill-row span {
+      background: #f7f7f7;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 12px
+    }
+
+    .pill-row b {
+      font-size: 10px;
+      color: #ec5c0d;
+      margin-right: 8px;
+      letter-spacing: 1px
+    }
+
+    .outcomes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px
+    }
+
+    .outcomes p {
+      color: var(--muted)
+    }
+
+    .checks {
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 14px
+    }
+
+    .checks li {
+      display: flex;
+      gap: 13px;
+      align-items: start;
+      font-size: 15px
+    }
+
+    .checks li:before {
+      content: '✓';
+      background: var(--orange);
+      color: #111;
+      font-weight: 900;
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      border-radius: 50%;
+      text-align: center
+    }
+
+    .roles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px
+    }
+
+    .roles span {
+      border: 1px solid #ddd;
+      padding: 10px 13px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700
+    }
+
+    .cta {
+      background: #111;
+      color: #fff;
+      padding: 80px 0
+    }
+
+    .cta-panel {
+      border-left: 6px solid var(--orange);
+      padding-left: 32px
+    }
+
+    .cta-panel p {
+      color: #bbb;
+      max-width: 670px
+    }
+
+    .cta-panel .btn {
+      margin-top: 12px
+    }
+
+    @media(max-width:800px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding-top: 70px
+      }
+
+      .art {
+        height: 300px
+      }
+
+      .art-circle {
+        height: 220px;
+        width: 220px
+      }
+
+      .art-circle strong {
+        font-size: 64px
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .outcomes {
+        gap: 30px
+      }
+    }
+
+    @media(max-width:600px) {
+      .container {
+        padding: 0 18px
+      }
+
+      .hero-inner {
+        padding-top: 65px;
+        padding-bottom: 60px;
+        gap: 0
+      }
+
+      .hero p {
+        font-size: 15px
+      }
+
+      .art {
+        height: 265px
+      }
+
+      .art-circle {
+        height: 180px;
+        width: 180px
+      }
+
+      .art-circle strong {
+        font-size: 52px
+      }
+
+      .l1 {
+        left: 0;
+        top: 30px
+      }
+
+      .l2 {
+        right: 0;
+        bottom: 25px
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .stat:nth-child(2) {
+        border-right: 0
+      }
+
+      .stat:nth-child(-n+2) {
+        border-bottom: 1px solid #0002
+      }
+
+      section {
+        padding: 65px 0
+      }
+
+      .features,
+      .days,
+      .outcomes {
+        grid-template-columns: 1fr
+      }
+
+      .curriculum-head {
+        display: block
+      }
+
+      .cta {
+        padding: 65px 0
+      }
+    }
+
+    /* Animated orange holographic cone — no external assets required */
+    .cone-scene {
+      position: relative;
+      width: 310px;
+      height: 350px;
+      display: grid;
+      place-items: center;
+      perspective: 700px;
+      filter: drop-shadow(0 0 24px #ff6b1950);
+      animation: cone-float 4s ease-in-out infinite
+    }
+
+    .cone-body {
+      position: absolute;
+      width: 245px;
+      height: 275px;
+      top: 18px;
+      left: 33px;
+      background: repeating-linear-gradient(180deg, transparent 0 12px, #ff8a3d66 13px, #ff8a3d66 14px, transparent 15px 22px), linear-gradient(90deg, #ff6b1910, #ff6b1950 45%, #ffb16a55 52%, #ff6b1910);
+      clip-path: polygon(50% 0, 100% 100%, 0 100%);
+      border-bottom: 3px solid #ff8c36;
+      animation: cone-glow 3s ease-in-out infinite
+    }
+
+    .cone-body:after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, transparent 34%, #fff5 49%, transparent 61%);
+      animation: cone-shimmer 3.2s linear infinite
+    }
+
+    .cone-base {
+      position: absolute;
+      width: 250px;
+      height: 65px;
+      left: 30px;
+      bottom: 25px;
+      border: 3px solid #ff7a21;
+      border-radius: 50%;
+      box-shadow: 0 0 18px #ff6b19, inset 0 0 22px #ff6b1944;
+      animation: cone-base-spin 5s linear infinite
+    }
+
+    .cone-orbit {
+      position: absolute;
+      width: 340px;
+      height: 110px;
+      border: 2px solid #ff8a3d99;
+      border-radius: 50%;
+      transform: rotate(-24deg);
+      box-shadow: 0 0 18px #ff6b1933;
+      animation: cone-orbit 9s linear infinite
+    }
+
+    .orbit-two {
+      width: 290px;
+      height: 100px;
+      transform: rotate(50deg);
+      border-color: #ffffff66;
+      animation-duration: 12s;
+      animation-direction: reverse
+    }
+
+    .cone-spark {
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      background: #ffb26d;
+      border-radius: 50%;
+      box-shadow: 0 0 15px #ff6b19;
+      animation: spark 2.4s ease-in-out infinite alternate
+    }
+
+    .spark-one {
+      left: 17%;
+      top: 19%
+    }
+
+    .spark-two {
+      right: 13%;
+      top: 42%;
+      animation-delay: .8s
+    }
+
+    .spark-three {
+      left: 27%;
+      bottom: 16%;
+      animation-delay: 1.5s
+    }
+
+    @keyframes cone-float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-16px)
+      }
+    }
+
+    @keyframes cone-glow {
+
+      0%,
+      100% {
+        filter: brightness(1)
+      }
+
+      50% {
+        filter: brightness(1.5)
+      }
+    }
+
+    @keyframes cone-shimmer {
+      from {
+        transform: translateX(-80%)
+      }
+
+      to {
+        transform: translateX(80%)
+      }
+    }
+
+    @keyframes cone-base-spin {
+      50% {
+        box-shadow: 0 0 40px #ff6b19, inset 0 0 30px #ff6b1977
+      }
+    }
+
+    @keyframes cone-orbit {
+      from {
+        rotate: 0deg
+      }
+
+      to {
+        rotate: 360deg
+      }
+    }
+
+    @keyframes spark {
+      to {
+        transform: translateY(-22px) scale(1.8);
+        opacity: .3
+      }
+    }
+
+    @media(max-width:600px) {
+      .cone-scene {
+        transform: scale(.72);
+        transform-origin: center;
+        animation: cone-float-mobile 4s ease-in-out infinite
+      }
+
+      @keyframes cone-float-mobile {
+
+        0%,
+        100% {
+          transform: scale(.72) translateY(0)
+        }
+
+        50% {
+          transform: scale(.72) translateY(-15px)
+        }
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      .cone-scene,
+      .cone-scene * {
+        animation: none !important
+      }
+    }
+
+    /* Scroll entrance effects matching the supplied Full Stack reference */
+    .reveal,
+    .reveal-left,
+    .reveal-right {
+      opacity: 0;
+      transition: opacity .75s ease, transform .75s cubic-bezier(.2, .8, .2, 1)
+    }
+
+    .reveal {
+      transform: translateY(35px)
+    }
+
+    .reveal-left {
+      transform: translateX(-45px)
+    }
+
+    .reveal-right {
+      transform: translateX(45px)
+    }
+
+    .reveal.in-view,
+    .reveal-left.in-view,
+    .reveal-right.in-view {
+      opacity: 1;
+      transform: translate(0, 0)
+    }
+
+    .feature,
+    .day,
+    .stat {
+      will-change: transform
+    }
+
+    .day {
+      transition: border-color .25s, box-shadow .25s, transform .3s
+    }
+
+    .day:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 26px #0000000d
+    }
+
+    .day .daybody {
+      animation: panel-enter .3s ease both
+    }
+
+    @keyframes panel-enter {
+      from {
+        opacity: 0;
+        transform: translateY(-8px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      .reveal,
+      .reveal-left,
+      .reveal-right {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important
+      }
+
+      .day .daybody {
+        animation: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+  <main>
+    <header class="hero">
+      <div class="container hero-inner">
+        <div class="reveal-left">
+          <div class="eyebrow">CampusZen Learning Solutions · Coimbatore</div>
+          <h1>GENERATIVE<br><span class="accent">AI.</span></h1>
+          <p>From your first prompt to your own AI-powered application. Master LLMs, APIs, RAG, agents and automation
+            through a practical 20-day learning experience.</p>
+          <div class="buttons"><a href="#curriculum" class="btn primary">Explore Curriculum ↗</a><a href="#enquire"
+              class="btn secondary">Enquire Now</a></div>
+        </div>
+        <div class="art reveal-right" aria-label="Decorative GenAI graphic">
+          <div class="cone-scene">
+            <div class="cone-orbit orbit-one"></div>
+            <div class="cone-orbit orbit-two"></div>
+            <div class="cone-body"></div>
+            <div class="cone-base"></div>
+            <div class="cone-spark spark-one"></div>
+            <div class="cone-spark spark-two"></div>
+            <div class="cone-spark spark-three"></div>
+          </div><span class="art-label l1">01 / PROMPT ENGINEERING</span><span class="art-label l2">02 / BUILD &
+            DEPLOY</span>
+        </div>
+      </div>
+    </header>
+    <div class="stats">
+      <div class="container stats-grid">
+        <div class="stat reveal"><strong>20</strong><span>INTENSIVE DAYS</span></div>
+        <div class="stat reveal"><strong>10</strong><span>FOUNDATION DAYS</span></div>
+        <div class="stat reveal"><strong>10</strong><span>ADVANCED DAYS</span></div>
+        <div class="stat reveal"><strong>01</strong><span>FINAL CAPSTONE</span></div>
+      </div>
+    </div>
+    <section>
+      <div class="container">
+        <div class="section-intro reveal">
+          <div class="eyebrow">The program</div>
+          <h2>Don't just use AI.<br>Learn to build with it.</h2>
+          <p>Explore modern generative AI workflows, then turn what you learn into working applications through labs and
+            project development.</p>
+        </div>
+        <div class="features">
+          <article class="feature reveal">
+            <div class="icon">✳</div>
+            <h3>Prompt Engineering</h3>
+            <p>Write structured prompts and develop reusable prompt templates.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="icon">⌘</div>
+            <h3>LLM APIs</h3>
+            <p>Connect language models to Python and build useful applications.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="icon">⌕</div>
+            <h3>RAG Systems</h3>
+            <p>Create document Q&A and PDF chatbots with retrieval.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="icon">↗</div>
+            <h3>AI Agents</h3>
+            <p>Explore tool calling and automated AI workflows.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="icon">◉</div>
+            <h3>Multimodal AI</h3>
+            <p>Understand vision, image generation, speech and audio use cases.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="icon">▣</div>
+            <h3>Deploy Your Project</h3>
+            <p>Prepare, deploy and demonstrate your GenAI capstone application.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="curriculum" id="curriculum">
+      <div class="container">
+        <div class="curriculum-head reveal">
+          <div>
+            <div class="eyebrow">Day-wise learning</div>
+            <h2>20-Day Curriculum</h2>
+          </div>
+          <p>Open any day to see the topics, tools and practical activity. Filter by the first or second half of the
+            program.</p>
+        </div>
+        <div class="tabs" role="group" aria-label="Curriculum filters"><button type="button" class="tab active"
+            data-range="all" aria-pressed="true">All 20 Days</button><button type="button" class="tab"
+            data-range="first" aria-pressed="false">Days 01–10</button><button type="button" class="tab"
+            data-range="second" aria-pressed="false">Days 11–20</button></div>
+        <div class="days">
+          <details class="day reveal">
+            <summary><span class="num">01</span><span class="dayname">GenAI Foundations</span><span
+                class="chev">+</span></summary>
+            <div class="daybody">
+              <p>AI vs ML vs GenAI, LLMs, tokens, real-world use cases</p>
+              <div class="pill-row"><span><b>TOOLS</b> ChatGPT + Gemini</span><span><b>LAB</b> AI tools
+                  exploration</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">02</span><span class="dayname">How LLMs Work</span><span class="chev">+</span>
+            </summary>
+            <div class="daybody">
+              <p>Transformers basics, context window, hallucination, limits</p>
+              <div class="pill-row"><span><b>TOOLS</b> ChatGPT / Claude</span><span><b>LAB</b> LLM behaviour lab</span>
+              </div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">03</span><span class="dayname">Prompt Engineering I</span><span
+                class="chev">+</span></summary>
+            <div class="daybody">
+              <p>Roles, clarity, zero-shot, few-shot prompting</p>
+              <div class="pill-row"><span><b>TOOLS</b> ChatGPT</span><span><b>LAB</b> Prompt writing</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">04</span><span class="dayname">Prompt Engineering II</span><span
+                class="chev">+</span></summary>
+            <div class="daybody">
+              <p>Chain-of-thought, structured output, prompt templates</p>
+              <div class="pill-row"><span><b>TOOLS</b> ChatGPT / Gemini</span><span><b>LAB</b> Prompt library
+                  build</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">05</span><span class="dayname">Python for AI</span><span class="chev">+</span>
+            </summary>
+            <div class="daybody">
+              <p>Python basics, functions, JSON handling</p>
+              <div class="pill-row"><span><b>TOOLS</b> Python + Colab</span><span><b>LAB</b> Coding lab</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">06</span><span class="dayname">Working with APIs</span><span
+                class="chev">+</span></summary>
+            <div class="daybody">
+              <p>REST, API keys, requests, JSON parsing</p>
+              <div class="pill-row"><span><b>TOOLS</b> Python + Postman</span><span><b>LAB</b> API call lab</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">07</span><span class="dayname">LLM APIs I</span><span class="chev">+</span>
+            </summary>
+            <div class="daybody">
+              <p>Chat completions, temperature, tokens, parameters</p>
+              <div class="pill-row"><span><b>TOOLS</b> OpenAI / Gemini API</span><span><b>LAB</b> First LLM
+                  script</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">08</span><span class="dayname">LLM APIs II</span><span class="chev">+</span>
+            </summary>
+            <div class="daybody">
+              <p>System prompts, conversation memory, streaming, cost</p>
+              <div class="pill-row"><span><b>TOOLS</b> LLM API</span><span><b>LAB</b> Chatbot v1</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">09</span><span class="dayname">Text Generation Apps</span><span
+                class="chev">+</span></summary>
+            <div class="daybody">
+              <p>Summarizer, email and content writer, rewriter</p>
+              <div class="pill-row"><span><b>TOOLS</b> Python + LLM API</span><span><b>LAB</b> Mini app build</span>
+              </div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">10</span><span class="dayname">Mid-Course Project</span><span
+                class="chev">+</span></summary>
+            <div class="daybody">
+              <p>Prompt + API mini application</p>
+              <div class="pill-row"><span><b>TOOLS</b> Python + Streamlit</span><span><b>LAB</b> Mid-course
+                  review</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">11</span><span class="dayname">Building AI Interfaces</span><span
+                class="chev">+</span></summary>
+            <div class="daybody">
+              <p>Streamlit basics, forms, chat UI</p>
+              <div class="pill-row"><span><b>TOOLS</b> Streamlit</span><span><b>LAB</b> AI app interface</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">12</span><span class="dayname">Embeddings &amp; Vector Search</span><span
+                class="chev">+</span></summary>
+            <div class="daybody">
+              <p>Embeddings, similarity search, vector databases</p>
+              <div class="pill-row"><span><b>TOOLS</b> Embeddings + ChromaDB</span><span><b>LAB</b> Semantic search
+                  lab</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">13</span><span class="dayname">RAG I</span><span class="chev">+</span></summary>
+            <div class="daybody">
+              <p>Document chunking, retrieval, grounding answers</p>
+              <div class="pill-row"><span><b>TOOLS</b> LangChain</span><span><b>LAB</b> Document Q&amp;A</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">14</span><span class="dayname">RAG II</span><span class="chev">+</span></summary>
+            <div class="daybody">
+              <p>PDF chatbot, source citations, output evaluation</p>
+              <div class="pill-row"><span><b>TOOLS</b> LangChain + Streamlit</span><span><b>LAB</b> PDF chatbot</span>
+              </div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">15</span><span class="dayname">AI Agents &amp; Automation</span><span
+                class="chev">+</span></summary>
+            <div class="daybody">
+              <p>Tool calling, function calling, workflow automation</p>
+              <div class="pill-row"><span><b>TOOLS</b> LLM API + n8n</span><span><b>LAB</b> Automation flow</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">16</span><span class="dayname">Multimodal AI</span><span class="chev">+</span>
+            </summary>
+            <div class="daybody">
+              <p>Image generation, vision, speech and audio</p>
+              <div class="pill-row"><span><b>TOOLS</b> Gemini / Canva AI</span><span><b>LAB</b> Multimodal task</span>
+              </div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">17</span><span class="dayname">Responsible AI</span><span class="chev">+</span>
+            </summary>
+            <div class="daybody">
+              <p>Bias, privacy, safety, prompt injection, guardrails</p>
+              <div class="pill-row"><span><b>TOOLS</b> Case reading</span><span><b>LAB</b> AI risk audit</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">18</span><span class="dayname">Deployment</span><span class="chev">+</span>
+            </summary>
+            <div class="daybody">
+              <p>Git basics, environment variables, deploying apps</p>
+              <div class="pill-row"><span><b>TOOLS</b> GitHub + Streamlit Cloud</span><span><b>LAB</b> Live app
+                  deployment</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">19</span><span class="dayname">Capstone Build</span><span class="chev">+</span>
+            </summary>
+            <div class="daybody">
+              <p>End-to-end GenAI application development</p>
+              <div class="pill-row"><span><b>TOOLS</b> Full stack tools</span><span><b>LAB</b> Capstone
+                  development</span></div>
+            </div>
+          </details>
+          <details class="day reveal">
+            <summary><span class="num">20</span><span class="dayname">Capstone + Placement</span><span
+                class="chev">+</span></summary>
+            <div class="daybody">
+              <p>Project demo, portfolio, interview prep</p>
+              <div class="pill-row"><span><b>TOOLS</b> All tools</span><span><b>LAB</b> Final assessment + mock
+                  interview</span></div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container outcomes">
+        <div class="reveal-left">
+          <div class="eyebrow">Career-focused learning</div>
+          <h2>Build skills for your next chapter.</h2>
+          <p>Explore application development and automation roles through project-based GenAI training.</p>
+          <h3>Target roles</h3>
+          <div class="roles"><span>AI Application Developer</span><span>Prompt Engineer</span><span>GenAI
+              Associate</span><span>AI Automation Executive</span></div>
+        </div>
+        <div class="reveal-right">
+          <h3>Learning outcomes</h3>
+          <ul class="checks">
+            <li>Understand GenAI and the behaviour of LLMs</li>
+            <li>Write effective prompts and structured outputs</li>
+            <li>Develop Python applications with LLM APIs</li>
+            <li>Build document-based RAG chatbots</li>
+            <li>Explore agents, automation and multimodal AI</li>
+            <li>Deploy and present an end-to-end GenAI capstone</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="cta" id="enquire">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <div class="eyebrow">Start building</div>
+          <h2>Ready to create with<br><span class="accent">Generative AI?</span></h2>
+          <p>Join the CampusZen Generative AI program to learn through hands-on labs, mini applications, and a final
+            capstone.</p><a class="btn primary" href="https://www.campuszen.in/">Contact CampusZen ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const tabs = document.querySelectorAll('.tab'); const days = document.querySelectorAll('.day'); tabs.forEach(tab => tab.addEventListener('click', () => { tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-pressed', 'false') }); tab.classList.add('active'); tab.setAttribute('aria-pressed', 'true'); const range = tab.dataset.range; days.forEach((day, index) => { day.hidden = range === 'first' ? index >= 10 : range === 'second' ? index < 10 : false; }); }));
+
+    // Same reveal-on-scroll and staggered card animation as the supplied reference.
+    const revealElements = document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('in-view'); observer.unobserve(entry.target); }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+      document.querySelectorAll('.features,.days,.stats-grid').forEach(grid => {
+        [...grid.children].forEach((item, index) => {
+          item.style.transitionDelay = Math.min(index % 6, 5) * 0.085 + 's';
+        });
+      });
+      revealElements.forEach(el => observer.observe(el));
+    } else { revealElements.forEach(el => el.classList.add('in-view')); }
+    // Keep only one curriculum accordion day expanded at a time.
+    days.forEach(day => day.addEventListener('toggle', () => {
+      if (day.open) days.forEach(other => { if (other !== day) other.open = false; });
+    }));
+  </script>
+  <!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+
+</html>

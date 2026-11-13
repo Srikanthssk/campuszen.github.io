@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biostatistics with R &amp; Python Course | CampusZen Coimbatore</title>
+    <meta name="description"
+        content="Study biostatistics with R and Python in a 20-day CampusZen course. Learn hypothesis testing, ANOVA, regression, survival analysis and clinical data analysis.">
+    <meta name="keywords"
+        content="biostatistics course Coimbatore, biostatistics R Python, clinical data analysis, hypothesis testing, ANOVA, survival analysis, statistics training CampusZen">
+    <meta name="author" content="CampusZen Learning Solutions">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="IN-TN">
+        <link rel="stylesheet" href="../css/common.css">
+
+    <meta name="geo.placename" content="Coimbatore">
+    <link rel="canonical" href="https://www.campuszen.in/courses/BiostatisticsWithRPython.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Biostatistics with R / Python — CampusZen">
+    <meta property="og:description" content="20-day practical biostatistics program for biological and clinical data.">
+    <meta property="og:url" content="https://www.campuszen.in/courses/BiostatisticsWithRPython.html">
+    <meta property="og:site_name" content="CampusZen Learning Solutions">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Biostatistics with R / Python | CampusZen">
+    <meta name="twitter:description" content="20-day hands-on biostatistics course with R and Python.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "Biostatistics with R / Python", "description": "20-day biostatistics course applying statistical methods to biological data using R and Python.", "provider": {"@type": "EducationalOrganization", "name": "CampusZen Learning Solutions", "url": "https://www.campuszen.in/"}, "url": "https://www.campuszen.in/courses/BiostatisticsWithRPython.html", "timeRequired": "P20D", "teaches": ["Statistics Basics", "Descriptive Stats", "Distributions", "Probability", "Data Visualisation", "Confidence Intervals", "Hypothesis Testing", "t-tests", "ANOVA", "Mid-Course Project", "Non-parametric Tests", "Chi-square & Fisher", "Correlation", "Linear Regression", "Logistic Regression", "Multiple Testing", "Survival Analysis", "Experimental Design", "Capstone Build", "Capstone + Placement"]}</script>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --purple: #111111;
+            --purple-hover: #111111;
+            --white: #ffffff;
+            --border: rgba(41, 40, 40, .222);
+            --dot-color: rgba(36, 35, 35, .292);
+            --orange: #fe8007
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: #111;
+            background: var(--bg)
+        }
+
+        button,
+        a {
+            font-family: inherit
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        .wrap {
+            width: min(1160px, 92%);
+            margin: auto
+        }
+
+        .hero {
+            background: #111;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            padding: 105px 0 95px
+        }
+
+        .hero:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(#ffffff1a 1px, transparent 1px) 0 0/25px 25px;
+            mask-image: linear-gradient(90deg, transparent, #000)
+        }
+
+        .hero-grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 45px
+        }
+
+        .label {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ce6700
+        }
+
+        .hero .label {
+            color: var(--orange)
+        }
+
+        h1 {
+            font-size: clamp(43px, 5.6vw, 76px);
+            line-height: 1.06;
+            letter-spacing: -3px;
+            margin: 24px 0
+        }
+
+        h1 span {
+            color: var(--orange)
+        }
+
+        .lead {
+            font-size: 16px;
+            line-height: 1.9;
+            color: #c9c9c9;
+            max-width: 580px
+        }
+
+        .facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin: 30px 0
+        }
+
+        .facts strong {
+            font-size: 22px;
+            display: block
+        }
+
+        .facts small {
+            display: block;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 11px;
+            margin-top: 5px
+        }
+
+        .btn {
+            display: inline-flex;
+            padding: 16px 26px;
+            background: var(--orange);
+            color: #111;
+            border-radius: 9px;
+            font-size: 14px;
+            font-weight: 800;
+            transition: transform .25s, box-shadow .25s
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px #fe800755
+        }
+
+        .visual {
+            position: relative;
+            min-height: 435px;
+            display: grid;
+            place-items: center
+        }
+
+        .chart {
+            width: 100%;
+            max-width: 475px;
+            background: linear-gradient(140deg, #242424, #171717);
+            border: 1px solid #505050;
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 25px 70px #0009;
+            animation: float 6s ease-in-out infinite
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #444;
+            padding-bottom: 16px;
+            font-size: 12px;
+            font-weight: 800
+        }
+
+        .live {
+            color: var(--orange);
+            font-size: 10px;
+            letter-spacing: 1px
+        }
+
+        .live:before {
+            content: '● ';
+            animation: blink 1.5s infinite
+        }
+
+        .plot {
+            width: 100%;
+            height: 250px;
+            overflow: visible;
+            margin-top: 20px
+        }
+
+        .gridline {
+            stroke: #ffffff20;
+            stroke-width: 1
+        }
+
+        .axis {
+            stroke: #888;
+            stroke-width: 1.5
+        }
+
+        .curve {
+            fill: none;
+            stroke: var(--orange);
+            stroke-width: 4;
+            stroke-linecap: round;
+            stroke-dasharray: 620;
+            stroke-dashoffset: 620;
+            animation: draw 3.2s ease forwards
+        }
+
+        .area {
+            fill: #fe80071b;
+            opacity: 0;
+            animation: appear 1.3s ease 2s forwards
+        }
+
+        .point {
+            fill: #fff;
+            stroke: var(--orange);
+            stroke-width: 4;
+            animation: pulse 2s ease-in-out infinite
+        }
+
+        .chart-foot {
+            font-size: 11px;
+            color: #999;
+            text-align: center
+        }
+
+        .float-chip {
+            position: absolute;
+            right: -3%;
+            top: 4%;
+            background: white;
+            color: #111;
+            border-radius: 12px;
+            padding: 14px 18px;
+            box-shadow: 0 16px 40px #0009;
+            font-size: 11px;
+            animation: bob 4s ease-in-out infinite
+        }
+
+        .float-chip b {
+            display: block;
+            font-size: 18px;
+            color: #ba5b00
+        }
+
+        .float-chip2 {
+            position: absolute;
+            left: -2%;
+            bottom: 2%;
+            background: #303030;
+            color: #eee;
+            border: 1px solid #666;
+            border-radius: 11px;
+            padding: 13px 18px;
+            font-size: 12px;
+            animation: bob 5s ease-in-out -2s infinite
+        }
+
+        .float-chip2 b {
+            color: var(--orange)
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0
+            }
+        }
+
+        @keyframes appear {
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: .35
+            }
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-14px)
+            }
+        }
+
+        @keyframes bob {
+            50% {
+                transform: translateY(13px)
+            }
+        }
+
+        @keyframes pulse {
+            50% {
+                filter: drop-shadow(0 0 8px #fe8007)
+            }
+        }
+
+        section {
+            padding: 95px 0
+        }
+
+        h2 {
+            font-size: clamp(32px, 4.3vw, 52px);
+            line-height: 1.13;
+            letter-spacing: -2px;
+            margin: 16px 0 20px
+        }
+
+        h2 span {
+            color: #cf6500
+        }
+
+        .intro {
+            color: #686868;
+            line-height: 1.85;
+            max-width: 700px
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 36px
+        }
+
+        .feature {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            transition: transform .3s, border-color .3s, box-shadow .3s
+        }
+
+        .feature:hover {
+            transform: translateY(-8px);
+            border-color: var(--orange);
+            box-shadow: 0 18px 35px #00000010
+        }
+
+        .feature .icon {
+            font-size: 29px;
+            font-weight: 900;
+            color: #db6b00
+        }
+
+        .feature h3 {
+            font-size: 19px
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 14px
+        }
+
+        .curriculum {
+            background: #f7f7f7
+        }
+
+        .day-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 13px;
+            margin-top: 36px;
+            align-items: start
+        }
+
+        .item {
+            background: white;
+            border: 1px solid #e2e2e2;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color .25s, box-shadow .25s
+        }
+
+        .item.open {
+            border-color: var(--orange);
+            box-shadow: 0 12px 26px #0000000c
+        }
+
+        .toggle {
+            border: 0;
+            background: transparent;
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            padding: 21px;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            color: #111
+        }
+
+        .number {
+            font-size: 12px;
+            font-weight: 900;
+            color: #c96100
+        }
+
+        .topic {
+            font-size: 14px;
+            font-weight: 800;
+            flex: 1
+        }
+
+        .toggle-mark {
+            font-size: 22px;
+            color: #c96100;
+            transition: transform .25s
+        }
+
+        .item.open .toggle-mark {
+            transform: rotate(45deg)
+        }
+
+        .details {
+            border-top: 1px solid #eee;
+            padding: 0 20px 20px
+        }
+
+        .details p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.85
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        .chips span {
+            font-size: 10px;
+            font-weight: 800;
+            color: #a54f00;
+            background: #fff2e4;
+            padding: 8px 10px;
+            border-radius: 30px
+        }
+
+        .roles {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 30px
+        }
+
+        .role {
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            padding: 14px 19px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: background .25s, color .25s
+        }
+
+        .role:hover {
+            background: #111;
+            color: white
+        }
+
+        .cta {
+            background: #111;
+            color: white;
+            text-align: center
+        }
+
+        .cta h2 {
+            max-width: 800px;
+            margin: 15px auto 20px
+        }
+
+        .cta h2 span {
+            color: var(--orange)
+        }
+
+        .cta p {
+            color: #bbb;
+            max-width: 620px;
+            line-height: 1.85;
+            margin: 0 auto 28px
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity .7s ease, transform .7s ease
+        }
+
+        .reveal.in-view {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .feature:nth-child(2) {
+            transition-delay: .1s
+        }
+
+        .feature:nth-child(3) {
+            transition-delay: .2s
+        }
+
+        @media(max-width:850px) {
+            .hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .visual {
+                max-width: 480px;
+                width: 100%;
+                margin: auto
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:580px) {
+            .hero {
+                padding: 75px 0
+            }
+
+            section {
+                padding: 65px 0
+            }
+
+            h1 {
+                letter-spacing: -2px
+            }
+
+            .feature-grid,
+            .day-grid {
+                grid-template-columns: 1fr
+            }
+
+            .visual {
+                min-height: 345px
+            }
+
+            .plot {
+                height: 205px
+            }
+
+            .float-chip {
+                right: 0
+            }
+
+            .float-chip2 {
+                left: 0
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *:before,
+            *:after {
+                animation: none !important;
+                transition: none !important
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none
+            }
+
+            .curve {
+                stroke-dashoffset: 0
+            }
+
+            .area {
+                opacity: 1
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+    <main>
+        <div class="hero">
+            <div class="wrap hero-grid">
+                <div class="reveal">
+                    <div class="label">✦ Bioscience Program · Course 07</div>
+                    <h1>Find the Story <span>Behind the Data.</span></h1>
+                    <p class="lead">Build biostatistics skills with R and Python — from descriptive statistics and
+                        hypothesis testing to regression, survival analysis and real biological datasets.</p>
+                    <div class="facts">
+                        <div><strong>20 Days</strong><small>Duration</small></div>
+                        <div><strong>R + Python</strong><small>Analysis Tools</small></div>
+                        <div><strong>Capstone</strong><small>Final Project</small></div>
+                    </div><a href="./Enroll.html" class="btn">Enroll Now ↗</a>
+                </div>
+                <div class="visual" role="img"
+                    aria-label="Animated orange bell curve showing a statistical distribution">
+                    <div class="chart">
+                        <div class="chart-header"><span>Biostatistics / Distribution Analysis</span><span
+                                class="live">LIVE</span></div><svg class="plot" viewBox="0 0 440 245"
+                            aria-hidden="true">
+                            <path class="gridline" d="M20 50H420 M20 100H420 M20 150H420 M20 200H420" />
+                            <path class="axis" d="M20 15V218H420" />
+                            <path class="area"
+                                d="M25 215 C100 215 120 198 160 117 C185 67 202 29 220 29 C238 29 255 67 280 117 C320 198 340 215 415 215 Z" />
+                            <path class="curve"
+                                d="M25 215 C100 215 120 198 160 117 C185 67 202 29 220 29 C238 29 255 67 280 117 C320 198 340 215 415 215" />
+                            <circle class="point" cx="220" cy="29" r="6" />
+                        </svg>
+                        <div class="chart-foot">Normal distribution · Probability density</div>
+                    </div>
+                    <div class="float-chip"><b>95% CI</b>Confidence Interval</div>
+                    <div class="float-chip2"><b>R / Python</b> · Statistical Analysis</div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="wrap">
+                <div class="label reveal">✦ Core capabilities</div>
+                <h2 class="reveal">Transform Numbers Into <span>Evidence.</span></h2>
+                <p class="intro reveal">Learn to describe, test, model and interpret biological and clinical data with
+                    reproducible statistical workflows.</p>
+                <div class="feature-grid">
+                    <div class="feature reveal">
+                        <div class="icon">01 /</div>
+                        <h3>Statistics Foundations</h3>
+                        <p>Explore distributions, probability, confidence intervals and clear statistical
+                            visualizations.</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="icon">02 /</div>
+                        <h3>Hypothesis Testing</h3>
+                        <p>Apply t-tests, ANOVA, non-parametric methods and multiple-testing corrections.</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="icon">03 /</div>
+                        <h3>Clinical Data Models</h3>
+                        <p>Practice regression, survival analysis, experimental design and end-to-end statistical
+                            projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="curriculum">
+            <div class="wrap">
+                <div class="label reveal">✦ Course planner</div>
+                <h2 class="reveal">Your <span>20-Day</span> Curriculum</h2>
+                <p class="intro reveal">Open any day to explore its topics, tools and hands-on activity.</p>
+                <div class="day-grid">
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">01</span><span class="topic">Statistics Basics</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>data types, sampling, study design</p>
+                            <div class="chips"><span>TOOLS · Excel</span><span>ACTIVITY · Data classification</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">02</span><span class="topic">Descriptive Stats</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>mean, median, SD, IQR</p>
+                            <div class="chips"><span>TOOLS · R / Python</span><span>ACTIVITY · Summary lab</span></div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">03</span><span class="topic">Distributions</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>normal, binomial, Poisson</p>
+                            <div class="chips"><span>TOOLS · R / Python</span><span>ACTIVITY · Simulation lab</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">04</span><span class="topic">Probability</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>Bayes rule, conditional probability</p>
+                            <div class="chips"><span>TOOLS · Python</span><span>ACTIVITY · Problem solving</span></div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">05</span><span class="topic">Data Visualisation</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>histograms, boxplots, scatter</p>
+                            <div class="chips"><span>TOOLS · ggplot2 / Seaborn</span><span>ACTIVITY · Plot making</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">06</span><span class="topic">Confidence Intervals</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>standard error, estimation</p>
+                            <div class="chips"><span>TOOLS · R / Python</span><span>ACTIVITY · CI lab</span></div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">07</span><span class="topic">Hypothesis Testing</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>p-values, errors, power</p>
+                            <div class="chips"><span>TOOLS · R / SciPy</span><span>ACTIVITY · Test design</span></div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">08</span><span class="topic">t-tests</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>one-sample, paired, two-sample</p>
+                            <div class="chips"><span>TOOLS · R / SciPy</span><span>ACTIVITY · t-test lab</span></div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">09</span><span class="topic">ANOVA</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>one-way, post-hoc tests</p>
+                            <div class="chips"><span>TOOLS · R / statsmodels</span><span>ACTIVITY · ANOVA lab</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">10</span><span class="topic">Mid-Course Project</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>analyse a clinical dataset</p>
+                            <div class="chips"><span>TOOLS · R / Python</span><span>ACTIVITY · Mid-course review</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">11</span><span class="topic">Non-parametric Tests</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>Mann-Whitney, Kruskal-Wallis</p>
+                            <div class="chips"><span>TOOLS · R / SciPy</span><span>ACTIVITY · Test selection</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">12</span><span class="topic">Chi-square &amp; Fisher</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>categorical data, contingency tables</p>
+                            <div class="chips"><span>TOOLS · R / SciPy</span><span>ACTIVITY · Categorical lab</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">13</span><span class="topic">Correlation</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>Pearson, Spearman</p>
+                            <div class="chips"><span>TOOLS · R / Python</span><span>ACTIVITY · Correlation lab</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">14</span><span class="topic">Linear Regression</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>fit, residuals, assumptions</p>
+                            <div class="chips"><span>TOOLS · R / statsmodels</span><span>ACTIVITY · Regression
+                                    lab</span></div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">15</span><span class="topic">Logistic Regression</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>odds ratio, binary outcomes</p>
+                            <div class="chips"><span>TOOLS · R / statsmodels</span><span>ACTIVITY · Model fitting</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">16</span><span class="topic">Multiple Testing</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>Bonferroni, FDR</p>
+                            <div class="chips"><span>TOOLS · R / Python</span><span>ACTIVITY · Correction lab</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">17</span><span class="topic">Survival Analysis</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>Kaplan-Meier, log-rank</p>
+                            <div class="chips"><span>TOOLS · lifelines / survival</span><span>ACTIVITY · Survival
+                                    curve</span></div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">18</span><span class="topic">Experimental Design</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>controls, replicates, bias</p>
+                            <div class="chips"><span>TOOLS · Case reading</span><span>ACTIVITY · Design critique</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">19</span><span class="topic">Capstone Build</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>end-to-end stats analysis</p>
+                            <div class="chips"><span>TOOLS · Full toolset</span><span>ACTIVITY · Capstone
+                                    development</span></div>
+                        </div>
+                    </div>
+                    <div class="item reveal"><button class="toggle" aria-expanded="false"><span
+                                class="number">20</span><span class="topic">Capstone + Placement</span><span
+                                class="toggle-mark">+</span></button>
+                        <div class="details" hidden>
+                            <p>demo, portfolio, interview prep</p>
+                            <div class="chips"><span>TOOLS · All tools</span><span>ACTIVITY · Final assessment + mock
+                                    interview</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="wrap">
+                <div class="label reveal">✦ Career pathways</div>
+                <h2 class="reveal">Where Your Skills <span>Can Lead.</span></h2>
+                <p class="intro reveal">Develop practical statistical analysis experience relevant to these entry-level
+                    pathways.</p>
+                <div class="roles reveal"><span class="role">Biostatistician Trainee</span><span class="role">Clinical
+                        Data Analyst</span><span class="role">Research Associate</span><span class="role">Statistical
+                        Programmer Trainee</span></div>
+            </div>
+        </section>
+        <section class="cta">
+            <div class="wrap reveal">
+                <div class="label">✦ Get started</div>
+                <h2>Make Better Decisions With <span>Biostatistics.</span></h2>
+                <p>Learn statistical reasoning with R and Python, analyze a clinical dataset and complete a full
+                    analysis capstone.</p><a class="btn" href="./Enroll.html">Enroll Now ↗</a>
+            </div>
+        </section>
+    </main>
+    <script>(() => { const els = document.querySelectorAll('.reveal'); if ('IntersectionObserver' in window) { const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target) } }), { threshold: .08 }); els.forEach(el => io.observe(el)) } else els.forEach(el => el.classList.add('in-view')); const items = document.querySelectorAll('.item'); items.forEach(item => { const btn = item.querySelector('.toggle'), panel = item.querySelector('.details'); btn.addEventListener('click', () => { const opening = panel.hidden; items.forEach(i => { i.classList.remove('open'); i.querySelector('.details').hidden = true; i.querySelector('.toggle').setAttribute('aria-expanded', 'false') }); if (opening) { panel.hidden = false; item.classList.add('open'); btn.setAttribute('aria-expanded', 'true') } }) }) })();</script>
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Machine Learning for Biotechnology Course | CampusZen Coimbatore</title>
+    <meta name="description"
+        content="Learn Machine Learning for Biotechnology with CampusZen's 20-day course. Explore biological datasets, classification, regression, clustering, model evaluation and deployment.">
+    <meta name="keywords"
+        content="Machine Learning for Biotechnology, biotechnology machine learning course, bioinformatics ML, scikit-learn, Python biotechnology, Coimbatore CampusZen">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="CampusZen Learning Solutions">
+    <meta name="geo.region" content="IN-TN">
+        <link rel="stylesheet" href="../css/common.css">
+
+    <meta name="geo.placename" content="Coimbatore">
+    <link rel="canonical" href="https://www.campuszen.in/courses/MachineLearningForBiotechnology.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Machine Learning for Biotechnology | CampusZen">
+    <meta property="og:description"
+        content="A hands-on 20-day biotechnology machine learning course with real biological data projects.">
+    <meta property="og:url" content="https://www.campuszen.in/courses/MachineLearningForBiotechnology.html">
+    <meta property="og:site_name" content="CampusZen Learning Solutions">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Machine Learning for Biotechnology — CampusZen">
+    <meta name="twitter:description"
+        content="Learn to build and evaluate ML models for biological prediction problems.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "Machine Learning for Biotechnology", "description": "A 20-day course covering machine learning, biological datasets, model evaluation, clustering, feature selection and Streamlit deployment.", "provider": {"@type": "EducationalOrganization", "name": "CampusZen Learning Solutions", "url": "https://www.campuszen.in/"}, "url": "https://www.campuszen.in/courses/MachineLearningForBiotechnology.html", "timeRequired": "P20D", "teaches": ["ML Foundations", "Python for ML", "Bio Datasets", "Data Preprocessing", "EDA", "Linear Regression", "Logistic Regression", "Decision Trees", "Random Forest", "Mid-Course Project", "SVM & KNN", "Model Evaluation", "Feature Selection", "Clustering", "Dimensionality Reduction", "Gradient Boosting", "Bio Applications", "Model Deployment", "Capstone Build", "Capstone + Placement"]}</script>
+    <style>
+        :root {
+            --bg: #fff;
+            --purple: #111;
+            --purple-hover: #111;
+            --white: #fff;
+            --border: rgba(41, 40, 40, .222);
+            --dot-color: rgba(36, 35, 35, .292);
+            --orange: #fe8007
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            font-family: 'Inter', sans-serif;
+            color: #111
+        }
+
+        button,
+        a {
+            font-family: inherit
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        .wrap {
+            width: min(1160px, 92%);
+            margin: auto
+        }
+
+        .hero {
+            background: #111;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            min-height: 675px;
+            display: flex;
+            align-items: center;
+            padding: 90px 0
+        }
+
+        .hero:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(#ffffff21 1px, transparent 1px) 0 0/27px 27px;
+            mask-image: linear-gradient(to right, transparent, #000)
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative
+        }
+
+        .kicker {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            display: inline-block;
+            border: 1px solid #555;
+            padding: 11px 16px;
+            border-radius: 50px
+        }
+
+        .kicker b {
+            color: var(--orange)
+        }
+
+        h1 {
+            font-size: clamp(43px, 5.5vw, 76px);
+            line-height: 1.08;
+            letter-spacing: -3.2px;
+            margin: 25px 0
+        }
+
+        h1 em {
+            font-style: normal;
+            color: var(--orange)
+        }
+
+        .lead {
+            font-size: 16px;
+            line-height: 1.85;
+            color: #c9c9c9;
+            max-width: 600px
+        }
+
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 29px;
+            margin: 30px 0
+        }
+
+        .stats strong {
+            font-size: 23px;
+            display: block
+        }
+
+        .stats small {
+            font-size: 11px;
+            color: #aaa;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: block;
+            margin-top: 5px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--orange);
+            color: #111;
+            font-weight: 800;
+            padding: 16px 27px;
+            border-radius: 9px;
+            transition: transform .25s, box-shadow .25s
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 32px #fe800751
+        }
+
+        .network {
+            position: relative;
+            width: min(470px, 100%);
+            height: 420px;
+            margin: auto;
+            animation: float 6s ease-in-out infinite
+        }
+
+        .network svg {
+            width: 100%;
+            height: 100%;
+            overflow: visible
+        }
+
+        .edge {
+            stroke: #fe800779;
+            stroke-width: 1.5;
+            stroke-dasharray: 7 7;
+            animation: dash 15s linear infinite
+        }
+
+        .node {
+            fill: #fe8007;
+            filter: drop-shadow(0 0 7px #fe8007);
+            animation: pulse 3s ease-in-out infinite
+        }
+
+        .node.alt {
+            fill: #fff;
+            filter: drop-shadow(0 0 5px #fff);
+            animation-delay: -1.4s
+        }
+
+        .node.out {
+            fill: #ffb565;
+            animation-delay: -2s
+        }
+
+        .neural-card {
+            position: absolute;
+            background: #252525;
+            border: 1px solid #555;
+            border-radius: 12px;
+            padding: 13px 18px;
+            box-shadow: 0 14px 32px #0009;
+            font-size: 12px;
+            animation: bob 5s ease-in-out infinite
+        }
+
+        .neural-card strong {
+            color: var(--orange);
+            display: block;
+            font-size: 15px;
+            margin-bottom: 5px
+        }
+
+        .neural-card.one {
+            top: 0;
+            right: 0
+        }
+
+        .neural-card.two {
+            bottom: 0;
+            left: 0;
+            animation-delay: -2s
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -200
+            }
+        }
+
+        @keyframes pulse {
+            50% {
+                opacity: .6;
+                filter: drop-shadow(0 0 15px #fe8007)
+            }
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-13px)
+            }
+        }
+
+        @keyframes bob {
+            50% {
+                transform: translateY(12px)
+            }
+        }
+
+        section {
+            padding: 95px 0
+        }
+
+        .eyebrow {
+            color: #cf6500;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase
+        }
+
+        h2 {
+            font-size: clamp(32px, 4.3vw, 52px);
+            line-height: 1.15;
+            letter-spacing: -2px;
+            margin: 15px 0 18px
+        }
+
+        h2 span {
+            color: #d46a00
+        }
+
+        .intro {
+            color: #666;
+            line-height: 1.85;
+            max-width: 690px
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 19px;
+            margin-top: 35px
+        }
+
+        .feature {
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            padding: 30px;
+            background: white;
+            transition: transform .3s, border-color .3s, box-shadow .3s
+        }
+
+        .feature:hover {
+            transform: translateY(-9px);
+            border-color: var(--orange);
+            box-shadow: 0 18px 38px #00000012
+        }
+
+        .feature .symbol {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--orange)
+        }
+
+        .feature h3 {
+            font-size: 19px
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8
+        }
+
+        .curriculum {
+            background: #f7f7f7
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 13px;
+            margin-top: 35px;
+            align-items: start
+        }
+
+        .lesson {
+            background: white;
+            border: 1px solid #e4e4e4;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color .25s, box-shadow .25s
+        }
+
+        .lesson.active {
+            border-color: var(--orange);
+            box-shadow: 0 12px 32px #0000000a
+        }
+
+        .lesson-toggle {
+            border: 0;
+            background: transparent;
+            width: 100%;
+            text-align: left;
+            padding: 19px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            color: #111
+        }
+
+        .number {
+            background: #fff1e4;
+            color: #bf5900;
+            border-radius: 9px;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 900
+        }
+
+        .lesson-name {
+            flex: 1;
+            font-weight: 800;
+            font-size: 14px
+        }
+
+        .arrow {
+            font-size: 22px;
+            color: #c75e00;
+            transition: transform .25s
+        }
+
+        .lesson.active .arrow {
+            transform: rotate(45deg)
+        }
+
+        .lesson-content {
+            padding: 0 19px 19px;
+            border-top: 1px solid #eee
+        }
+
+        .lesson-content p {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #666
+        }
+
+        .pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        .pills span {
+            background: #fff2e6;
+            color: #984900;
+            font-size: 10px;
+            font-weight: 800;
+            border-radius: 30px;
+            padding: 8px 10px
+        }
+
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 32px
+        }
+
+        .role {
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            padding: 14px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: background .25s, color .25s
+        }
+
+        .role:hover {
+            background: #111;
+            color: #fff
+        }
+
+        .cta {
+            background: #111;
+            color: white;
+            text-align: center
+        }
+
+        .cta h2 {
+            max-width: 800px;
+            margin: 15px auto 20px
+        }
+
+        .cta h2 span {
+            color: var(--orange)
+        }
+
+        .cta p {
+            color: #bbb;
+            line-height: 1.85;
+            max-width: 620px;
+            margin: 0 auto 30px
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(27px);
+            transition: opacity .75s ease, transform .75s ease
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .features .feature:nth-child(2) {
+            transition-delay: .08s
+        }
+
+        .features .feature:nth-child(3) {
+            transition-delay: .16s
+        }
+
+        @media(max-width:850px) {
+            .hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .hero {
+                padding: 70px 0
+            }
+
+            .network {
+                height: 350px;
+                max-width: 400px
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:580px) {
+            section {
+                padding: 65px 0
+            }
+
+            h1 {
+                letter-spacing: -2px
+            }
+
+            .features,
+            .lessons {
+                grid-template-columns: 1fr
+            }
+
+            .network {
+                height: 300px;
+                max-width: 340px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *:before,
+            *:after {
+                animation: none !important;
+                transition: none !important
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+    <main>
+        <div class="hero">
+            <div class="wrap hero-grid">
+                <div class="reveal">
+                    <div class="kicker"><b>✦</b> Bioscience Program · Course 08</div>
+                    <h1>Train Models.<br>Transform <em>Biotechnology.</em></h1>
+                    <p class="lead">Apply machine learning to real biological datasets. Explore predictive modeling,
+                        sample classification, clustering and deployable biotechnology applications.</p>
+                    <div class="stats">
+                        <div><strong>20 Days</strong><small>Duration</small></div>
+                        <div><strong>Python + ML</strong><small>Core Stack</small></div>
+                        <div><strong>Capstone</strong><small>Final Project</small></div>
+                    </div><a href="./Enroll.html" class="btn">Enroll Now ↗</a>
+                </div>
+                <div class="network" role="img"
+                    aria-label="Animated neural network showing biological data processed through machine learning layers">
+                    <svg viewBox="0 0 460 420" aria-hidden="true">
+                        <line class="edge" x1="65" y1="105" x2="195" y2="65" />
+                        <line class="edge" x1="65" y1="105" x2="195" y2="160" />
+                        <line class="edge" x1="65" y1="105" x2="195" y2="260" />
+                        <line class="edge" x1="65" y1="105" x2="195" y2="355" />
+                        <line class="edge" x1="65" y1="210" x2="195" y2="65" />
+                        <line class="edge" x1="65" y1="210" x2="195" y2="160" />
+                        <line class="edge" x1="65" y1="210" x2="195" y2="260" />
+                        <line class="edge" x1="65" y1="210" x2="195" y2="355" />
+                        <line class="edge" x1="65" y1="315" x2="195" y2="65" />
+                        <line class="edge" x1="65" y1="315" x2="195" y2="160" />
+                        <line class="edge" x1="65" y1="315" x2="195" y2="260" />
+                        <line class="edge" x1="65" y1="315" x2="195" y2="355" />
+                        <line class="edge" x1="195" y1="65" x2="315" y2="110" />
+                        <line class="edge" x1="195" y1="65" x2="315" y2="210" />
+                        <line class="edge" x1="195" y1="65" x2="315" y2="310" />
+                        <line class="edge" x1="195" y1="160" x2="315" y2="110" />
+                        <line class="edge" x1="195" y1="160" x2="315" y2="210" />
+                        <line class="edge" x1="195" y1="160" x2="315" y2="310" />
+                        <line class="edge" x1="195" y1="260" x2="315" y2="110" />
+                        <line class="edge" x1="195" y1="260" x2="315" y2="210" />
+                        <line class="edge" x1="195" y1="260" x2="315" y2="310" />
+                        <line class="edge" x1="195" y1="355" x2="315" y2="110" />
+                        <line class="edge" x1="195" y1="355" x2="315" y2="210" />
+                        <line class="edge" x1="195" y1="355" x2="315" y2="310" />
+                        <line class="edge" x1="315" y1="110" x2="405" y2="210" />
+                        <line class="edge" x1="315" y1="210" x2="405" y2="210" />
+                        <line class="edge" x1="315" y1="310" x2="405" y2="210" />
+                        <circle class="node " cx="65" cy="105" r="10" />
+                        <circle class="node " cx="65" cy="210" r="10" />
+                        <circle class="node " cx="65" cy="315" r="10" />
+                        <circle class="node alt" cx="195" cy="65" r="10" />
+                        <circle class="node alt" cx="195" cy="160" r="10" />
+                        <circle class="node alt" cx="195" cy="260" r="10" />
+                        <circle class="node alt" cx="195" cy="355" r="10" />
+                        <circle class="node " cx="315" cy="110" r="10" />
+                        <circle class="node " cx="315" cy="210" r="10" />
+                        <circle class="node " cx="315" cy="310" r="10" />
+                        <circle class="node out" cx="405" cy="210" r="15" />
+                    </svg>
+                    <div class="neural-card one"><strong>MODEL TRAINING</strong>Biological data → Insights</div>
+                    <div class="neural-card two"><strong>ML PIPELINE</strong>Preprocess · Predict · Evaluate</div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="wrap">
+                <div class="eyebrow reveal">✦ What you'll learn</div>
+                <h2 class="reveal">Where Biology Meets <span>Intelligent Prediction.</span></h2>
+                <p class="intro reveal">Learn the complete ML workflow: prepare biological data, train and evaluate
+                    models, interpret features and share your results.</p>
+                <div class="features">
+                    <div class="feature reveal">
+                        <div class="symbol">01 /</div>
+                        <h3>Biological Data Preparation</h3>
+                        <p>Work with omics datasets, missing values, scaling, encoding and exploratory analysis.</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="symbol">02 /</div>
+                        <h3>Prediction &amp; Evaluation</h3>
+                        <p>Build regression and classification models with scikit-learn, and evaluate ROC, AUC and
+                            cross-validation.</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="symbol">03 /</div>
+                        <h3>Discovery &amp; Deployment</h3>
+                        <p>Explore clustering, PCA, feature selection, gradient boosting and Streamlit deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="curriculum">
+            <div class="wrap">
+                <div class="eyebrow reveal">✦ Day-by-day learning</div>
+                <h2 class="reveal">Your <span>20-Day</span> Curriculum</h2>
+                <p class="intro reveal">Click each day to view the topics, tools and practical activities from the
+                    CampusZen course planner.</p>
+                <div class="lessons">
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">01</span><span class="lesson-name">ML Foundations</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>supervised vs unsupervised, workflow</p>
+                            <div class="pills"><span>TOOLS · Python + Colab</span><span>ACTIVITY · Concept lab</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">02</span><span class="lesson-name">Python for ML</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>NumPy, Pandas refresher</p>
+                            <div class="pills"><span>TOOLS · NumPy / Pandas</span><span>ACTIVITY · Data handling</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">03</span><span class="lesson-name">Bio Datasets</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>omics data, features, labels</p>
+                            <div class="pills"><span>TOOLS · Kaggle / GEO</span><span>ACTIVITY · Dataset review</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">04</span><span class="lesson-name">Data Preprocessing</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>missing values, scaling, encoding</p>
+                            <div class="pills"><span>TOOLS · scikit-learn</span><span>ACTIVITY · Cleaning lab</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">05</span><span class="lesson-name">EDA</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>distributions, correlation, outliers</p>
+                            <div class="pills"><span>TOOLS · Seaborn</span><span>ACTIVITY · EDA report</span></div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">06</span><span class="lesson-name">Linear Regression</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>loss, fitting, metrics</p>
+                            <div class="pills"><span>TOOLS · scikit-learn</span><span>ACTIVITY · Prediction model</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">07</span><span class="lesson-name">Logistic Regression</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>classification, threshold</p>
+                            <div class="pills"><span>TOOLS · scikit-learn</span><span>ACTIVITY · Disease
+                                    classifier</span></div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">08</span><span class="lesson-name">Decision Trees</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>splits, overfitting</p>
+                            <div class="pills"><span>TOOLS · scikit-learn</span><span>ACTIVITY · Tree model</span></div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">09</span><span class="lesson-name">Random Forest</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>ensembles, feature importance</p>
+                            <div class="pills"><span>TOOLS · scikit-learn</span><span>ACTIVITY · Feature ranking</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">10</span><span class="lesson-name">Mid-Course Project</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>classify samples from expression data</p>
+                            <div class="pills"><span>TOOLS · scikit-learn</span><span>ACTIVITY · Mid-course
+                                    review</span></div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">11</span><span class="lesson-name">SVM &amp; KNN</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>kernels, distance</p>
+                            <div class="pills"><span>TOOLS · scikit-learn</span><span>ACTIVITY · Model comparison</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">12</span><span class="lesson-name">Model Evaluation</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>CV, ROC, AUC, confusion matrix</p>
+                            <div class="pills"><span>TOOLS · scikit-learn</span><span>ACTIVITY · Evaluation lab</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">13</span><span class="lesson-name">Feature Selection</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>filters, PCA, regularisation</p>
+                            <div class="pills"><span>TOOLS · scikit-learn</span><span>ACTIVITY · Feature lab</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">14</span><span class="lesson-name">Clustering</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>k-means, hierarchical</p>
+                            <div class="pills"><span>TOOLS · scikit-learn</span><span>ACTIVITY · Cluster lab</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">15</span><span class="lesson-name">Dimensionality Reduction</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>PCA, t-SNE, UMAP</p>
+                            <div class="pills"><span>TOOLS · scikit-learn / UMAP</span><span>ACTIVITY · Visualisation
+                                    lab</span></div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">16</span><span class="lesson-name">Gradient Boosting</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>XGBoost, tuning</p>
+                            <div class="pills"><span>TOOLS · XGBoost</span><span>ACTIVITY · Tuned model</span></div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">17</span><span class="lesson-name">Bio Applications</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>protein and variant prediction</p>
+                            <div class="pills"><span>TOOLS · Python</span><span>ACTIVITY · Case study</span></div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">18</span><span class="lesson-name">Model Deployment</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>save models, Streamlit app</p>
+                            <div class="pills"><span>TOOLS · Streamlit</span><span>ACTIVITY · App build</span></div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">19</span><span class="lesson-name">Capstone Build</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>biological prediction system</p>
+                            <div class="pills"><span>TOOLS · Full toolset</span><span>ACTIVITY · Capstone
+                                    development</span></div>
+                        </div>
+                    </article>
+                    <article class="lesson reveal"><button type="button" class="lesson-toggle" aria-expanded="false">
+                            <span class="number">20</span><span class="lesson-name">Capstone + Placement</span><span
+                                class="arrow">+</span></button>
+                        <div class="lesson-content" hidden>
+                            <p>demo, portfolio, interview prep</p>
+                            <div class="pills"><span>TOOLS · All tools</span><span>ACTIVITY · Final assessment + mock
+                                    interview</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="wrap">
+                <div class="eyebrow reveal">✦ Career pathways</div>
+                <h2 class="reveal">Explore Careers in <span>Biotech + AI.</span></h2>
+                <p class="intro reveal">Build a practical foundation for entry-level roles that combine biological data
+                    with machine learning.</p>
+                <div class="roles reveal"><span class="role">Bioinformatics ML Trainee</span><span class="role">Biotech
+                        Data Analyst</span><span class="role">Junior ML Engineer</span><span class="role">Research Data
+                        Associate</span></div>
+            </div>
+        </section>
+        <section class="cta">
+            <div class="wrap reveal">
+                <div class="eyebrow">✦ Start learning</div>
+                <h2>Build Your First <span>Biological Prediction System.</span></h2>
+                <p>Practice with biological datasets, develop machine learning models and complete a capstone project
+                    you can demonstrate.</p><a href="./Enroll.html" class="btn">Enroll Now ↗</a>
+            </div>
+        </section>
+    </main>
+    <script>
+        (() => {
+            const els = document.querySelectorAll('.reveal'); if ('IntersectionObserver' in window) { const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } }), { threshold: .08 }); els.forEach(e => io.observe(e)); } else els.forEach(e => e.classList.add('visible'));
+            const cards = document.querySelectorAll('.lesson'); cards.forEach(card => { const b = card.querySelector('.lesson-toggle'), c = card.querySelector('.lesson-content'); b.addEventListener('click', () => { const opening = c.hidden; cards.forEach(x => { x.classList.remove('active'); x.querySelector('.lesson-content').hidden = true; x.querySelector('.lesson-toggle').setAttribute('aria-expanded', 'false') }); if (opening) { card.classList.add('active'); c.hidden = false; b.setAttribute('aria-expanded', 'true') } }) });
+        })();
+    </script>
+
+    <!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+
+</html>

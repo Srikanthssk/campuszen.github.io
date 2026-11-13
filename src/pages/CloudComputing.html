@@ -1,0 +1,1086 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cloud Computing Course in Coimbatore | CampusZen Learning Solutions</title>
+    <meta name="description"
+        content="Learn Cloud Computing in 20 days with CampusZen Coimbatore. Explore AWS, EC2, S3, IAM, Docker, Kubernetes, CI/CD, Terraform and cloud deployment through practical labs.">
+    <meta name="keywords"
+        content="Cloud Computing course Coimbatore, AWS training, cloud engineering, DevOps course, EC2, S3, Docker, Kubernetes, Terraform, CampusZen">
+    <meta name="author" content="CampusZen Learning Solutions">
+    <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="../css/common.css">
+
+    <link rel="canonical" href="https://www.campuszen.in/courses/CloudComputing.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cloud Computing Course | CampusZen">
+    <meta property="og:description"
+        content="A 20-day practical cloud computing course covering AWS, containers, CI/CD, IaC and deployment.">
+    <meta property="og:url" content="https://www.campuszen.in/courses/CloudComputing.html">
+    <meta property="og:site_name" content="CampusZen Learning Solutions">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Cloud Computing Course — CampusZen">
+    <meta name="twitter:description" content="Build cloud computing skills with a 20-day hands-on course.">
+    <meta name="geo.region" content="IN-TN">
+    <meta name="geo.placename" content="Coimbatore">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Cloud Computing","description":"20-day cloud computing course covering cloud foundations, AWS services, containers, CI/CD, infrastructure as code, security and deployment.","provider":{"@type":"EducationalOrganization","name":"CampusZen Learning Solutions","address":{"@type":"PostalAddress","addressLocality":"Coimbatore","addressRegion":"Tamil Nadu","addressCountry":"IN"}},"url":"https://www.campuszen.in/courses/CloudComputing.html","timeRequired":"P20D","teaches":["Cloud fundamentals","AWS EC2","AWS S3","AWS IAM","Docker","Kubernetes","GitHub Actions","Terraform","Cloud security"]}</script>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --purple: #111111;
+            --purple-hover: #000000;
+            --white: #ffffff;
+            --border: rgba(41, 40, 40, .222);
+            --dot-color: rgba(36, 35, 35, .292);
+            --orange: #fe8007;
+            --black: #111111
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--black);
+            font-family: 'Inter', sans-serif
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        button {
+            font-family: inherit
+        }
+
+        .wrap {
+            width: min(1160px, calc(100% - 40px));
+            margin: auto
+        }
+
+        .hero {
+            background: #101010;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            min-height: 680px;
+            display: flex;
+            align-items: center
+        }
+
+        .hero:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(#ffffff22 1px, transparent 1px);
+            background-size: 27px 27px;
+            mask-image: linear-gradient(to right, transparent, black);
+            opacity: .6
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            padding: 85px 0
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .17em;
+            text-transform: uppercase;
+            color: var(--orange)
+        }
+
+        h1 {
+            font-size: clamp(48px, 6.2vw, 83px);
+            letter-spacing: -.065em;
+            line-height: 1.04;
+            margin: 20px 0 25px
+        }
+
+        h1 em {
+            color: var(--orange);
+            font-style: normal
+        }
+
+        .lead {
+            font-size: 16px;
+            line-height: 1.9;
+            color: #c8c8c8;
+            max-width: 540px
+        }
+
+        .actions {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+            margin-top: 33px
+        }
+
+        .btn {
+            padding: 16px 24px;
+            border-radius: 9px;
+            font-size: 14px;
+            font-weight: 800;
+            transition: transform .3s, background .3s
+        }
+
+        .btn:hover {
+            transform: translateY(-4px)
+        }
+
+        .btn.orange {
+            background: var(--orange);
+            color: #111
+        }
+
+        .btn.outline {
+            border: 1px solid #777;
+            color: #fff
+        }
+
+        .facts {
+            display: flex;
+            gap: 34px;
+            margin-top: 39px;
+            flex-wrap: wrap
+        }
+
+        .fact strong {
+            display: block;
+            font-size: 22px
+        }
+
+        .fact small {
+            font-size: 12px;
+            color: #aaa
+        }
+
+        .scene {
+            height: 460px;
+            position: relative;
+            display: grid;
+            place-items: center;
+            perspective: 900px
+        }
+
+        .halo {
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #fe80072a, transparent 68%);
+            filter: blur(12px);
+            animation: breathe 4s ease-in-out infinite
+        }
+
+        .orbit {
+            position: absolute;
+            border: 1px solid #fe80074f;
+            border-radius: 50%;
+            width: 330px;
+            height: 330px;
+            transform: rotateX(67deg) rotateZ(0deg);
+            animation: spin 13s linear infinite
+        }
+
+        .orbit.two {
+            width: 260px;
+            height: 260px;
+            transform: rotateY(65deg);
+            animation: spin2 10s linear infinite reverse
+        }
+
+        .cloud {
+            position: relative;
+            width: 275px;
+            height: 190px;
+            filter: drop-shadow(0 0 32px #fe80073a);
+            animation: float 5s ease-in-out infinite
+        }
+
+        .cloud svg {
+            width: 100%;
+            height: 100%;
+            overflow: visible
+        }
+
+        .cloud path {
+            stroke: var(--orange);
+            stroke-width: 3;
+            fill: #161616;
+            stroke-linejoin: round
+        }
+
+        .cloud .line {
+            stroke: #fff;
+            stroke-width: 2;
+            fill: none;
+            stroke-dasharray: 9 9;
+            animation: dash 4s linear infinite
+        }
+
+        .node {
+            position: absolute;
+            background: #1a1a1a;
+            border: 1px solid #fe800788;
+            padding: 11px 15px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            box-shadow: 0 12px 40px #0007;
+            animation: float 4s ease-in-out infinite
+        }
+
+        .node.a {
+            top: 30px;
+            right: 4px
+        }
+
+        .node.b {
+            bottom: 37px;
+            left: 0;
+            animation-delay: -2s
+        }
+
+        .node i {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background: var(--orange);
+            border-radius: 50%;
+            margin-right: 7px;
+            box-shadow: 0 0 10px var(--orange)
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotateX(67deg) rotateZ(360deg)
+            }
+        }
+
+        @keyframes spin2 {
+            to {
+                transform: rotateY(65deg) rotateZ(360deg)
+            }
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-17px)
+            }
+        }
+
+        @keyframes breathe {
+            50% {
+                transform: scale(1.25);
+                opacity: .5
+            }
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -72
+            }
+        }
+
+        section {
+            padding: 100px 0
+        }
+
+        .kicker {
+            color: var(--orange);
+            font-size: 12px;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            font-weight: 800
+        }
+
+        .heading {
+            font-size: clamp(33px, 4vw, 54px);
+            letter-spacing: -.055em;
+            line-height: 1.12;
+            margin: 13px 0 20px
+        }
+
+        .heading span {
+            color: var(--orange)
+        }
+
+        .muted {
+            color: #666;
+            line-height: 1.85
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 17px;
+            margin-top: 40px
+        }
+
+        .feature {
+            border: 1px solid #e1e1e1;
+            border-radius: 16px;
+            padding: 32px;
+            background: #fff;
+            transition: transform .3s, border-color .3s, box-shadow .3s
+        }
+
+        .feature:hover {
+            transform: translateY(-8px);
+            border-color: var(--orange);
+            box-shadow: 0 22px 45px #00000010
+        }
+
+        .feature .symbol {
+            font-size: 29px;
+            color: var(--orange);
+            font-weight: 900
+        }
+
+        .feature h3 {
+            font-size: 19px;
+            margin: 22px 0 10px
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 14px
+        }
+
+        .dark {
+            background: #111;
+            color: #fff
+        }
+
+        .dark .muted {
+            color: #aaa
+        }
+
+        .tools {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 34px
+        }
+
+        .tool {
+            border: 1px solid #444;
+            padding: 15px 19px;
+            border-radius: 10px;
+            background: #1b1b1b;
+            font-weight: 700;
+            font-size: 13px;
+            transition: all .3s
+        }
+
+        .tool:hover {
+            border-color: var(--orange);
+            transform: translateY(-5px)
+        }
+
+        .curr-intro {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 65px;
+            align-items: start
+        }
+
+        .day {
+            border-bottom: 1px solid #dedede;
+            transition: background .3s
+        }
+
+        .day summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 20px 8px
+        }
+
+        .day summary::-webkit-details-marker {
+            display: none
+        }
+
+        .num {
+            font-weight: 900;
+            color: var(--orange);
+            font-size: 13px
+        }
+
+        .day strong {
+            flex: 1;
+            font-size: 15px
+        }
+
+        .plus {
+            font-size: 24px;
+            font-weight: 400;
+            transition: transform .3s
+        }
+
+        .day[open] .plus {
+            transform: rotate(45deg);
+            color: var(--orange)
+        }
+
+        .daybody {
+            padding: 0 16px 23px 48px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+            animation: appear .3s ease
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        .chips span {
+            border-radius: 6px;
+            background: #f4f4f4;
+            padding: 7px 10px;
+            color: #444;
+            font-size: 12px
+        }
+
+        .role-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-top: 38px
+        }
+
+        .role {
+            padding: 27px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-weight: 800;
+            transition: .3s
+        }
+
+        .role:hover {
+            background: #111;
+            color: #fff;
+            border-color: #111;
+            transform: translateY(-5px)
+        }
+
+        .role b {
+            color: var(--orange);
+            display: block;
+            margin-bottom: 14px
+        }
+
+        .cta {
+            background: var(--orange);
+            padding: 70px;
+            border-radius: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px
+        }
+
+        .cta h2 {
+            font-size: clamp(30px, 4vw, 48px);
+            letter-spacing: -.05em;
+            margin: 0 0 14px
+        }
+
+        .cta p {
+            max-width: 580px;
+            line-height: 1.7;
+            margin: 0
+        }
+
+        .cta a {
+            background: #111;
+            color: #fff;
+            white-space: nowrap;
+            padding: 17px 25px;
+            border-radius: 9px;
+            font-weight: 800
+        }
+
+        .reveal,
+        .reveal-left,
+        .reveal-right {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity .8s ease, transform .8s ease
+        }
+
+        .reveal-left {
+            transform: translateX(-45px)
+        }
+
+        .reveal-right {
+            transform: translateX(45px)
+        }
+
+        .in-view {
+            opacity: 1;
+            transform: none
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(-7px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        @media(max-width:850px) {
+
+            .hero-grid,
+            .curr-intro {
+                grid-template-columns: 1fr
+            }
+
+            .hero-grid {
+                padding: 65px 0
+            }
+
+            .scene {
+                height: 360px
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .role-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:560px) {
+            .wrap {
+                width: min(100% - 28px, 1160px)
+            }
+
+            section {
+                padding: 65px 0
+            }
+
+            .hero {
+                min-height: auto
+            }
+
+            .scene {
+                height: 320px;
+                transform: scale(.84)
+            }
+
+            .feature-grid,
+            .role-grid {
+                grid-template-columns: 1fr
+            }
+
+            .cta {
+                padding: 35px 24px;
+                display: block
+            }
+
+            .cta a {
+                display: inline-block;
+                margin-top: 22px
+            }
+
+            .facts {
+                gap: 22px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *:before,
+            *:after {
+                animation: none !important;
+                scroll-behavior: auto !important
+            }
+
+            .reveal,
+            .reveal-left,
+            .reveal-right {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+    <main>
+        <div class="hero">
+            <div class="wrap hero-grid">
+                <div class="reveal-left">
+                    <div class="eyebrow">✦ CampusZen · Cloud Engineering</div>
+                    <h1>Build Beyond<br><em>The Cloud.</em></h1>
+                    <p class="lead">Master cloud fundamentals, core AWS services, containers, DevOps workflows, and
+                        real-world deployments through practical, guided labs.</p>
+                    <div class="actions"><a class="btn orange" href="./Enroll.html">Enroll Now ↗</a><a
+                            class="btn outline" href="#curriculum">Explore Curriculum ↓</a></div>
+                    <div class="facts">
+                        <div class="fact"><strong>20 Days</strong><small>Learning Plan</small></div>
+                        <div class="fact"><strong>Hands-on</strong><small>Cloud Labs</small></div>
+                        <div class="fact"><strong>Capstone</strong><small>Final Project</small></div>
+                    </div>
+                </div>
+                <div class="scene reveal-right" aria-label="Animated cloud infrastructure illustration">
+                    <div class="halo"></div>
+                    <div class="orbit"></div>
+                    <div class="orbit two"></div>
+                    <div class="cloud"><svg viewBox="0 0 300 200" role="img"
+                            aria-label="Cloud with connected infrastructure">
+                            <path
+                                d="M65 153 C28 153 17 116 40 94 C51 84 62 81 75 84 C78 45 111 23 147 29 C174 33 193 52 199 77 C238 68 275 94 275 126 C275 143 262 153 241 153 Z" />
+                            <path class="line" d="M83 119 H217 M110 100 V137 M150 90 V142 M190 100 V137" />
+                            <g fill="#fe8007">
+                                <circle cx="83" cy="119" r="6" />
+                                <circle cx="150" cy="90" r="6" />
+                                <circle cx="217" cy="119" r="6" />
+                                <circle cx="150" cy="142" r="6" />
+                            </g>
+                        </svg></div>
+                    <div class="node a"><i></i> AWS · ACTIVE</div>
+                    <div class="node b"><i></i> DEPLOYMENT READY</div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="wrap">
+                <div class="reveal">
+                    <div class="kicker">✦ Practical capabilities</div>
+                    <h2 class="heading">Learn. Build. <span>Deploy.</span></h2>
+                    <p class="muted">From your first cloud instance to a scalable final application.</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature reveal">
+                        <div class="symbol">01 /</div>
+                        <h3>Cloud Infrastructure</h3>
+                        <p>Launch compute instances, configure storage and networking, and understand core cloud
+                            architecture.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="symbol">02 /</div>
+                        <h3>Cloud Security</h3>
+                        <p>Apply identity and access controls, understand encryption and shared responsibility, and
+                            review cloud risks.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="symbol">03 /</div>
+                        <h3>DevOps & Automation</h3>
+                        <p>Explore containers, Kubernetes, CI/CD pipelines, and infrastructure as code with hands-on
+                            exercises.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="symbol">04 /</div>
+                        <h3>Serverless Services</h3>
+                        <p>Build event-driven cloud functions and learn when managed services simplify applications.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="symbol">05 /</div>
+                        <h3>Cloud Monitoring</h3>
+                        <p>Track metrics, logs, alerts, budgets, and operational performance.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="symbol">06 /</div>
+                        <h3>Scalable Deployment</h3>
+                        <p>Design high-availability architecture and deploy an end-to-end capstone application.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="dark">
+            <div class="wrap reveal">
+                <div class="kicker">✦ Technology stack</div>
+                <h2 class="heading">Tools You'll <span>Explore.</span></h2>
+                <p class="muted">Cloud and engineering tools featured in the course plan.</p>
+                <div class="tools"><span class="tool">AWS EC2</span><span class="tool">AWS S3</span><span
+                        class="tool">AWS VPC</span><span class="tool">AWS IAM</span><span class="tool">AWS
+                        Lambda</span><span class="tool">CloudWatch</span><span class="tool">Docker</span><span
+                        class="tool">Kubernetes</span><span class="tool">GitHub Actions</span><span
+                        class="tool">Terraform</span><span class="tool">AWS Cost Explorer</span></div>
+            </div>
+        </section>
+        <section id="curriculum">
+            <div class="wrap curr-intro">
+                <div class="reveal-left">
+                    <div class="kicker">✦ 20-day learning journey</div>
+                    <h2 class="heading">Your Cloud<br><span>Roadmap.</span></h2>
+                    <p class="muted">A progressive, practical curriculum from cloud fundamentals through deployment,
+                        capstone development, and interview preparation.</p>
+                    <p class="muted"><strong>Course objective:</strong> To train students in cloud fundamentals, core
+                        cloud services, and deployment practices for cloud support and engineering roles.</p>
+                </div>
+                <div class="reveal-right">
+                    <details class="day reveal" open>
+                        <summary><span class="num">01</span><strong>Cloud Computing Foundations</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>cloud models, IaaS/PaaS/SaaS, benefits</p>
+                            <div class="chips"><span>Tools: Case studies</span><span>Lab: Cloud model mapping</span>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">02</span><strong>Cloud Providers Overview</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>AWS/Azure/GCP comparison, console tour</p>
+                            <div class="chips"><span>Tools: AWS Console</span><span>Lab: Account setup &amp; tour</span>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">03</span><strong>Compute Services</strong><span class="plus">+</span>
+                        </summary>
+                        <div class="daybody">
+                            <p>virtual machines, instances, scaling</p>
+                            <div class="chips"><span>Tools: AWS EC2</span><span>Lab: Launch a VM</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">04</span><strong>Storage Services</strong><span class="plus">+</span>
+                        </summary>
+                        <div class="daybody">
+                            <p>object, block, file storage</p>
+                            <div class="chips"><span>Tools: AWS S3</span><span>Lab: Storage lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">05</span><strong>Networking Basics</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>VPC, subnets, security groups</p>
+                            <div class="chips"><span>Tools: AWS VPC</span><span>Lab: Network setup lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">06</span><strong>Identity &amp; Access Management</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>IAM users, roles, policies</p>
+                            <div class="chips"><span>Tools: AWS IAM</span><span>Lab: IAM policy lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">07</span><strong>Databases in the Cloud</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>RDS, NoSQL, managed databases</p>
+                            <div class="chips"><span>Tools: AWS RDS / DynamoDB</span><span>Lab: Database setup
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">08</span><strong>Serverless Computing</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>functions, triggers, event-driven architecture</p>
+                            <div class="chips"><span>Tools: AWS Lambda</span><span>Lab: Serverless function lab</span>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">09</span><strong>Monitoring &amp; Logging</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>metrics, logs, alerts</p>
+                            <div class="chips"><span>Tools: AWS CloudWatch</span><span>Lab: Monitoring setup lab</span>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">10</span><strong>Mid-Course Project</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>deploy a simple app using compute, storage, DB</p>
+                            <div class="chips"><span>Tools: AWS services</span><span>Lab: Mid-course review</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">11</span><strong>Containers Basics</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>containers vs VMs, Docker fundamentals</p>
+                            <div class="chips"><span>Tools: Docker</span><span>Lab: Containerise an app</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">12</span><strong>Container Orchestration</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>Kubernetes basics, pods, services</p>
+                            <div class="chips"><span>Tools: Kubernetes (demo)</span><span>Lab: Orchestration demo</span>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">13</span><strong>CI/CD Fundamentals</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>pipelines, build, test, deploy stages</p>
+                            <div class="chips"><span>Tools: GitHub Actions</span><span>Lab: CI/CD pipeline lab</span>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">14</span><strong>Infrastructure as Code</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>IaC concepts, Terraform basics</p>
+                            <div class="chips"><span>Tools: Terraform</span><span>Lab: IaC script lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">15</span><strong>Cloud Security Basics</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>shared responsibility, encryption, compliance</p>
+                            <div class="chips"><span>Tools: AWS Security Hub</span><span>Lab: Security review lab</span>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">16</span><strong>Cost Management</strong><span class="plus">+</span>
+                        </summary>
+                        <div class="daybody">
+                            <p>pricing models, cost optimisation, budgets</p>
+                            <div class="chips"><span>Tools: AWS Cost Explorer</span><span>Lab: Cost estimation
+                                    exercise</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">17</span><strong>High Availability &amp; DR</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>load balancing, auto-scaling, backup strategy</p>
+                            <div class="chips"><span>Tools: AWS ELB / Auto Scaling</span><span>Lab: HA architecture
+                                    design</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">18</span><strong>AI in Cloud Operations</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>AI-assisted monitoring and automation</p>
+                            <div class="chips"><span>Tools: ChatGPT + Cloud tools</span><span>Lab: AI-assisted ops
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">19</span><strong>Capstone Build</strong><span class="plus">+</span>
+                        </summary>
+                        <div class="daybody">
+                            <p>deploy a scalable cloud application end to end</p>
+                            <div class="chips"><span>Tools: AWS stack</span><span>Lab: Capstone development</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">20</span><strong>Capstone + Placement</strong><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>project demo, resume, interview prep</p>
+                            <div class="chips"><span>Tools: All tools</span><span>Lab: Final assessment + mock
+                                    interview</span></div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <section style="background:#f6f6f6">
+            <div class="wrap">
+                <div class="reveal">
+                    <div class="kicker">✦ Career pathways</div>
+                    <h2 class="heading">Where Your Skills <span>Lead.</span></h2>
+                    <p class="muted">Target roles identified in the CampusZen course plan.</p>
+                </div>
+                <div class="role-grid">
+                    <div class="role reveal"><b>01</b>Cloud Support Associate</div>
+                    <div class="role reveal"><b>02</b>Cloud Engineer Trainee</div>
+                    <div class="role reveal"><b>03</b>DevOps Associate</div>
+                    <div class="role reveal"><b>04</b>Solutions Associate</div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="wrap">
+                <div class="cta reveal">
+                    <div>
+                        <h2>Ready to Build<br>Your Cloud Future?</h2>
+                        <p>Turn cloud concepts into practical skills through guided labs and a complete capstone
+                            project.</p>
+                    </div><a href="./Enroll.html">Enroll Now ↗</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>const els = document.querySelectorAll('.reveal,.reveal-left,.reveal-right'); if ('IntersectionObserver' in window) { const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target) } }), { threshold: .08 }); els.forEach(e => io.observe(e)) } else els.forEach(e => e.classList.add('in-view')); document.querySelectorAll('.feature-grid,.role-grid').forEach(grid => Array.from(grid.children).forEach((el, i) => el.style.transitionDelay = (i * .09) + 's')); document.querySelectorAll('.day').forEach(d => d.addEventListener('toggle', () => { if (d.open) document.querySelectorAll('.day').forEach(x => { if (x !== d) x.open = false }) }));</script>
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+
+</html>

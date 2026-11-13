@@ -1,0 +1,1216 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Deep Learning Course in Coimbatore | 20 Days | CampusZen</title>
+    <meta name="description"
+        content="Learn neural networks, CNNs, NLP, transformers and AI model deployment in CampusZen's 20-day Deep Learning course in Coimbatore.">
+    <meta name="keywords"
+        content="deep learning course Coimbatore, neural networks training, TensorFlow Keras, CNN, NLP, transformers, AI ML course, CampusZen">
+    <meta name="author" content="CampusZen Learning Solutions">
+    <meta name="robots" content="index,follow">
+    <meta name="geo.region" content="IN-TN">
+    <meta name="geo.placename" content="Coimbatore">
+    <meta name="theme-color" content="#111111">
+        <link rel="stylesheet" href="../css/common.css">
+
+    <link rel="canonical" href="https://www.campuszen.in/courses/DeepLearning.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CampusZen Learning Solutions">
+    <meta property="og:title" content="Deep Learning Course | CampusZen">
+    <meta property="og:description"
+        content="A 20-day hands-on Deep Learning course covering neural networks, CNNs, transformers and deployment.">
+    <meta property="og:url" content="https://www.campuszen.in/courses/DeepLearning.html">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Deep Learning Course | CampusZen">
+    <meta name="twitter:description" content="Build and deploy deep learning applications in 20 days.">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "Deep Learning \u2014 20-Day Course", "description": "Neural networks, CNNs, RNNs, transformers, model deployment and deep learning capstone.", "provider": {"@type": "EducationalOrganization", "name": "CampusZen Learning Solutions", "url": "https://www.campuszen.in/", "address": {"@type": "PostalAddress", "addressLocality": "Coimbatore", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "timeRequired": "P20D", "url": "https://www.campuszen.in/courses/DeepLearning.html"}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --purple: #111111;
+            --purple-hover: #111111;
+            --white: #ffffff;
+            --border: rgba(41, 40, 40, .222);
+            --dot-color: rgba(36, 35, 35, .292);
+            --orange: #fe8007;
+            --muted: #666
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            font-family: 'Inter', sans-serif;
+            color: var(--purple);
+            overflow-x: hidden
+        }
+
+        button,
+        a {
+            font-family: inherit
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        button {
+            cursor: pointer
+        }
+
+        .wrap {
+            max-width: 1180px;
+            width: calc(100% - 42px);
+            margin: auto
+        }
+
+        section {
+            padding: 95px 0
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--orange)
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0
+        }
+
+        h1 {
+            font-size: clamp(48px, 6.3vw, 88px);
+            line-height: 1.03;
+            letter-spacing: -.065em;
+            margin: 20px 0
+        }
+
+        h2 {
+            font-size: clamp(34px, 4.2vw, 58px);
+            line-height: 1.1;
+            letter-spacing: -.05em;
+            margin: 14px 0 20px
+        }
+
+        h3 {
+            letter-spacing: -.03em
+        }
+
+        p {
+            color: var(--muted);
+            line-height: 1.8
+        }
+
+        .orange {
+            color: var(--orange)
+        }
+
+        .btn {
+            display: inline-flex;
+            padding: 16px 24px;
+            border-radius: 7px;
+            font-weight: 800;
+            font-size: 14px;
+            transition: .3s
+        }
+
+        .btn:hover {
+            transform: translateY(-4px)
+        }
+
+        .primary {
+            background: var(--orange);
+            color: #111
+        }
+
+        .outline {
+            color: #111;
+            border: 1px solid var(--border);
+            background: white
+        }
+
+        .hero {
+            padding: 105px 0 95px;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(circle at 80% 35%, #fff3e9, transparent 35%), white
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: .18;
+            background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+            background-size: 24px 24px;
+            pointer-events: none
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            align-items: center;
+            gap: 35px;
+            position: relative
+        }
+
+        .hero p {
+            max-width: 590px;
+            font-size: 17px
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 32px
+        }
+
+        .hero-tags span {
+            border: 1px solid #e4e4e4;
+            background: #fff;
+            padding: 9px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700
+        }
+
+        .scene {
+            position: relative;
+            height: 490px;
+            display: grid;
+            place-items: center;
+            isolation: isolate
+        }
+
+        .scene:before {
+            content: '';
+            position: absolute;
+            width: 390px;
+            height: 390px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #fe80071b, transparent 67%);
+            animation: breathe 4s ease-in-out infinite
+        }
+
+        .orbit {
+            position: absolute;
+            width: min(390px, 95%);
+            aspect-ratio: 1;
+            border: 1px dashed #fe80076e;
+            border-radius: 50%;
+            animation: spin 22s linear infinite
+        }
+
+        .orbit.two {
+            width: 310px;
+            border-style: solid;
+            border-color: #1112;
+            animation-direction: reverse;
+            animation-duration: 16s
+        }
+
+        .orbit.three {
+            width: 225px;
+            border-color: #fe80079a;
+            animation-duration: 11s
+        }
+
+        .orbit:after {
+            content: '';
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--orange);
+            top: 13%;
+            left: 13%;
+            box-shadow: 0 0 0 8px #fe800721, 0 0 22px #fe8007
+        }
+
+        .network {
+            position: relative;
+            width: 245px;
+            height: 245px;
+            filter: drop-shadow(0 16px 25px #1112);
+            animation: float 5s ease-in-out infinite
+        }
+
+        .network svg {
+            width: 100%;
+            height: 100%
+        }
+
+        .network .link {
+            stroke: #111;
+            stroke-width: 2;
+            opacity: .55
+        }
+
+        .network .node {
+            fill: #111;
+            stroke: white;
+            stroke-width: 3
+        }
+
+        .network .active {
+            fill: #fe8007;
+            animation: nodepulse 2s ease-in-out infinite;
+            transform-origin: center
+        }
+
+        .network .active:nth-child(2n) {
+            animation-delay: .6s
+        }
+
+        .float-note {
+            position: absolute;
+            bottom: 36px;
+            right: 0;
+            background: #111;
+            color: #fff;
+            padding: 16px 20px;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px #1113;
+            animation: float 5s ease-in-out infinite 1s;
+            font-size: 12px;
+            font-weight: 800
+        }
+
+        .float-note b {
+            color: var(--orange)
+        }
+
+        .strip {
+            background: #111;
+            padding: 30px 0
+        }
+
+        .strip-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px
+        }
+
+        .strip-item {
+            text-align: center;
+            border-right: 1px solid #ffffff25
+        }
+
+        .strip-item:last-child {
+            border: 0
+        }
+
+        .strip-item strong {
+            display: block;
+            color: var(--orange);
+            font-size: 29px
+        }
+
+        .strip-item span {
+            color: #ddd;
+            font-size: 12px
+        }
+
+        .section-head {
+            max-width: 710px;
+            margin-bottom: 35px
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .feature {
+            padding: 32px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            transition: transform .3s, border-color .3s, box-shadow .3s
+        }
+
+        .feature:hover {
+            transform: translateY(-9px);
+            border-color: var(--orange);
+            box-shadow: 0 18px 50px #11111112
+        }
+
+        .feature .icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 13px;
+            display: grid;
+            place-items: center;
+            background: #fff0e1;
+            color: var(--orange);
+            font-size: 26px;
+            margin-bottom: 24px
+        }
+
+        .feature h3 {
+            font-size: 20px
+        }
+
+        .feature p {
+            font-size: 14px;
+            margin: 0
+        }
+
+        .curriculum {
+            background: #f6f6f6
+        }
+
+        .curr-top {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 28px
+        }
+
+        .curr-top p {
+            max-width: 390px
+        }
+
+        .tabs {
+            display: flex;
+            gap: 9px;
+            flex-wrap: wrap;
+            margin-bottom: 22px
+        }
+
+        .tab {
+            padding: 11px 18px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: 800;
+            color: #111
+        }
+
+        .tab.active,
+        .tab:hover {
+            background: #111;
+            color: white
+        }
+
+        .days {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: start;
+            gap: 12px
+        }
+
+        .day {
+            border: 1px solid #e4e4e4;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: .25s
+        }
+
+        .day[hidden] {
+            display: none
+        }
+
+        .day[open] {
+            border-color: var(--orange);
+            box-shadow: 0 10px 32px #1111
+        }
+
+        .day summary {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 19px 20px;
+            cursor: pointer;
+            font-weight: 800;
+            font-size: 14px
+        }
+
+        .day summary::-webkit-details-marker {
+            display: none
+        }
+
+        .day-num {
+            color: var(--orange);
+            font-weight: 900
+        }
+
+        .day summary>span:nth-child(2) {
+            flex: 1
+        }
+
+        .plus {
+            color: var(--orange);
+            font-size: 24px;
+            font-weight: 400;
+            transition: transform .25s
+        }
+
+        .day[open] .plus {
+            transform: rotate(45deg)
+        }
+
+        .day-content {
+            padding: 0 20px 20px
+        }
+
+        .day-content p {
+            font-size: 13px;
+            margin-bottom: 12px
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        .chips span {
+            font-size: 11px;
+            background: #f7f7f7;
+            border-radius: 5px;
+            padding: 8px 10px;
+            color: #555
+        }
+
+        .chips b {
+            color: #fe8007;
+            margin-right: 4px
+        }
+
+        .outcome-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 65px;
+            align-items: center
+        }
+
+        .roles {
+            display: flex;
+            gap: 9px;
+            flex-wrap: wrap
+        }
+
+        .roles span {
+            padding: 10px 13px;
+            border: 1px solid #f1c79d;
+            border-radius: 7px;
+            font-size: 12px;
+            font-weight: 700;
+            background: #fff8f2
+        }
+
+        .outcome-card {
+            background: #f6f6f6;
+            padding: 35px;
+            border: 1px solid #e9e9e9;
+            border-radius: 17px
+        }
+
+        .outcome-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0
+        }
+
+        .outcome-card li {
+            padding: 13px 0 13px 30px;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+            font-size: 14px
+        }
+
+        .outcome-card li:last-child {
+            border: 0
+        }
+
+        .outcome-card li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--orange);
+            font-weight: 900
+        }
+
+        .cta {
+            padding-top: 25px
+        }
+
+        .cta-box {
+            position: relative;
+            background: #111;
+            border-radius: 22px;
+            color: white;
+            padding: 70px;
+            overflow: hidden
+        }
+
+        .cta-box:after {
+            content: '';
+            position: absolute;
+            width: 330px;
+            height: 330px;
+            border: 1px solid #fe800765;
+            border-radius: 50%;
+            right: -90px;
+            top: -90px;
+            box-shadow: 0 0 0 45px #fe80070a, 0 0 0 95px #fe800707;
+            pointer-events: none
+        }
+
+        .cta-box h2 {
+            color: white
+        }
+
+        .cta-box p {
+            color: #ccc;
+            max-width: 620px
+        }
+
+        .cta-box .btn {
+            position: relative;
+            z-index: 1
+        }
+
+        .reveal,
+        .reveal-left,
+        .reveal-right {
+            opacity: 0;
+            transition: opacity .75s ease, transform .75s ease
+        }
+
+        .reveal {
+            transform: translateY(34px)
+        }
+
+        .reveal-left {
+            transform: translateX(-42px)
+        }
+
+        .reveal-right {
+            transform: translateX(42px)
+        }
+
+        .in-view {
+            opacity: 1;
+            transform: translate(0)
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-16px)
+            }
+        }
+
+        @keyframes breathe {
+            50% {
+                transform: scale(1.14);
+                opacity: .6
+            }
+        }
+
+        @keyframes nodepulse {
+            50% {
+                opacity: .45
+            }
+        }
+
+        @media(max-width:850px) {
+
+            .hero-grid,
+            .outcome-grid {
+                grid-template-columns: 1fr
+            }
+
+            .scene {
+                height: 390px
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .curr-top {
+                display: block
+            }
+        }
+
+        @media(max-width:600px) {
+            section {
+                padding: 65px 0
+            }
+
+            .hero {
+                padding: 65px 0
+            }
+
+            .scene {
+                height: 320px
+            }
+
+            .orbit {
+                width: 290px
+            }
+
+            .orbit.two {
+                width: 230px
+            }
+
+            .orbit.three {
+                width: 170px
+            }
+
+            .network {
+                width: 180px;
+                height: 180px
+            }
+
+            .float-note {
+                bottom: 0;
+                right: 0
+            }
+
+            .features,
+            .days {
+                grid-template-columns: 1fr
+            }
+
+            .strip-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .strip-item:nth-child(2) {
+                border: 0
+            }
+
+            .cta-box {
+                padding: 42px 25px
+            }
+
+            .outcome-card {
+                padding: 25px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *:before,
+            *:after {
+                animation: none !important;
+                scroll-behavior: auto !important
+            }
+
+            .reveal,
+            .reveal-left,
+            .reveal-right {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+    <main>
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div class="reveal-left">
+                    <div class="eyebrow">CampusZen · AI / ML Program</div>
+                    <h1>Train the<br><span class="orange">Intelligence.</span><br>Build the Future.</h1>
+                    <p>Go beyond machine learning. Master neural networks, computer vision, NLP and transformers — then
+                        build and deploy your own deep learning application.</p>
+                    <div class="actions"><a class="btn primary" href="./Enroll.html">Enroll Now ↗</a><a
+                            class="btn outline" href="#curriculum">Explore Curriculum ↓</a></div>
+                    <div class="hero-tags"><span>20-Day Learning Plan</span><span>Hands-On Labs</span><span>Capstone
+                            Project</span></div>
+                </div>
+                <div class="scene reveal-right" aria-label="Animated neural network illustration">
+                    <div class="orbit"></div>
+                    <div class="orbit two"></div>
+                    <div class="orbit three"></div>
+                    <div class="network"><svg viewBox="0 0 245 245" role="img" aria-label="Neural network connections">
+                            <g class="link">
+                                <path
+                                    d="M35 48L115 36 205 55M35 48L80 121 190 126 205 55M35 195L80 121 115 36M35 195L125 210 190 126M125 210L205 55M115 36L190 126M80 121L125 210"
+                                    fill="none" />
+                            </g>
+                            <g>
+                                <circle class="node" cx="35" cy="48" r="14" />
+                                <circle class="node active" cx="115" cy="36" r="13" />
+                                <circle class="node" cx="205" cy="55" r="15" />
+                                <circle class="node active" cx="80" cy="121" r="18" />
+                                <circle class="node" cx="190" cy="126" r="17" />
+                                <circle class="node" cx="35" cy="195" r="14" />
+                                <circle class="node active" cx="125" cy="210" r="15" />
+                            </g>
+                        </svg></div>
+                    <div class="float-note">● <b>NEURAL NETWORK</b><br>Training in progress...</div>
+                </div>
+            </div>
+        </section>
+        <div class="strip">
+            <div class="wrap strip-grid">
+                <div class="strip-item reveal"><strong>20</strong><span>Course Days</span></div>
+                <div class="strip-item reveal"><strong>2</strong><span>Learning Phases</span></div>
+                <div class="strip-item reveal"><strong>AI</strong><span>Practical Tools</span></div>
+                <div class="strip-item reveal"><strong>1</strong><span>Final Capstone</span></div>
+            </div>
+        </div>
+        <section>
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <div class="eyebrow">What you will learn</div>
+                    <h2>From Neural Networks<br>to <span class="orange">Real AI Systems.</span></h2>
+                    <p>Develop the core skills to build, evaluate and deploy deep learning models through structured
+                        practical exercises.</p>
+                </div>
+                <div class="features">
+                    <article class="feature reveal">
+                        <div class="icon">◉</div>
+                        <h3>Neural Networks</h3>
+                        <p>Learn perceptrons, activation functions, backpropagation, loss functions and optimisation.
+                        </p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="icon">▦</div>
+                        <h3>Computer Vision</h3>
+                        <p>Build convolutional neural networks, apply transfer learning and train image classifiers.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="icon">⌁</div>
+                        <h3>Sequence Models</h3>
+                        <p>Explore RNNs, LSTM/GRU, tokenisation, embeddings and NLP classification.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="icon">✦</div>
+                        <h3>Transformers</h3>
+                        <p>Understand attention and use pretrained Hugging Face models for practical tasks.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="icon">⬡</div>
+                        <h3>Generative Models</h3>
+                        <p>Get introduced to autoencoders, GANs and their core use cases.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="icon">↗</div>
+                        <h3>Deployment & MLOps</h3>
+                        <p>Serve models with Flask or FastAPI and explore experiment tracking with MLflow.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="curriculum" id="curriculum">
+            <div class="wrap">
+                <div class="curr-top">
+                    <div class="reveal-left">
+                        <div class="eyebrow">Day-wise course structure</div>
+                        <h2>20 Days. <span class="orange">One AI Journey.</span></h2>
+                    </div>
+                    <p class="reveal-right">Explore the exact topics, tools and activities in the CampusZen course
+                        planner.</p>
+                </div>
+                <div class="tabs"><button type="button" class="tab active" data-range="all" aria-pressed="true">All 20
+                        Days</button><button type="button" class="tab" data-range="first" aria-pressed="false">Days
+                        01–10</button><button type="button" class="tab" data-range="second" aria-pressed="false">Days
+                        11–20</button></div>
+                <div class="days">
+                    <details class="day reveal" data-day="1">
+                        <summary><span class="day-num">01</span><span>Deep Learning Foundations</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>AI vs ML vs DL, applications, workflow</p>
+                            <div class="chips"><span><b>TOOLS</b> Case studies</span><span><b>ACTIVITY</b> Use case
+                                    mapping</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="2">
+                        <summary><span class="day-num">02</span><span>Python &amp; Math Refresher</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>NumPy, linear algebra, calculus basics</p>
+                            <div class="chips"><span><b>TOOLS</b> Python + NumPy</span><span><b>ACTIVITY</b> Math
+                                    refresher lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="3">
+                        <summary><span class="day-num">03</span><span>Neural Network Basics</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>perceptron, activation functions, forward pass</p>
+                            <div class="chips"><span><b>TOOLS</b> TensorFlow/Keras</span><span><b>ACTIVITY</b> First
+                                    neural network</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="4">
+                        <summary><span class="day-num">04</span><span>Training Neural Networks</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>loss functions, backpropagation, gradient descent</p>
+                            <div class="chips"><span><b>TOOLS</b> TensorFlow/Keras</span><span><b>ACTIVITY</b> Training
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="5">
+                        <summary><span class="day-num">05</span><span>Optimisation Techniques</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>SGD, Adam, learning rate, regularisation</p>
+                            <div class="chips"><span><b>TOOLS</b> TensorFlow/Keras</span><span><b>ACTIVITY</b> Optimiser
+                                    comparison</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="6">
+                        <summary><span class="day-num">06</span><span>Model Evaluation</span><span class="plus">+</span>
+                        </summary>
+                        <div class="day-content">
+                            <p>train/val/test split, overfitting, metrics</p>
+                            <div class="chips"><span><b>TOOLS</b> scikit-learn</span><span><b>ACTIVITY</b> Evaluation
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="7">
+                        <summary><span class="day-num">07</span><span>Convolutional Neural Networks I</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>convolution, pooling, CNN architecture</p>
+                            <div class="chips"><span><b>TOOLS</b> TensorFlow/Keras</span><span><b>ACTIVITY</b> Build a
+                                    CNN</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="8">
+                        <summary><span class="day-num">08</span><span>Convolutional Neural Networks II</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>transfer learning, pretrained models</p>
+                            <div class="chips"><span><b>TOOLS</b> Keras Applications</span><span><b>ACTIVITY</b>
+                                    Transfer learning lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="9">
+                        <summary><span class="day-num">09</span><span>Image Classification Project</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>data augmentation, training pipeline</p>
+                            <div class="chips"><span><b>TOOLS</b> TensorFlow/Keras</span><span><b>ACTIVITY</b> Image
+                                    classifier build</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="10">
+                        <summary><span class="day-num">10</span><span>Mid-Course Project</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>train and evaluate a CNN on a dataset</p>
+                            <div class="chips"><span><b>TOOLS</b> TensorFlow/Keras</span><span><b>ACTIVITY</b>
+                                    Mid-course review</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="11">
+                        <summary><span class="day-num">11</span><span>Recurrent Neural Networks</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>RNN basics, vanishing gradients, LSTM/GRU</p>
+                            <div class="chips"><span><b>TOOLS</b> TensorFlow/Keras</span><span><b>ACTIVITY</b> Sequence
+                                    model lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="12">
+                        <summary><span class="day-num">12</span><span>NLP with Deep Learning</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>tokenisation, embeddings, text classification</p>
+                            <div class="chips"><span><b>TOOLS</b> TensorFlow/Keras</span><span><b>ACTIVITY</b> Text
+                                    classifier build</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="13">
+                        <summary><span class="day-num">13</span><span>Attention &amp; Transformers</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>attention mechanism, transformer basics</p>
+                            <div class="chips"><span><b>TOOLS</b> Hugging Face</span><span><b>ACTIVITY</b> Transformer
+                                    demo</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="14">
+                        <summary><span class="day-num">14</span><span>Working with Pretrained Models</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>Hugging Face models, fine-tuning basics</p>
+                            <div class="chips"><span><b>TOOLS</b> Hugging Face</span><span><b>ACTIVITY</b> Fine-tuning
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="15">
+                        <summary><span class="day-num">15</span><span>Generative Models Intro</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>autoencoders, GANs overview</p>
+                            <div class="chips"><span><b>TOOLS</b> TensorFlow/Keras</span><span><b>ACTIVITY</b>
+                                    Autoencoder demo</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="16">
+                        <summary><span class="day-num">16</span><span>Model Deployment</span><span class="plus">+</span>
+                        </summary>
+                        <div class="day-content">
+                            <p>saving models, Flask/FastAPI, REST endpoints</p>
+                            <div class="chips"><span><b>TOOLS</b> Flask / FastAPI</span><span><b>ACTIVITY</b> Deploy a
+                                    model API</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="17">
+                        <summary><span class="day-num">17</span><span>MLOps Basics</span><span class="plus">+</span>
+                        </summary>
+                        <div class="day-content">
+                            <p>versioning, experiment tracking, monitoring</p>
+                            <div class="chips"><span><b>TOOLS</b> MLflow (demo)</span><span><b>ACTIVITY</b> Experiment
+                                    tracking lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="18">
+                        <summary><span class="day-num">18</span><span>AI Tools &amp; Automation</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>AutoML overview, using AI coding assistants</p>
+                            <div class="chips"><span><b>TOOLS</b> ChatGPT + AutoML</span><span><b>ACTIVITY</b>
+                                    AI-assisted model building</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="19">
+                        <summary><span class="day-num">19</span><span>Capstone Build</span><span class="plus">+</span>
+                        </summary>
+                        <div class="day-content">
+                            <p>end-to-end deep learning application</p>
+                            <div class="chips"><span><b>TOOLS</b> TensorFlow/Keras + Flask</span><span><b>ACTIVITY</b>
+                                    Capstone development</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal" data-day="20">
+                        <summary><span class="day-num">20</span><span>Capstone + Placement</span><span
+                                class="plus">+</span></summary>
+                        <div class="day-content">
+                            <p>project demo, resume, interview prep</p>
+                            <div class="chips"><span><b>TOOLS</b> All tools</span><span><b>ACTIVITY</b> Final assessment
+                                    + mock interview</span></div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="wrap outcome-grid">
+                <div class="reveal-left">
+                    <div class="eyebrow">Career pathways</div>
+                    <h2>Turn AI Skills Into<br><span class="orange">Career Possibilities.</span></h2>
+                    <p>Build a foundation for entry-level roles involving deep learning, computer vision and natural
+                        language processing.</p>
+                    <h3>Target roles</h3>
+                    <div class="roles"><span>Deep Learning Engineer Trainee</span><span>AI/ML
+                            Associate</span><span>Computer Vision Associate</span><span>NLP Engineer Trainee</span>
+                    </div>
+                </div>
+                <div class="outcome-card reveal-right">
+                    <h3>What you'll be able to do</h3>
+                    <ul>
+                        <li>Train and evaluate neural networks using TensorFlow/Keras</li>
+                        <li>Build image classification models with CNNs</li>
+                        <li>Apply pretrained models and basic fine-tuning</li>
+                        <li>Explore RNNs, transformers and generative architectures</li>
+                        <li>Deploy a model behind a REST API</li>
+                        <li>Present an end-to-end deep learning capstone</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="cta" id="enquire">
+            <div class="wrap">
+                <div class="cta-box reveal">
+                    <div class="eyebrow">Your next step starts here</div>
+                    <h2>Ready to Build<br><span class="orange">Smarter Systems?</span></h2>
+                    <p>Start learning Deep Learning with hands-on labs, guided projects and a final capstone
+                        demonstration.</p><a class="btn primary" href="./Enroll.html">Enroll Now ↗</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>(() => { 'use strict'; const days = [...document.querySelectorAll('.day')]; document.querySelectorAll('.tab').forEach(btn => btn.addEventListener('click', () => { document.querySelectorAll('.tab').forEach(b => { b.classList.toggle('active', b === btn); b.setAttribute('aria-pressed', String(b === btn)); }); days.forEach((d, i) => d.hidden = btn.dataset.range === 'first' ? i >= 10 : btn.dataset.range === 'second' ? i < 10 : false) })); days.forEach(day => day.addEventListener('toggle', () => { if (day.open) days.forEach(d => { if (d !== day) d.open = false }) })); document.querySelectorAll('.features,.days,.strip-grid').forEach(g => [...g.children].forEach((el, i) => el.style.transitionDelay = (i % 6 * .075) + 's')); const els = document.querySelectorAll('.reveal,.reveal-left,.reveal-right'); if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) { const ob = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); ob.unobserve(e.target) } }), { threshold: .07 }); els.forEach(e => ob.observe(e)) } else els.forEach(e => e.classList.add('in-view')) })();</script>
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+
+</html>

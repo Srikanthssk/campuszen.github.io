@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NGS Data Analysis Course in Coimbatore | CampusZen Learning Solutions</title>
+    <meta name="description"
+        content="Learn NGS data analysis in 20 hands-on days at CampusZen, Coimbatore. Practice FastQC, BWA, SAMtools, GATK, RNA-seq, DESeq2 and genomics workflows.">
+    <meta name="keywords"
+        content="NGS data analysis course Coimbatore, next generation sequencing training, FastQC, RNA-seq, variant calling, bioinformatics, CampusZen">
+    <meta name="author" content="CampusZen Learning Solutions">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="IN-TN">
+    <meta name="geo.placename" content="Coimbatore">
+        <link rel="stylesheet" href="../css/common.css">
+
+    <link rel="canonical" href="https://www.campuszen.in/courses/NGSDataAnalysis.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NGS Data Analysis Course | CampusZen">
+    <meta property="og:description"
+        content="20-day hands-on NGS training from sequencing reads to variants and expression analysis.">
+    <meta property="og:url" content="https://www.campuszen.in/courses/NGSDataAnalysis.html">
+    <meta property="og:site_name" content="CampusZen Learning Solutions">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="NGS Data Analysis — CampusZen">
+    <meta name="twitter:description" content="20 days of practical NGS analysis training in Coimbatore.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "NGS Data Analysis", "description": "20-day practical course in next-generation sequencing, read quality control, alignment, variant calling, RNA-seq, differential expression and workflow automation.", "provider": {"@type": "EducationalOrganization", "name": "CampusZen Learning Solutions", "address": {"@type": "PostalAddress", "addressLocality": "Coimbatore", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "url": "https://www.campuszen.in/courses/NGSDataAnalysis.html", "timeRequired": "P20D", "teaches": ["NGS quality control", "Read alignment", "Variant calling and annotation", "RNA-seq", "Differential expression", "Workflow automation"]}</script>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --purple: #111111;
+            --purple-hover: #000000;
+            --white: #ffffff;
+            --border: rgba(41, 40, 40, .222);
+            --dot-color: rgba(36, 35, 35, .292);
+            --orange: #fe8007;
+            --ink: #111;
+            --muted: #686868
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--ink)
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        button {
+            font-family: inherit
+        }
+
+        .wrap {
+            width: min(1160px, calc(100% - 40px));
+            margin: auto
+        }
+
+        .hero {
+            background: #101010;
+            color: white;
+            min-height: 650px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(#ffffff20 1px, transparent 1px);
+            background-size: 25px 25px;
+            mask-image: linear-gradient(90deg, transparent, #000)
+        }
+
+        .hero-grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+            padding: 105px 0
+        }
+
+        .eyebrow,
+        .label {
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--orange)
+        }
+
+        h1 {
+            font-size: clamp(45px, 5.4vw, 80px);
+            line-height: 1.05;
+            letter-spacing: -.065em;
+            margin: 20px 0
+        }
+
+        h1 em {
+            color: var(--orange);
+            font-style: normal
+        }
+
+        .hero p {
+            color: #c9c9c9;
+            line-height: 1.85;
+            max-width: 520px
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 32px 0
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 23px;
+            border-radius: 7px;
+            font-weight: 800;
+            font-size: 14px;
+            transition: transform .3s, background .3s
+        }
+
+        .btn:hover {
+            transform: translateY(-4px)
+        }
+
+        .btn-orange {
+            background: var(--orange);
+            color: #111
+        }
+
+        .btn-border {
+            border: 1px solid #777;
+            color: white
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 45px
+        }
+
+        .hero-stats strong {
+            display: block;
+            font-size: 26px
+        }
+
+        .hero-stats small {
+            color: #aaa
+        }
+
+        .sequencer {
+            position: relative;
+            width: min(475px, 100%);
+            aspect-ratio: 1;
+            margin: auto;
+            display: grid;
+            place-items: center
+        }
+
+        .halo {
+            position: absolute;
+            inset: 6%;
+            border: 1px solid #fe80074a;
+            border-radius: 50%;
+            animation: rotate 20s linear infinite
+        }
+
+        .halo:nth-child(2) {
+            inset: 17%;
+            border-style: dashed;
+            animation-direction: reverse;
+            animation-duration: 13s
+        }
+
+        .halo:nth-child(3) {
+            inset: 29%;
+            animation-duration: 9s
+        }
+
+        .halo:after {
+            content: '';
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            width: 11px;
+            height: 11px;
+            background: var(--orange);
+            border-radius: 50%;
+            box-shadow: 0 0 22px var(--orange)
+        }
+
+        .read-window {
+            position: relative;
+            width: 67%;
+            background: #191919;
+            border: 1px solid #fe80076b;
+            border-radius: 17px;
+            padding: 22px;
+            box-shadow: 0 0 65px #fe80071c;
+            transform: rotate(-7deg);
+            animation: float 5s ease-in-out infinite
+        }
+
+        .terminal-head {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 18px
+        }
+
+        .terminal-head i {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--orange)
+        }
+
+        .terminal-head i:nth-child(2) {
+            opacity: .6
+        }
+
+        .terminal-head i:nth-child(3) {
+            opacity: .3
+        }
+
+        .read {
+            display: flex;
+            gap: 5px;
+            margin: 10px 0;
+            animation: scan 2.8s ease-in-out infinite alternate
+        }
+
+        .read:nth-child(odd) {
+            animation-delay: -1.1s
+        }
+
+        .base {
+            flex: 1;
+            min-width: 0;
+            text-align: center;
+            background: #333;
+            border-radius: 3px;
+            color: #ddd;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 8px 0
+        }
+
+        .base.hot {
+            background: var(--orange);
+            color: #111;
+            box-shadow: 0 0 12px #fe800766
+        }
+
+        .read-caption {
+            color: #aaa;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            margin-top: 20px
+        }
+
+        .floating-label {
+            position: absolute;
+            right: -2%;
+            bottom: 12%;
+            border: 1px solid #555;
+            background: #1e1e1e;
+            padding: 14px 17px;
+            border-radius: 9px;
+            font-size: 12px;
+            animation: float 4s ease-in-out infinite reverse
+        }
+
+        .floating-label b {
+            color: var(--orange)
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-15px) rotate(-4deg)
+            }
+        }
+
+        @keyframes scan {
+            to {
+                transform: translateX(7px);
+                opacity: .7
+            }
+        }
+
+        section {
+            padding: 95px 0
+        }
+
+        .section-title {
+            font-size: clamp(34px, 4vw, 54px);
+            letter-spacing: -.06em;
+            line-height: 1.13;
+            margin: 15px 0 20px
+        }
+
+        .section-title span {
+            color: var(--orange)
+        }
+
+        .lead {
+            max-width: 700px;
+            color: var(--muted);
+            line-height: 1.85
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 42px
+        }
+
+        .tile {
+            border: 1px solid var(--border);
+            padding: 30px 24px;
+            border-radius: 12px;
+            transition: transform .3s, border-color .3s, box-shadow .3s
+        }
+
+        .tile:hover {
+            transform: translateY(-8px);
+            border-color: var(--orange);
+            box-shadow: 0 15px 35px #0000000d
+        }
+
+        .tile .index {
+            color: var(--orange);
+            font-weight: 900
+        }
+
+        .tile h3 {
+            font-size: 19px;
+            letter-spacing: -.035em;
+            margin: 25px 0 10px
+        }
+
+        .tile p {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #666
+        }
+
+        .dark {
+            background: #111;
+            color: white
+        }
+
+        .dark .lead {
+            color: #bbb
+        }
+
+        .tool-list {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 32px
+        }
+
+        .tool-list span {
+            background: #222;
+            border: 1px solid #484848;
+            border-radius: 8px;
+            padding: 13px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: background .3s, color .3s
+        }
+
+        .tool-list span:hover {
+            background: var(--orange);
+            color: #111
+        }
+
+        .curr {
+            display: grid;
+            grid-template-columns: .75fr 1.25fr;
+            gap: 65px;
+            align-items: start
+        }
+
+        .sticky {
+            position: sticky;
+            top: 25px
+        }
+
+        details {
+            border-bottom: 1px solid #ddd
+        }
+
+        details:first-child {
+            border-top: 1px solid #ddd
+        }
+
+        summary {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 17px;
+            padding: 20px 8px;
+            list-style: none
+        }
+
+        summary::-webkit-details-marker {
+            display: none
+        }
+
+        .daynum {
+            color: #e47708;
+            font-weight: 900;
+            font-size: 13px
+        }
+
+        .daytitle {
+            font-weight: 800;
+            flex: 1
+        }
+
+        .plus {
+            color: var(--orange);
+            font-size: 25px;
+            transition: transform .3s
+        }
+
+        details[open] .plus {
+            transform: rotate(45deg)
+        }
+
+        .daybody {
+            padding: 0 18px 20px 43px;
+            animation: appear .3s ease
+        }
+
+        .daybody p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7
+        }
+
+        .meta {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        .meta span {
+            background: #f5f5f5;
+            border-radius: 5px;
+            padding: 9px 11px;
+            font-size: 12px
+        }
+
+        .meta b {
+            color: #b85e00
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(-8px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px
+        }
+
+        .roles span {
+            border: 1px solid #555;
+            padding: 14px 19px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px
+        }
+
+        .roles span:hover {
+            border-color: var(--orange)
+        }
+
+        .cta {
+            background: var(--orange);
+            border-radius: 18px;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px
+        }
+
+        .cta h2 {
+            font-size: clamp(30px, 4vw, 48px);
+            letter-spacing: -.055em;
+            margin: 0 0 15px
+        }
+
+        .cta p {
+            line-height: 1.75;
+            max-width: 610px
+        }
+
+        .cta .btn {
+            background: #111;
+            color: #fff;
+            white-space: nowrap
+        }
+
+        .reveal,
+        .reveal-left,
+        .reveal-right {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity .75s ease, transform .75s ease
+        }
+
+        .reveal-left {
+            transform: translateX(-38px)
+        }
+
+        .reveal-right {
+            transform: translateX(38px)
+        }
+
+        .in-view {
+            opacity: 1;
+            transform: none
+        }
+
+        @media(max-width:950px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                padding: 80px 0
+            }
+
+            .sequencer {
+                max-width: 390px
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .curr {
+                grid-template-columns: 1fr;
+                gap: 25px
+            }
+
+            .sticky {
+                position: static
+            }
+        }
+
+        @media(max-width:600px) {
+            .wrap {
+                width: calc(100% - 30px)
+            }
+
+            .hero-grid {
+                padding: 65px 0
+            }
+
+            .sequencer {
+                max-width: 290px
+            }
+
+            section {
+                padding: 65px 0
+            }
+
+            .grid {
+                grid-template-columns: 1fr
+            }
+
+            .cta {
+                padding: 28px;
+                display: block
+            }
+
+            .cta .btn {
+                margin-top: 18px
+            }
+
+            .hero-stats {
+                gap: 20px
+            }
+
+            .daybody {
+                padding-left: 28px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *:before,
+            *:after {
+                animation: none !important;
+                transition: none !important
+            }
+
+            .reveal,
+            .reveal-left,
+            .reveal-right {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+    <main>
+        <div class="hero">
+            <div class="wrap hero-grid">
+                <div class="reveal-left"><span class="eyebrow">CampusZen · Bioscience Program 02</span>
+                    <h1>From Raw Reads<br>to <em>Real Insights.</em></h1>
+                    <p>NGS Data Analysis — learn to process sequencing data from raw reads to genomic variants and
+                        expression results through hands-on bioinformatics workflows.</p>
+                    <div class="buttons"><a class="btn btn-orange" href="./Enroll.html">Enroll Now →</a><a
+                            class="btn btn-border" href="#curriculum">Explore Curriculum ↓</a></div>
+                    <div class="hero-stats">
+                        <div><strong>20</strong><small>Learning Days</small></div>
+                        <div><strong>Hands-on</strong><small>Practical Labs</small></div>
+                        <div><strong>Capstone</strong><small>Final Project</small></div>
+                    </div>
+                </div>
+                <div class="sequencer reveal-right" aria-label="Animated DNA sequencing read visualization">
+                    <div class="halo"></div>
+                    <div class="halo"></div>
+                    <div class="halo"></div>
+                    <div class="read-window">
+                        <div class="terminal-head"><i></i><i></i><i></i></div>
+                        <div class="read"><span class="base hot">A</span><span class="base ">C</span><span
+                                class="base ">G</span><span class="base ">T</span><span class="base hot">A</span><span
+                                class="base ">G</span><span class="base ">C</span><span class="base ">T</span></div>
+                        <div class="read"><span class="base ">G</span><span class="base ">C</span><span
+                                class="base ">T</span><span class="base hot">A</span><span class="base ">A</span><span
+                                class="base ">C</span><span class="base ">G</span><span class="base hot">T</span></div>
+                        <div class="read"><span class="base ">T</span><span class="base ">T</span><span
+                                class="base hot">G</span><span class="base ">A</span><span class="base ">C</span><span
+                                class="base ">G</span><span class="base hot">T</span><span class="base ">A</span></div>
+                        <div class="read"><span class="base ">C</span><span class="base hot">G</span><span
+                                class="base ">A</span><span class="base ">T</span><span class="base ">T</span><span
+                                class="base hot">C</span><span class="base ">G</span><span class="base ">A</span></div>
+                        <div class="read"><span class="base hot">A</span><span class="base ">A</span><span
+                                class="base ">G</span><span class="base ">C</span><span class="base hot">T</span><span
+                                class="base ">T</span><span class="base ">G</span><span class="base ">C</span></div>
+                        <div class="read"><span class="base ">G</span><span class="base ">T</span><span
+                                class="base ">A</span><span class="base hot">C</span><span class="base ">C</span><span
+                                class="base ">G</span><span class="base ">A</span><span class="base hot">T</span></div>
+                        <div class="read-caption">SEQUENCING READS · ANALYSIS IN PROGRESS</div>
+                    </div>
+                    <div class="floating-label"><b>NGS</b> · Reads → Results</div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="wrap"><span class="label reveal">Core capabilities</span>
+                <h2 class="section-title reveal">Make Sense of <span>Sequencing Data.</span></h2>
+                <p class="lead reveal">Learn the steps of a real NGS analysis workflow, from checking raw data quality
+                    to interpreting variants and gene expression.</p>
+                <div class="grid">
+                    <article class="tile reveal"><span class="index">01</span>
+                        <h3>Quality Control</h3>
+                        <p>Inspect sequencing reads, review QC reports and trim low-quality data.</p>
+                    </article>
+                    <article class="tile reveal"><span class="index">02</span>
+                        <h3>Alignment & BAM</h3>
+                        <p>Map reads to reference genomes, then sort, index and inspect alignment files.</p>
+                    </article>
+                    <article class="tile reveal"><span class="index">03</span>
+                        <h3>Variant Analysis</h3>
+                        <p>Call, filter and annotate SNPs and indels using standard genomics tools.</p>
+                    </article>
+                    <article class="tile reveal"><span class="index">04</span>
+                        <h3>RNA-Seq Analysis</h3>
+                        <p>Generate count matrices, compare expression and explore enriched pathways.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="dark">
+            <div class="wrap"><span class="label reveal">Hands-on toolkit</span>
+                <h2 class="section-title reveal">Tools You Will <span>Use.</span></h2>
+                <p class="lead reveal">Practical exposure to the tools listed in your course planner.</p>
+                <div class="tool-list reveal"><span>Linux</span><span>FastQC / MultiQC</span><span>fastp</span><span>BWA
+                        / HISAT2</span><span>SAMtools</span><span>IGV</span><span>GATK / bcftools</span><span>SnpEff /
+                        ANNOVAR</span><span>featureCounts</span><span>DESeq2</span><span>ggplot2</span><span>clusterProfiler</span><span>Snakemake</span>
+                </div>
+            </div>
+        </section>
+        <section id="curriculum">
+            <div class="wrap curr">
+                <div class="sticky reveal-left"><span class="label">Course structure</span>
+                    <h2 class="section-title">Your 20-Day <span>Learning Plan.</span></h2>
+                    <p class="lead">Each day combines concepts, tools and a practical activity. Select a day to see the
+                        details.</p>
+                </div>
+                <div class="days reveal-right">
+                    <details class="day" open>
+                        <summary><span class="daynum">01</span><span class="daytitle">NGS Foundations</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>platforms, read types, workflows</p>
+                            <div class="meta"><span><b>Tools:</b> Illumina overview</span><span><b>Activity:</b>
+                                    Platform review</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">02</span><span class="daytitle">Linux for NGS</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>shell, permissions, compression</p>
+                            <div class="meta"><span><b>Tools:</b> Linux terminal</span><span><b>Activity:</b> Command
+                                    drills</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">03</span><span class="daytitle">Sequence Formats</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>FASTQ, SAM/BAM, VCF, BED</p>
+                            <div class="meta"><span><b>Tools:</b> SAMtools</span><span><b>Activity:</b> Format
+                                    inspection</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">04</span><span class="daytitle">Quality Control</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>Phred scores, adapters, QC reports</p>
+                            <div class="meta"><span><b>Tools:</b> FastQC / MultiQC</span><span><b>Activity:</b> QC
+                                    report</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">05</span><span class="daytitle">Read Trimming</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>trimming, filtering</p>
+                            <div class="meta"><span><b>Tools:</b> Trimmomatic / fastp</span><span><b>Activity:</b> Trim
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">06</span><span class="daytitle">Read Alignment</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>BWA, HISAT2, indexing</p>
+                            <div class="meta"><span><b>Tools:</b> BWA / HISAT2</span><span><b>Activity:</b> Alignment
+                                    run</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">07</span><span class="daytitle">BAM Processing</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>sort, index, dedup, stats</p>
+                            <div class="meta"><span><b>Tools:</b> SAMtools</span><span><b>Activity:</b> BAM
+                                    handling</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">08</span><span class="daytitle">Genome Browsing</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>coverage, IGV navigation</p>
+                            <div class="meta"><span><b>Tools:</b> IGV</span><span><b>Activity:</b> Visual
+                                    inspection</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">09</span><span class="daytitle">Variant Calling I</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>SNPs, indels, callers</p>
+                            <div class="meta"><span><b>Tools:</b> GATK / bcftools</span><span><b>Activity:</b> Variant
+                                    call</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">10</span><span class="daytitle">Mid-Course Project</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>WGS mini pipeline</p>
+                            <div class="meta"><span><b>Tools:</b> Bash</span><span><b>Activity:</b> Mid-course
+                                    review</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">11</span><span class="daytitle">Variant Calling II</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>filtering, VCF handling</p>
+                            <div class="meta"><span><b>Tools:</b> bcftools</span><span><b>Activity:</b> Filter
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">12</span><span class="daytitle">Variant Annotation</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>effects, ClinVar, dbSNP</p>
+                            <div class="meta"><span><b>Tools:</b> SnpEff / ANNOVAR</span><span><b>Activity:</b>
+                                    Annotation lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">13</span><span class="daytitle">RNA-Seq Basics</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>design, replicates, normalisation</p>
+                            <div class="meta"><span><b>Tools:</b> HISAT2</span><span><b>Activity:</b> Design
+                                    review</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">14</span><span class="daytitle">Read Counting</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>featureCounts, count matrices</p>
+                            <div class="meta"><span><b>Tools:</b> featureCounts</span><span><b>Activity:</b> Count
+                                    matrix</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">15</span><span class="daytitle">Differential
+                                Expression</span><span class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>DESeq2, edgeR, fold change</p>
+                            <div class="meta"><span><b>Tools:</b> R + DESeq2</span><span><b>Activity:</b> DE
+                                    analysis</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">16</span><span class="daytitle">Expression Plots</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>PCA, heatmaps, volcano</p>
+                            <div class="meta"><span><b>Tools:</b> R / ggplot2</span><span><b>Activity:</b> Figure
+                                    making</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">17</span><span class="daytitle">Functional Enrichment</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>GO, KEGG, pathways</p>
+                            <div class="meta"><span><b>Tools:</b> clusterProfiler</span><span><b>Activity:</b>
+                                    Enrichment lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">18</span><span class="daytitle">Workflow Automation</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>Snakemake, Nextflow basics</p>
+                            <div class="meta"><span><b>Tools:</b> Snakemake</span><span><b>Activity:</b> Pipeline
+                                    automation</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">19</span><span class="daytitle">Capstone Build</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>reads-to-results project</p>
+                            <div class="meta"><span><b>Tools:</b> Full toolset</span><span><b>Activity:</b> Capstone
+                                    development</span></div>
+                        </div>
+                    </details>
+                    <details class="day">
+                        <summary><span class="daynum">20</span><span class="daytitle">Capstone + Placement</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>demo, portfolio, interview prep</p>
+                            <div class="meta"><span><b>Tools:</b> All tools</span><span><b>Activity:</b> Final
+                                    assessment + mock interview</span></div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <section class="dark">
+            <div class="wrap"><span class="label reveal">Career pathways</span>
+                <h2 class="section-title reveal">Build Toward <span>Genomics Roles.</span></h2>
+                <p class="lead reveal">Practical training aligned with entry-level NGS and sequencing support
+                    opportunities.</p>
+                <div class="roles reveal"><span>NGS Data Analyst</span><span>Genomics
+                        Associate</span><span>Bioinformatics Trainee</span><span>Sequencing Support Executive</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="wrap">
+                <div class="cta reveal">
+                    <div>
+                        <h2>Ready to Analyze the Genome?</h2>
+                        <p>Start building practical NGS analysis skills with CampusZen Learning Solutions.</p>
+                    </div><a href="./Enroll.html" class="btn">Enroll Now →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>(function () { const els = document.querySelectorAll('.reveal,.reveal-left,.reveal-right'); if ('IntersectionObserver' in window) { const obs = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in-view'); obs.unobserve(entry.target) } }) }, { threshold: .08 }); els.forEach((el, i) => { el.style.transitionDelay = (i % 4) * .07 + 's'; obs.observe(el) }) } else els.forEach(el => el.classList.add('in-view')); document.querySelectorAll('.day').forEach(el => el.addEventListener('toggle', () => { if (el.open) document.querySelectorAll('.day').forEach(other => { if (other !== el) other.open = false }) })) })();</script>
+
+
+    <!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+
+</html>

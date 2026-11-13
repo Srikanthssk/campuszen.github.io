@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Ethical Hacking Course in Coimbatore | 20 Days | CampusZen</title>
+    <meta
+        content="Learn ethical hacking, network scanning, web security, penetration testing and VAPT reporting in CampusZen's 20-day hands-on course in Coimbatore."
+        name="description" />
+    <meta
+        content="ethical hacking course Coimbatore, cybersecurity training, VAPT course, penetration testing, Kali Linux, Burp Suite, Nmap, CampusZen"
+        name="keywords" />
+    <meta content="CampusZen Learning Solutions" name="author" />
+    <meta content="index, follow" name="robots" />
+        <link rel="stylesheet" href="../css/common.css">
+
+    <link href="https://www.campuszen.in/courses/EthicalHacking.html" rel="canonical" />
+    <meta content="website" property="og:type" />
+    <meta content="CampusZen Learning Solutions" property="og:site_name" />
+    <meta content="Ethical Hacking Course | CampusZen" property="og:title" />
+    <meta content="20-day hands-on ethical hacking and VAPT course in Coimbatore." property="og:description" />
+    <meta content="https://www.campuszen.in/courses/EthicalHacking.html" property="og:url" />
+    <meta content="en_IN" property="og:locale" />
+    <meta content="summary" name="twitter:card" />
+    <meta content="Ethical Hacking Course | CampusZen" name="twitter:title" />
+    <meta content="Learn ethical hacking and penetration testing in authorized lab environments."
+        name="twitter:description" />
+    <meta content="IN-TN" name="geo.region" />
+    <meta content="Coimbatore" name="geo.placename" />
+    <meta content="#0b0b0b" name="theme-color" />
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "Ethical Hacking \u2014 20-Day Course", "description": "Hands-on ethical hacking and vulnerability assessment training, including network security, web application testing and VAPT reporting in authorized labs.", "provider": {"@type": "EducationalOrganization", "name": "CampusZen Learning Solutions", "url": "https://www.campuszen.in/", "address": {"@type": "PostalAddress", "addressLocality": "Coimbatore", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}, "timeRequired": "P20D", "url": "https://www.campuszen.in/courses/EthicalHacking.html", "inLanguage": "en"}</script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #ffffff;
+            --purple: #111111;
+            --purple-hover: #111111;
+            --white: #ffffff;
+            --border: rgba(41, 40, 40, .222);
+            --dot-color: rgba(36, 35, 35, .292);
+            --orange: #fe8007;
+            --ink: #111111;
+            --muted: #626262
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.65;
+            overflow-x: hidden
+        }
+
+        button,
+        a {
+            font-family: inherit
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        button {
+            cursor: pointer
+        }
+
+        .container {
+            width: min(1160px, calc(100% - 44px));
+            margin: auto
+        }
+
+        section {
+            padding: 104px 0
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.12;
+            letter-spacing: -.045em
+        }
+
+        h2 {
+            font-size: clamp(34px, 4.4vw, 58px)
+        }
+
+        p {
+            color: var(--muted)
+        }
+
+        .accent {
+            color: var(--orange)
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: .19em;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .eyebrow:before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: currentColor
+        }
+
+        .hero {
+            position: relative;
+            padding: 110px 0 120px;
+            background: var(--white);
+            overflow: hidden
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: .32;
+            background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+            background-size: 27px 27px;
+            mask-image: linear-gradient(90deg, transparent 20%, black)
+        }
+
+        .hero-inner {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 6.3vw, 87px);
+            color: var(--purple);
+            margin-bottom: 25px
+        }
+
+        .hero p {
+            font-size: 17px;
+            max-width: 550px
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 32px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 800;
+            transition: transform .25s, box-shadow .25s, background .25s
+        }
+
+        .btn:hover {
+            transform: translateY(-4px)
+        }
+
+        .btn.primary {
+            background: var(--orange);
+            color: #111;
+            box-shadow: 0 12px 30px #fe80072b
+        }
+
+        .btn.secondary {
+            border: 1px solid var(--border);
+            color: var(--purple);
+            background: white
+        }
+
+        .btn.secondary:hover {
+            border-color: var(--orange)
+        }
+
+        .shield-scene {
+            height: 470px;
+            position: relative;
+            display: grid;
+            place-items: center
+        }
+
+        .radar-halo {
+            position: relative;
+            width: min(390px, 90%);
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: radial-gradient(circle, #fff 0 15%, #fff4e9 16%, #fff 65%);
+            border: 1px solid #f6c79b;
+            box-shadow: 0 0 0 24px #fe80070b, 0 0 0 48px #fe800707, 0 30px 70px #11111118;
+            overflow: hidden
+        }
+
+        .radar-halo:before,
+        .radar-halo:after {
+            content: '';
+            position: absolute;
+            background: #fe80072a;
+            z-index: 1
+        }
+
+        .radar-halo:before {
+            height: 1px;
+            left: 0;
+            right: 0;
+            top: 50%
+        }
+
+        .radar-halo:after {
+            width: 1px;
+            top: 0;
+            bottom: 0;
+            left: 50%
+        }
+
+        .radar-ring {
+            position: absolute;
+            border: 1px dashed #fe80075c;
+            border-radius: 50%;
+            inset: 14%
+        }
+
+        .r2 {
+            inset: 29%
+        }
+
+        .r3 {
+            inset: 42%
+        }
+
+        .radar-sweep {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, transparent 0deg, transparent 270deg, #fe800705 310deg, #fe800763 359deg, transparent 360deg);
+            animation: spin 5s linear infinite
+        }
+
+        .radar-ping {
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: var(--orange);
+            box-shadow: 0 0 0 8px #fe80072b;
+            z-index: 2;
+            animation: pulse 2.3s ease-in-out infinite
+        }
+
+        .p1 {
+            top: 23%;
+            left: 59%
+        }
+
+        .p2 {
+            top: 64%;
+            left: 27%;
+            animation-delay: .7s
+        }
+
+        .p3 {
+            top: 73%;
+            left: 73%;
+            animation-delay: 1.4s
+        }
+
+        .radar-center {
+            position: absolute;
+            inset: 42%;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--purple);
+            color: var(--orange);
+            font-size: 35px;
+            z-index: 3;
+            box-shadow: 0 0 0 7px white
+        }
+
+        .terminal {
+            position: absolute;
+            bottom: 2px;
+            right: -5px;
+            width: min(320px, 85%);
+            background: var(--purple);
+            color: #f5f5f5;
+            border-radius: 13px;
+            box-shadow: 0 25px 55px #11111145;
+            padding: 0 20px 18px;
+            transform: rotate(-3deg);
+            animation: float 5s ease-in-out infinite
+        }
+
+        .terminal-head {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 14px 0;
+            border-bottom: 1px solid #ffffff2c;
+            margin-bottom: 12px
+        }
+
+        .terminal-head i {
+            width: 7px;
+            height: 7px;
+            background: var(--orange);
+            border-radius: 50%
+        }
+
+        .terminal-head i:nth-child(2) {
+            opacity: .6
+        }
+
+        .terminal-head i:nth-child(3) {
+            opacity: .3
+        }
+
+        .terminal-head span {
+            font-size: 9px;
+            letter-spacing: .12em;
+            margin-left: auto;
+            color: #bdbdbd
+        }
+
+        .terminal-line {
+            font-size: 11px;
+            font-family: monospace;
+            margin: 6px 0
+        }
+
+        .terminal-line b,
+        .good {
+            color: #ffb36c
+        }
+
+        .terminal-line.muted {
+            color: #aaaaaa
+        }
+
+        .cursor {
+            animation: blink .8s steps(1) infinite
+        }
+
+        .stats {
+            background: var(--purple);
+            padding: 26px 0
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr)
+        }
+
+        .stat {
+            text-align: center;
+            border-right: 1px solid #ffffff28;
+            padding: 14px
+        }
+
+        .stat:last-child {
+            border: 0
+        }
+
+        .stat strong {
+            display: block;
+            font-size: clamp(25px, 3vw, 39px);
+            line-height: 1.2;
+            color: var(--orange);
+            font-weight: 900
+        }
+
+        .stat span {
+            font-size: 10px;
+            letter-spacing: .12em;
+            color: #eeeeee;
+            font-weight: 700
+        }
+
+        .section-intro {
+            max-width: 680px;
+            margin-bottom: 36px
+        }
+
+        .section-intro h2 {
+            color: var(--purple);
+            margin-bottom: 18px
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .feature {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: #fff;
+            transition: transform .3s, box-shadow .3s, border-color .3s
+        }
+
+        .feature:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 55px #11111112;
+            border-color: var(--orange)
+        }
+
+        .feature .icon {
+            display: grid;
+            place-items: center;
+            width: 52px;
+            height: 52px;
+            background: #fff1e5;
+            border-radius: 11px;
+            color: var(--orange);
+            font-size: 27px;
+            margin-bottom: 26px
+        }
+
+        .feature h3 {
+            font-size: 21px;
+            color: var(--purple);
+            letter-spacing: -.03em
+        }
+
+        .feature p {
+            font-size: 14px;
+            margin: 0
+        }
+
+        .curriculum {
+            background: #f7f7f7
+        }
+
+        .curriculum-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 35px;
+            align-items: end;
+            margin-bottom: 30px
+        }
+
+        .curriculum-head h2 {
+            color: var(--purple);
+            margin: 0
+        }
+
+        .curriculum-head p {
+            max-width: 400px;
+            margin: 0
+        }
+
+        .tabs {
+            display: flex;
+            gap: 9px;
+            flex-wrap: wrap;
+            margin-bottom: 22px
+        }
+
+        .tab {
+            border: 1px solid var(--border);
+            background: white;
+            color: var(--purple);
+            border-radius: 7px;
+            padding: 10px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: .2s
+        }
+
+        .tab.active,
+        .tab:hover {
+            background: var(--purple);
+            color: white;
+            border-color: var(--purple)
+        }
+
+        .days {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            align-items: start
+        }
+
+        .day {
+            border: 1px solid #e5e5e5;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: border-color .2s, box-shadow .2s
+        }
+
+        .day[hidden] {
+            display: none
+        }
+
+        .day[open] {
+            border-color: var(--orange);
+            box-shadow: 0 12px 32px #11111110
+        }
+
+        .day summary {
+            list-style: none;
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            padding: 18px 20px;
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--purple)
+        }
+
+        .day summary::-webkit-details-marker {
+            display: none
+        }
+
+        .day .num {
+            color: var(--orange);
+            font-size: 14px;
+            font-weight: 900
+        }
+
+        .day .dayname {
+            flex: 1;
+            font-size: 14px
+        }
+
+        .day .chev {
+            font-size: 22px;
+            font-weight: 400;
+            color: var(--orange);
+            transition: transform .2s
+        }
+
+        .day[open] .chev {
+            transform: rotate(45deg)
+        }
+
+        .day>div,
+        .day .day-body {
+            padding: 0 20px 20px;
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        .day p {
+            margin-bottom: 8px
+        }
+
+        .outcomes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center
+        }
+
+        .outcomes h2 {
+            color: var(--purple)
+        }
+
+        .outcomes h3 {
+            color: var(--purple);
+            font-size: 20px;
+            margin-top: 28px
+        }
+
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        .roles span {
+            padding: 9px 13px;
+            border: 1px solid #f3d2b4;
+            border-radius: 7px;
+            color: var(--purple);
+            font-size: 12px;
+            font-weight: 700;
+            background: #fff9f3
+        }
+
+        .outcomes>div:nth-child(2) {
+            background: #f7f7f7;
+            padding: 34px;
+            border-radius: 16px;
+            border: 1px solid #e7e7e7
+        }
+
+        .checks {
+            list-style: none;
+            padding: 0;
+            margin: 0
+        }
+
+        .checks li {
+            position: relative;
+            padding: 11px 0 11px 30px;
+            border-bottom: 1px solid #dddddd;
+            font-size: 14px
+        }
+
+        .checks li:last-child {
+            border: 0
+        }
+
+        .checks li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--orange);
+            font-weight: 900
+        }
+
+        .cta {
+            padding-top: 35px
+        }
+
+        .cta-panel {
+            position: relative;
+            overflow: hidden;
+            background: var(--purple);
+            border-radius: 22px;
+            padding: 65px 70px;
+            color: white
+        }
+
+        .cta-panel:after {
+            content: '';
+            position: absolute;
+            width: 370px;
+            height: 370px;
+            border: 1px solid #fe80075e;
+            border-radius: 50%;
+            right: -80px;
+            top: -100px;
+            box-shadow: 0 0 0 35px #fe800714, 0 0 0 70px #fe80070a;
+            animation: pulse 4s infinite
+        }
+
+        .cta-panel h2 {
+            position: relative;
+            z-index: 1;
+            color: white
+        }
+
+        .cta-panel p {
+            color: #d0d0d0;
+            max-width: 560px
+        }
+
+        .cta-panel .btn {
+            position: relative;
+            z-index: 1
+        }
+
+        .reveal,
+        .reveal-left,
+        .reveal-right {
+            opacity: 0;
+            transition: opacity .8s ease, transform .8s cubic-bezier(.2, .8, .2, 1)
+        }
+
+        .reveal {
+            transform: translateY(30px)
+        }
+
+        .reveal-left {
+            transform: translateX(-40px)
+        }
+
+        .reveal-right {
+            transform: translateX(40px)
+        }
+
+        .in-view {
+            opacity: 1;
+            transform: translate(0)
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-14px) rotate(-3deg)
+            }
+        }
+
+        @keyframes pulse {
+            50% {
+                box-shadow: 0 0 0 16px #fe80070d;
+                opacity: .7
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0
+            }
+        }
+
+        @media(max-width:850px) {
+
+            .hero-inner,
+            .outcomes {
+                grid-template-columns: 1fr
+            }
+
+            .hero {
+                padding: 75px 0
+            }
+
+            .shield-scene {
+                height: 430px
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .curriculum-head {
+                display: block
+            }
+
+            .curriculum-head p {
+                margin-top: 15px
+            }
+
+            .outcomes {
+                gap: 30px
+            }
+        }
+
+        @media(max-width:580px) {
+            section {
+                padding: 65px 0
+            }
+
+            .container {
+                width: min(100% - 30px, 1160px)
+            }
+
+            .hero h1 {
+                font-size: 50px
+            }
+
+            .shield-scene {
+                height: 360px
+            }
+
+            .radar-halo {
+                width: 280px
+            }
+
+            .terminal {
+                right: 0;
+                bottom: 0
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .stat:nth-child(2) {
+                border-right: 0
+            }
+
+            .features,
+            .days {
+                grid-template-columns: 1fr
+            }
+
+            .feature {
+                padding: 24px
+            }
+
+            .cta-panel {
+                padding: 40px 25px
+            }
+
+            .outcomes>div:nth-child(2) {
+                padding: 24px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *:before,
+            *:after {
+                animation: none !important;
+                scroll-behavior: auto !important;
+                transition: none !important
+            }
+
+            .reveal,
+            .reveal-left,
+            .reveal-right {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="reveal-left">
+                    <div class="eyebrow">CampusZen · Cybersecurity Training</div>
+                    <h1>Think Like a<br /><span class="accent">Hacker.</span><br />Defend Better.</h1>
+                    <p>Build practical ethical hacking and penetration testing skills through authorized security labs,
+                        vulnerability analysis, and real-world-style VAPT reporting.</p>
+                    <div class="buttons"><a class="btn primary" href="./Enroll.html">Enroll Now ↗</a><a
+                            class="btn secondary" href="#curriculum">Explore Curriculum ↓</a></div>
+                </div>
+                <div aria-label="Animated cybersecurity network radar" class="shield-scene reveal-right">
+                    <div class="radar-halo">
+                        <div class="radar-sweep"></div>
+                        <div class="radar-ring r1"></div>
+                        <div class="radar-ring r2"></div>
+                        <div class="radar-ring r3"></div><span class="radar-ping p1"></span><span
+                            class="radar-ping p2"></span><span class="radar-ping p3"></span>
+                        <div class="radar-center">⌘</div>
+                    </div>
+                    <div class="terminal">
+                        <div class="terminal-head"><i></i><i></i><i></i><span>SECURITY SCAN / LAB</span></div>
+                        <div class="terminal-line"><b>›</b> initializing secure environment<span class="cursor">_</span>
+                        </div>
+                        <div class="terminal-line muted">› permission: authorized</div>
+                        <div class="terminal-line good">✓ monitoring active</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="stats">
+            <div class="container stats-grid">
+                <div class="stat reveal"><strong>20</strong><span>TRAINING DAYS</span></div>
+                <div class="stat reveal"><strong>2</strong><span>COURSE PHASES</span></div>
+                <div class="stat reveal"><strong>VAPT</strong><span>CAPSTONE PROJECT</span></div>
+                <div class="stat reveal"><strong>100%</strong><span>AUTHORIZED LAB FOCUS</span></div>
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <div class="section-intro reveal">
+                    <div class="eyebrow">Core capabilities</div>
+                    <h2>What You'll <span class="accent">Learn</span></h2>
+                    <p>Hands-on cybersecurity concepts and practical assessment workflows.</p>
+                </div>
+                <div class="features">
+                    <article class="feature reveal">
+                        <div class="icon">◈</div>
+                        <h3>Reconnaissance</h3>
+                        <p>Practice OSINT, DNS and network discovery in controlled labs.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="icon">⌁</div>
+                        <h3>Vulnerability Assessment</h3>
+                        <p>Understand scanning, CVE mapping and vulnerability reporting.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="icon">▣</div>
+                        <h3>Web App Security</h3>
+                        <p>Explore OWASP risks and web testing using training applications.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="icon">⌘</div>
+                        <h3>Network Defense</h3>
+                        <p>Understand traffic analysis, wireless risks and mitigation.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="icon">◇</div>
+                        <h3>Exploitation Labs</h3>
+                        <p>Learn guided testing with industry-standard lab tools.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="icon">↗</div>
+                        <h3>VAPT Reporting</h3>
+                        <p>Document findings, recommendations and capstone results.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="curriculum" id="curriculum">
+            <div class="container">
+                <div class="curriculum-head reveal">
+                    <div>
+                        <div class="eyebrow">Day-wise learning</div>
+                        <h2>20-Day Curriculum</h2>
+                    </div>
+                    <p>Tap any day to see the exact topics, tools and activity from the course planner.</p>
+                </div>
+                <div aria-label="Curriculum filters" class="tabs" role="group"><button aria-pressed="true"
+                        class="tab active" data-range="all" type="button">All 20 Days</button><button
+                        aria-pressed="false" class="tab" data-range="first" type="button">Days 01–10</button><button
+                        aria-pressed="false" class="tab" data-range="second" type="button">Days 11–20</button></div>
+                <div class="days">
+                    <details class="day reveal">
+                        <summary><span class="num">01</span><span class="dayname">Ethical Hacking
+                                Foundations</span><span class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>hacking phases, legal aspects, hacker types</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Case studies</span><span><b>LAB</b> Methodology
+                                    mapping</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">02</span><span class="dayname">Lab Setup</span><span
+                                class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>Kali Linux, virtual lab, target machines</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Kali Linux, VirtualBox</span><span><b>LAB</b> Lab
+                                    environment setup</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">03</span><span class="dayname">Footprinting &amp;
+                                Reconnaissance</span><span class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>OSINT, WHOIS, DNS enumeration</p>
+                            <div class="pill-row"><span><b>TOOLS</b> theHarvester, Nmap</span><span><b>LAB</b> Recon
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">04</span><span class="dayname">Scanning Networks</span><span
+                                class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>port scanning, service detection, OS fingerprinting</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Nmap</span><span><b>LAB</b> Scanning lab</span>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">05</span><span class="dayname">Enumeration</span><span
+                                class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>SMB, SNMP, NetBIOS enumeration</p>
+                            <div class="pill-row"><span><b>TOOLS</b> enum4linux</span><span><b>LAB</b> Enumeration
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">06</span><span class="dayname">Vulnerability Analysis</span><span
+                                class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>vulnerability scanning, CVE mapping</p>
+                            <div class="pill-row"><span><b>TOOLS</b> OpenVAS / Nessus</span><span><b>LAB</b>
+                                    Vulnerability scan lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">07</span><span class="dayname">System Hacking</span><span
+                                class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>password attacks, privilege escalation</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Hydra, Metasploit</span><span><b>LAB</b> Password
+                                    cracking lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">08</span><span class="dayname">Malware Threats</span><span
+                                class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>trojans, viruses, keyloggers overview</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Case studies</span><span><b>LAB</b> Malware
+                                    analysis (static)</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">09</span><span class="dayname">Sniffing &amp; Social
+                                Engineering</span><span class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>packet sniffing, phishing techniques</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Wireshark</span><span><b>LAB</b> Sniffing
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">10</span><span class="dayname">Mid-Course Project</span><span
+                                class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>perform recon and scanning on a lab target</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Nmap + report</span><span><b>LAB</b> Mid-course
+                                    review</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">11</span><span class="dayname">Denial of Service</span><span
+                                class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>DoS/DDoS concepts, mitigation techniques</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Case studies</span><span><b>LAB</b> DoS simulation
+                                    (lab)</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">12</span><span class="dayname">Session Hijacking</span><span
+                                class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>session management flaws, hijacking techniques</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Burp Suite</span><span><b>LAB</b> Session hijacking
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">13</span><span class="dayname">Web Server &amp; App
+                                Hacking</span><span class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>server misconfigurations, OWASP Top 10</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Burp Suite, DVWA</span><span><b>LAB</b> Web app
+                                    exploitation lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">14</span><span class="dayname">SQL Injection</span><span
+                                class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>injection types, detection, exploitation</p>
+                            <div class="pill-row"><span><b>TOOLS</b> SQLMap, DVWA</span><span><b>LAB</b> SQL injection
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">15</span><span class="dayname">Wireless Network Hacking</span><span
+                                class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>WEP/WPA/WPA2 attacks, wireless security</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Aircrack-ng (demo)</span><span><b>LAB</b> Wireless
+                                    security lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">16</span><span class="dayname">Mobile &amp; IoT Hacking
+                                Basics</span><span class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>mobile app vulnerabilities, IoT risks</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Case studies</span><span><b>LAB</b> Mobile risk
+                                    review</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">17</span><span class="dayname">Cloud &amp; Cryptography</span><span
+                                class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>cloud attack surface, cryptography in pentesting</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Case studies</span><span><b>LAB</b> Crypto
+                                    exercise</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">18</span><span class="dayname">Exploitation with
+                                Metasploit</span><span class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>Metasploit framework, payloads, exploits</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Metasploit</span><span><b>LAB</b> Guided
+                                    exploitation lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">19</span><span class="dayname">Capstone Build</span><span
+                                class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>full VAPT on a lab environment with report</p>
+                            <div class="pill-row"><span><b>TOOLS</b> Kali toolkit</span><span><b>LAB</b> Capstone
+                                    development</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="num">20</span><span class="dayname">Capstone + Placement</span><span
+                                class="chev">+</span></summary>
+                        <div class="daybody">
+                            <p>project demo, resume, interview prep</p>
+                            <div class="pill-row"><span><b>TOOLS</b> All tools</span><span><b>LAB</b> Final assessment +
+                                    mock interview</span></div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container outcomes">
+                <div class="reveal-left">
+                    <div class="eyebrow">Your future career</div>
+                    <h2>Learn to Find Risks.<br /><span class="accent">Help Fix Them.</span></h2>
+                    <p>Prepare for entry-level cybersecurity roles with structured labs and a final vulnerability
+                        assessment report.</p>
+                    <h3>Target roles</h3>
+                    <div class="roles"><span>Penetration Tester Trainee</span><span>Ethical Hacker</span><span>VAPT
+                            Associate</span><span>Security Consultant Trainee</span></div>
+                </div>
+                <div class="reveal-right">
+                    <h3>Learning outcomes</h3>
+                    <ul class="checks">
+                        <li>Understand ethical hacking phases and legal boundaries</li>
+                        <li>Set up a Kali Linux practice environment</li>
+                        <li>Perform authorized reconnaissance and vulnerability scanning</li>
+                        <li>Identify common web, wireless and network security risks</li>
+                        <li>Explore tools including Nmap, Wireshark, Burp Suite and Metasploit</li>
+                        <li>Prepare a VAPT capstone report with remediation guidance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="cta" id="enquire">
+            <div class="container">
+                <div class="cta-panel reveal">
+                    <div class="eyebrow">Secure your future</div>
+                    <h2>Start Your Journey in<br /><span class="accent">Ethical Hacking.</span></h2>
+                    <p>Learn security testing responsibly, practice in authorized labs, and present your final VAPT
+                        capstone.</p><a class="btn primary" href="./Enroll.html">Enroll Now ↗</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>(() => { 'use strict'; const days = [...document.querySelectorAll('.day')]; document.querySelectorAll('.tab').forEach(button => button.addEventListener('click', () => { document.querySelectorAll('.tab').forEach(b => { b.classList.toggle('active', b === button); b.setAttribute('aria-pressed', String(b === button)); }); days.forEach((day, i) => { day.hidden = button.dataset.range === 'first' ? i >= 10 : button.dataset.range === 'second' ? i < 10 : false; }); })); days.forEach(day => day.addEventListener('toggle', () => { if (day.open) days.forEach(other => { if (other !== day) other.open = false; }); })); const els = document.querySelectorAll('.reveal,.reveal-left,.reveal-right'); document.querySelectorAll('.features,.days,.stats-grid').forEach(grid => [...grid.children].forEach((el, i) => { el.style.transitionDelay = (i % 6 * .08) + 's'; })); if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) { const obs = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in-view'); obs.unobserve(entry.target); } }), { threshold: .08 }); els.forEach(el => obs.observe(el)); } else els.forEach(el => el.classList.add('in-view')); })();</script>
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+
+</html>

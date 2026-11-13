@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bioinformatics & Computational Biology Course in Coimbatore | CampusZen</title>
+    <meta name="description"
+        content="Learn bioinformatics and computational biology in a 20-day practical course at CampusZen. Study NCBI, Biopython, BLAST, genomics, phylogenetics and analysis pipelines.">
+    <meta name="keywords"
+        content="bioinformatics course Coimbatore, computational biology training, Biopython, BLAST, genomics, CampusZen, bioinformatics 20 days">
+    <meta name="author" content="CampusZen Learning Solutions">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="IN-TN">
+    <meta name="geo.placename" content="Coimbatore">
+        <link rel="stylesheet" href="../css/common.css">
+
+    <link rel="canonical" href="https://www.campuszen.in/courses/BioinformaticsComputationalBiology.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bioinformatics & Computational Biology | CampusZen">
+    <meta property="og:description"
+        content="20 days of practical bioinformatics: databases, sequences, Python, BLAST, genomics and capstone.">
+    <meta property="og:url" content="https://www.campuszen.in/courses/BioinformaticsComputationalBiology.html">
+    <meta property="og:site_name" content="CampusZen Learning Solutions">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Bioinformatics & Computational Biology — CampusZen">
+    <meta name="twitter:description" content="Hands-on 20-day course in bioinformatics and computational biology.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Bioinformatics & Computational Biology","description":"20-day practical course in biological databases, sequence analysis and bioinformatics pipelines using Python and Linux.","provider":{"@type":"EducationalOrganization","name":"CampusZen Learning Solutions","address":{"@type":"PostalAddress","addressLocality":"Coimbatore","addressRegion":"Tamil Nadu","addressCountry":"IN"}},"url":"https://www.campuszen.in/courses/BioinformaticsComputationalBiology.html","timeRequired":"P20D","teaches":["Biological databases","Biopython","Sequence alignment","Phylogenetics","Genomics","Transcriptomics","Bioinformatics pipelines"]}</script>
+    <style>
+        :root {
+            --bg: #fff;
+            --purple: #111;
+            --purple-hover: #000;
+            --white: #fff;
+            --border: rgba(41, 40, 40, .222);
+            --dot-color: rgba(36, 35, 35, .292);
+            --orange: #fe8007;
+            --black: #111;
+            --muted: #666
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--black)
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        .wrap {
+            width: min(1160px, calc(100% - 44px));
+            margin: auto
+        }
+
+        .hero {
+            background: #111;
+            color: #fff;
+            min-height: 690px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center
+        }
+
+        .hero:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(#ffffff25 1px, transparent 1px);
+            background-size: 28px 28px;
+            mask-image: linear-gradient(90deg, transparent, #000)
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            align-items: center;
+            gap: 35px;
+            position: relative;
+            z-index: 1;
+            padding: 95px 0
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+            color: var(--orange);
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px
+        }
+
+        .eyebrow:before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: var(--orange);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--orange)
+        }
+
+        h1 {
+            font-size: clamp(43px, 5.3vw, 78px);
+            letter-spacing: -.07em;
+            line-height: 1.05;
+            margin: 22px 0
+        }
+
+        h1 em {
+            font-style: normal;
+            color: var(--orange)
+        }
+
+        .intro {
+            max-width: 570px;
+            line-height: 1.8;
+            color: #c7c7c7;
+            font-size: 16px
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+            margin: 32px 0
+        }
+
+        .btn {
+            padding: 15px 23px;
+            border-radius: 7px;
+            font-weight: 800;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform .25s, background .25s
+        }
+
+        .btn:hover {
+            transform: translateY(-4px)
+        }
+
+        .primary {
+            background: var(--orange);
+            color: #111
+        }
+
+        .outline {
+            border: 1px solid #ffffff70;
+            color: white
+        }
+
+        .facts {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 45px
+        }
+
+        .fact strong {
+            font-size: 28px;
+            display: block
+        }
+
+        .fact span {
+            font-size: 12px;
+            color: #bbb
+        }
+
+        .visual {
+            width: min(480px, 100%);
+            aspect-ratio: 1;
+            margin: auto;
+            position: relative;
+            display: grid;
+            place-items: center
+        }
+
+        .orbit {
+            position: absolute;
+            border: 1px solid #fe80075e;
+            border-radius: 50%;
+            inset: 8%;
+            animation: spin 22s linear infinite
+        }
+
+        .orbit:nth-child(2) {
+            inset: 20%;
+            border-style: dashed;
+            animation-direction: reverse;
+            animation-duration: 15s
+        }
+
+        .orbit:nth-child(3) {
+            inset: 32%;
+            animation-duration: 11s
+        }
+
+        .orbit:after {
+            content: "";
+            position: absolute;
+            top: 14%;
+            left: 14%;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--orange);
+            box-shadow: 0 0 22px var(--orange)
+        }
+
+        .dna {
+            width: 160px;
+            height: 260px;
+            position: relative;
+            filter: drop-shadow(0 0 22px #fe800766);
+            animation: float 5s ease-in-out infinite
+        }
+
+        .strand {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateX(-50%)
+        }
+
+        .rung {
+            position: absolute;
+            top: var(--top);
+            left: 50%;
+            height: 4px;
+            width: var(--w);
+            background: linear-gradient(90deg, #fff, var(--orange), #fff);
+            border-radius: 4px;
+            transform: translateX(-50%) rotate(var(--angle));
+            box-shadow: 0 0 9px #fe800777
+        }
+
+        .rung:before,
+        .rung:after {
+            content: "";
+            position: absolute;
+            top: -5px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--orange);
+            box-shadow: 0 0 12px var(--orange)
+        }
+
+        .rung:before {
+            left: -6px
+        }
+
+        .rung:after {
+            right: -6px
+        }
+
+        .visual-tag {
+            position: absolute;
+            bottom: 13%;
+            right: 0;
+            background: #1f1f1f;
+            border: 1px solid #444;
+            padding: 12px 16px;
+            border-radius: 9px;
+            font-size: 12px;
+            animation: float 4s ease-in-out infinite
+        }
+
+        .visual-tag b {
+            color: var(--orange)
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-17px)
+            }
+        }
+
+        section {
+            padding: 100px 0
+        }
+
+        .label {
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            font-weight: 800
+        }
+
+        .section-title {
+            font-size: clamp(34px, 4.2vw, 54px);
+            letter-spacing: -.055em;
+            line-height: 1.12;
+            margin: 14px 0 20px
+        }
+
+        .section-title span {
+            color: var(--orange)
+        }
+
+        .lead {
+            color: #666;
+            line-height: 1.8;
+            max-width: 660px
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 45px
+        }
+
+        .feature {
+            padding: 32px 25px;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            transition: transform .3s, border-color .3s, box-shadow .3s
+        }
+
+        .feature:hover {
+            transform: translateY(-8px);
+            border-color: var(--orange);
+            box-shadow: 0 16px 36px #0000000b
+        }
+
+        .feature>span {
+            color: var(--orange);
+            font-size: 14px;
+            font-weight: 900
+        }
+
+        .feature h3 {
+            font-size: 19px;
+            letter-spacing: -.04em;
+            margin: 25px 0 10px
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.8
+        }
+
+        .dark {
+            background: #111;
+            color: #fff
+        }
+
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 36px
+        }
+
+        .tools span {
+            padding: 12px 19px;
+            border: 1px solid #555;
+            border-radius: 7px;
+            background: #1d1d1d;
+            font-weight: 700;
+            font-size: 13px;
+            transition: background .25s
+        }
+
+        .tools span:hover {
+            background: var(--orange);
+            color: #111
+        }
+
+        .curr-layout {
+            display: grid;
+            grid-template-columns: .75fr 1.25fr;
+            gap: 70px;
+            align-items: start
+        }
+
+        .curr-note {
+            position: sticky;
+            top: 30px
+        }
+
+        .day {
+            border-bottom: 1px solid #dedede;
+            background: #fff
+        }
+
+        .day:first-child {
+            border-top: 1px solid #dedede
+        }
+
+        .day summary {
+            cursor: pointer;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 21px 10px;
+            list-style: none
+        }
+
+        .day summary::-webkit-details-marker {
+            display: none
+        }
+
+        .daynum {
+            font-size: 13px;
+            font-weight: 900;
+            color: var(--orange)
+        }
+
+        .daytitle {
+            font-weight: 800;
+            flex: 1
+        }
+
+        .plus {
+            font-size: 24px;
+            color: var(--orange);
+            transition: transform .25s
+        }
+
+        .day[open] .plus {
+            transform: rotate(45deg)
+        }
+
+        .daybody {
+            padding: 0 25px 22px 48px;
+            animation: drop .3s ease
+        }
+
+        .daybody p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #555
+        }
+
+        .daymeta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px
+        }
+
+        .daymeta span {
+            font-size: 12px;
+            background: #f5f5f5;
+            padding: 9px 11px;
+            border-radius: 5px
+        }
+
+        .daymeta b {
+            color: #d46900;
+            margin-right: 5px
+        }
+
+        @keyframes drop {
+            from {
+                opacity: 0;
+                transform: translateY(-6px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-top: 35px
+        }
+
+        .roles span {
+            padding: 14px 20px;
+            border: 1px solid #555;
+            border-radius: 8px;
+            font-weight: 700
+        }
+
+        .roles span:hover {
+            border-color: var(--orange)
+        }
+
+        .cta {
+            background: var(--orange);
+            border-radius: 20px;
+            padding: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px
+        }
+
+        .cta h2 {
+            font-size: clamp(30px, 4vw, 48px);
+            letter-spacing: -.05em;
+            margin: 0 0 15px
+        }
+
+        .cta p {
+            max-width: 580px;
+            line-height: 1.7
+        }
+
+        .cta .btn {
+            background: #111;
+            color: #fff;
+            white-space: nowrap
+        }
+
+        .reveal,
+        .reveal-left,
+        .reveal-right {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity .75s ease, transform .75s ease
+        }
+
+        .reveal-left {
+            transform: translateX(-40px)
+        }
+
+        .reveal-right {
+            transform: translateX(40px)
+        }
+
+        .in-view {
+            opacity: 1;
+            transform: none
+        }
+
+        @media(max-width:950px) {
+            .features {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .visual {
+                max-width: 380px
+            }
+
+            .curr-layout {
+                grid-template-columns: 1fr;
+                gap: 30px
+            }
+
+            .curr-note {
+                position: static
+            }
+        }
+
+        @media(max-width:600px) {
+            .wrap {
+                width: min(100% - 30px, 1160px)
+            }
+
+            .hero-grid {
+                padding: 75px 0 45px
+            }
+
+            .hero {
+                min-height: 0
+            }
+
+            .visual {
+                max-width: 290px
+            }
+
+            .features {
+                grid-template-columns: 1fr
+            }
+
+            section {
+                padding: 70px 0
+            }
+
+            .cta {
+                padding: 30px 24px;
+                display: block
+            }
+
+            .cta .btn {
+                margin-top: 16px
+            }
+
+            .facts {
+                gap: 22px
+            }
+
+            .day summary {
+                gap: 13px
+            }
+
+            .daybody {
+                padding-left: 35px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *:before,
+            *:after {
+                animation: none !important;
+                transition: none !important
+            }
+
+            .reveal,
+            .reveal-left,
+            .reveal-right {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+    <main>
+        <div class="hero">
+            <div class="wrap hero-grid">
+                <div class="reveal-left"><span class="eyebrow">CampusZen · Bioscience Program 01</span>
+                    <h1>Decode Life.<br><em>Discover More.</em></h1>
+                    <p class="intro">Bioinformatics &amp; Computational Biology — build core skills in biological
+                        databases, sequence analysis and pipelines using Python and Linux.</p>
+                    <div class="hero-actions"><a class="btn primary" href="./Enroll.html">Enroll Now →</a><a
+                            class="btn outline" href="#curriculum">Explore Curriculum ↓</a></div>
+                    <div class="facts">
+                        <div class="fact"><strong>20</strong><span>Learning Days</span></div>
+                        <div class="fact"><strong>Hands-on</strong><span>Labs &amp; Activities</span></div>
+                        <div class="fact"><strong>1</strong><span>Capstone Project</span></div>
+                    </div>
+                </div>
+                <div class="visual reveal-right" aria-label="Animated DNA double helix illustration">
+                    <div class="orbit"></div>
+                    <div class="orbit"></div>
+                    <div class="orbit"></div>
+                    <div class="dna">
+                        <div class="strand"><span class="rung" style="--top:0%;--w:125px;--angle:0deg"></span><span
+                                class="rung" style="--top:8%;--w:110px;--angle:35deg"></span><span class="rung"
+                                style="--top:16%;--w:95px;--angle:70deg"></span><span class="rung"
+                                style="--top:24%;--w:80px;--angle:105deg"></span><span class="rung"
+                                style="--top:32%;--w:65px;--angle:140deg"></span><span class="rung"
+                                style="--top:40%;--w:50px;--angle:175deg"></span><span class="rung"
+                                style="--top:48%;--w:35px;--angle:210deg"></span><span class="rung"
+                                style="--top:56%;--w:50px;--angle:245deg"></span><span class="rung"
+                                style="--top:64%;--w:65px;--angle:280deg"></span><span class="rung"
+                                style="--top:72%;--w:80px;--angle:315deg"></span><span class="rung"
+                                style="--top:80%;--w:95px;--angle:350deg"></span><span class="rung"
+                                style="--top:88%;--w:110px;--angle:385deg"></span><span class="rung"
+                                style="--top:96%;--w:125px;--angle:420deg"></span></div>
+                    </div>
+                    <div class="visual-tag"><b>DNA</b> · Sequence Analysis</div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="wrap"><span class="label reveal">What you'll learn</span>
+                <h2 class="section-title reveal">Turn Biological Data Into <span>Insight.</span></h2>
+                <p class="lead reveal">From your first database search to a reproducible computational biology capstone,
+                    develop practical research skills step by step.</p>
+                <div class="features">
+                    <article class="feature reveal"><span>01</span>
+                        <h3>Explore Biological Data</h3>
+                        <p>Navigate NCBI, GenBank, UniProt, PDB and Ensembl to retrieve and interpret biological
+                            records.</p>
+                    </article>
+                    <article class="feature reveal"><span>02</span>
+                        <h3>Analyze DNA & Proteins</h3>
+                        <p>Use Biopython, BLAST, multiple sequence alignment and protein analysis tools.</p>
+                    </article>
+                    <article class="feature reveal"><span>03</span>
+                        <h3>Build Reproducible Workflows</h3>
+                        <p>Work with Linux, Python, Git and bioinformatics pipelines for repeatable analyses.</p>
+                    </article>
+                    <article class="feature reveal"><span>04</span>
+                        <h3>Visualize & Present Findings</h3>
+                        <p>Explore genomics, transcriptomics, pathways and research-ready visualizations.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="dark">
+            <div class="wrap"><span class="label reveal">Practical toolkit</span>
+                <h2 class="section-title reveal">Tools You Will <span>Explore.</span></h2>
+                <div class="tools reveal">
+                    <span>NCBI</span><span>UniProt</span><span>Biopython</span><span>Linux</span><span>Python</span><span>BLAST</span><span>Clustal
+                        Omega</span><span>MEGA / iTOL</span><span>PyMOL</span><span>UCSC /
+                        IGV</span><span>KEGG</span><span>Git</span></div>
+            </div>
+        </section>
+        <section id="curriculum">
+            <div class="wrap curr-layout">
+                <div class="curr-note reveal-left"><span class="label">20-day learning journey</span>
+                    <h2 class="section-title">Your Course <span>Curriculum.</span></h2>
+                    <p class="lead">Every day includes a focused topic, tools and an applied learning activity. Click
+                        any day to view the details.</p>
+                </div>
+                <div class="days reveal-right">
+                    <details class="day reveal" open>
+                        <summary><span class="daynum">01</span><span class="daytitle">Intro to
+                                Bioinformatics</span><span class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>omics, central dogma, careers</p>
+                            <div class="daymeta"><span><b>Tools</b> NCBI</span><span><b>Activity</b> Database
+                                    tour</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">02</span><span class="daytitle">Biological Databases</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>GenBank, UniProt, PDB, Ensembl</p>
+                            <div class="daymeta"><span><b>Tools</b> NCBI / UniProt</span><span><b>Activity</b> Data
+                                    retrieval</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">03</span><span class="daytitle">File Formats</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>FASTA, FASTQ, GFF, VCF, SAM</p>
+                            <div class="daymeta"><span><b>Tools</b> Linux + Biopython</span><span><b>Activity</b> Format
+                                    conversion</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">04</span><span class="daytitle">Linux for Biologists</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>shell, files, grep, awk, pipes</p>
+                            <div class="daymeta"><span><b>Tools</b> Linux terminal</span><span><b>Activity</b> Command
+                                    drills</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">05</span><span class="daytitle">Python Basics</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>variables, loops, functions</p>
+                            <div class="daymeta"><span><b>Tools</b> Python + Colab</span><span><b>Activity</b> Coding
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">06</span><span class="daytitle">Biopython</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>SeqIO, sequence handling, GC content</p>
+                            <div class="daymeta"><span><b>Tools</b> Biopython</span><span><b>Activity</b> Sequence
+                                    script</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">07</span><span class="daytitle">Pairwise Alignment</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>BLAST, Needleman-Wunsch, scoring</p>
+                            <div class="daymeta"><span><b>Tools</b> BLAST</span><span><b>Activity</b> Similarity
+                                    search</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">08</span><span class="daytitle">Multiple Alignment</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>Clustal, MUSCLE, conservation</p>
+                            <div class="daymeta"><span><b>Tools</b> Clustal Omega</span><span><b>Activity</b> MSA
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">09</span><span class="daytitle">Phylogenetics</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>tree building, bootstrapping</p>
+                            <div class="daymeta"><span><b>Tools</b> MEGA / iTOL</span><span><b>Activity</b> Tree
+                                    construction</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">10</span><span class="daytitle">Mid-Course Project</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>annotate a gene family</p>
+                            <div class="daymeta"><span><b>Tools</b> Python + BLAST</span><span><b>Activity</b>
+                                    Mid-course review</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">11</span><span class="daytitle">Gene Prediction</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>ORFs, annotation, promoters</p>
+                            <div class="daymeta"><span><b>Tools</b> Prodigal / Augustus</span><span><b>Activity</b>
+                                    Annotation lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">12</span><span class="daytitle">Protein Analysis</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>domains, motifs, properties</p>
+                            <div class="daymeta"><span><b>Tools</b> InterPro / Pfam</span><span><b>Activity</b> Domain
+                                    search</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">13</span><span class="daytitle">Structure Basics</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>PDB, secondary structure, visualisation</p>
+                            <div class="daymeta"><span><b>Tools</b> PyMOL / Chimera</span><span><b>Activity</b>
+                                    Structure viewing</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">14</span><span class="daytitle">Genomics Overview</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>assembly, variants, genome browsers</p>
+                            <div class="daymeta"><span><b>Tools</b> UCSC / IGV</span><span><b>Activity</b> Genome
+                                    browsing</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">15</span><span class="daytitle">Transcriptomics</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>RNA-seq concepts, expression</p>
+                            <div class="daymeta"><span><b>Tools</b> GEO / GEO2R</span><span><b>Activity</b> Expression
+                                    analysis</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">16</span><span class="daytitle">Pathway Analysis</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>GO, KEGG, enrichment</p>
+                            <div class="daymeta"><span><b>Tools</b> DAVID / KEGG</span><span><b>Activity</b> Enrichment
+                                    lab</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">17</span><span class="daytitle">Pipelines &amp;
+                                Workflows</span><span class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>scripting, reproducibility, Git</p>
+                            <div class="daymeta"><span><b>Tools</b> Bash + Git</span><span><b>Activity</b> Pipeline
+                                    build</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">18</span><span class="daytitle">Data Visualisation</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>plots, heatmaps, volcano plots</p>
+                            <div class="daymeta"><span><b>Tools</b> Python / R</span><span><b>Activity</b> Figure
+                                    making</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">19</span><span class="daytitle">Capstone Build</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>end-to-end analysis project</p>
+                            <div class="daymeta"><span><b>Tools</b> Full toolset</span><span><b>Activity</b> Capstone
+                                    development</span></div>
+                        </div>
+                    </details>
+                    <details class="day reveal">
+                        <summary><span class="daynum">20</span><span class="daytitle">Capstone + Placement</span><span
+                                class="plus">+</span></summary>
+                        <div class="daybody">
+                            <p>demo, portfolio, interview prep</p>
+                            <div class="daymeta"><span><b>Tools</b> All tools</span><span><b>Activity</b> Final
+                                    assessment + mock interview</span></div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <section class="dark">
+            <div class="wrap"><span class="label reveal">Career pathways</span>
+                <h2 class="section-title reveal">Where Your Skills <span>Can Lead.</span></h2>
+                <p class="lead reveal" style="color:#bbb">Build a foundation for research, genomics and computational
+                    biology opportunities.</p>
+                <div class="roles reveal"><span>Bioinformatics Analyst</span><span>Computational Biologist
+                        Trainee</span><span>Genomics Associate</span><span>Research Assistant</span></div>
+            </div>
+        </section>
+        <section>
+            <div class="wrap">
+                <div class="cta reveal">
+                    <div>
+                        <h2>Ready to Decode the Future?</h2>
+                        <p>Start building practical bioinformatics skills with CampusZen Learning Solutions.</p>
+                    </div><a class="btn" href="./Enroll.html">Enroll Now →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target) } }), { threshold: .1 }); document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach((e, i) => { e.style.transitionDelay = (i % 5) * .055 + 's'; io.observe(e) }); document.querySelectorAll('.day').forEach(d => d.addEventListener('toggle', () => { if (d.open) document.querySelectorAll('.day').forEach(other => { if (other !== d) other.open = false }) }));</script>
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+
+</html>

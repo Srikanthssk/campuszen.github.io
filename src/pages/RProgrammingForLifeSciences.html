@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>R Programming for Life Sciences Course | CampusZen Coimbatore</title>
+    <meta name="description"
+        content="Learn R programming for life sciences in 20 days with CampusZen. Master RStudio, dplyr, ggplot2, statistics, Bioconductor, gene expression and omics analysis.">
+    <meta name="keywords"
+        content="R programming for life sciences, R course Coimbatore, RStudio training, ggplot2, dplyr, Bioconductor, bioinformatics R, omics analysis, CampusZen">
+    <meta name="author" content="CampusZen Learning Solutions">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="IN-TN">
+    <meta name="geo.placename" content="Coimbatore">
+        <link rel="stylesheet" href="../css/common.css">
+
+    <link rel="canonical" href="https://www.campuszen.in/courses/RProgrammingForLifeSciences.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="R Programming for Life Sciences — CampusZen">
+    <meta property="og:description"
+        content="Hands-on 20-day R programming course for biological data analysis and omics.">
+    <meta property="og:url" content="https://www.campuszen.in/courses/RProgrammingForLifeSciences.html">
+    <meta property="og:site_name" content="CampusZen Learning Solutions">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="R Programming for Life Sciences | CampusZen">
+    <meta name="twitter:description"
+        content="Learn R, ggplot2, statistics and Bioconductor with a practical 20-day course.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "R Programming for Life Sciences", "description": "20-day R programming course for life sciences covering RStudio, dplyr, ggplot2, statistical tests, Bioconductor, expression analysis and enrichment analysis.", "provider": {"@type": "EducationalOrganization", "name": "CampusZen Learning Solutions", "url": "https://www.campuszen.in/"}, "url": "https://www.campuszen.in/courses/RProgrammingForLifeSciences.html", "timeRequired": "P20D", "teaches": ["R Setup & Basics", "Data Structures", "Control Flow", "Functions & Packages", "Importing Data", "Data Wrangling I", "Data Wrangling II", "Visualisation I", "Visualisation II", "Mid-Course Project", "Descriptive Statistics", "Hypothesis Testing", "Regression", "Heatmaps & Clustering", "Bioconductor Intro", "Expression Analysis", "Enrichment Analysis", "Reports", "Capstone Build", "Capstone + Placement"]}</script>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --purple: #111111;
+            --purple-hover: #111111;
+            --white: #ffffff;
+            --border: rgba(41, 40, 40, .222);
+            --dot-color: rgba(36, 35, 35, .292);
+            --orange: #fe8007
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: #111
+        }
+
+        button,
+        a {
+            font-family: inherit
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        .container {
+            width: min(1160px, 92%);
+            margin: auto
+        }
+
+        .hero {
+            background: #111;
+            color: white;
+            min-height: 670px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            padding: 90px 0
+        }
+
+        .hero:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(#ffffff20 1px, transparent 1px) 0 0/26px 26px;
+            opacity: .5
+        }
+
+        .hero-grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 55px;
+            align-items: center
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #666;
+            border-radius: 30px;
+            padding: 11px 16px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase
+        }
+
+        .tag:before {
+            content: "";
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background: var(--orange);
+            box-shadow: 0 0 15px var(--orange)
+        }
+
+        h1 {
+            font-size: clamp(43px, 5.5vw, 76px);
+            line-height: 1.07;
+            letter-spacing: -3px;
+            margin: 26px 0 20px
+        }
+
+        h1 em {
+            font-style: normal;
+            color: var(--orange)
+        }
+
+        .lead {
+            font-size: 16px;
+            line-height: 1.85;
+            color: #c4c4c4;
+            max-width: 590px
+        }
+
+        .facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin: 30px 0
+        }
+
+        .facts strong {
+            display: block;
+            font-size: 22px
+        }
+
+        .facts small {
+            display: block;
+            color: #aaa;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--orange);
+            color: #111;
+            padding: 16px 25px;
+            border-radius: 9px;
+            font-size: 14px;
+            font-weight: 800;
+            transition: transform .3s, box-shadow .3s
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px #fe80074a
+        }
+
+        .visual {
+            position: relative;
+            min-height: 425px;
+            display: grid;
+            place-items: center;
+            animation: float 6s ease-in-out infinite
+        }
+
+        .chart {
+            position: relative;
+            width: 94%;
+            max-width: 450px;
+            height: 330px;
+            border: 1px solid #555;
+            border-radius: 18px;
+            background: linear-gradient(145deg, #252525, #141414);
+            box-shadow: 0 30px 70px #0009;
+            padding: 22px;
+            overflow: hidden
+        }
+
+        .chart-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #444;
+            padding-bottom: 15px;
+            font-size: 12px;
+            color: #aaa
+        }
+
+        .chart-head b {
+            color: white
+        }
+
+        .chart-dots {
+            display: flex;
+            gap: 5px
+        }
+
+        .chart-dots i {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #777
+        }
+
+        .chart-dots i:first-child {
+            background: var(--orange)
+        }
+
+        .plot {
+            position: relative;
+            height: 225px;
+            margin-top: 15px;
+            border-left: 1px solid #777;
+            border-bottom: 1px solid #777;
+            background: repeating-linear-gradient(to top, transparent 0 43px, #ffffff13 44px 45px);
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            padding: 0 12px
+        }
+
+        .bar {
+            width: 13%;
+            height: var(--h);
+            background: linear-gradient(180deg, #ffb46a, #fe8007);
+            border-radius: 6px 6px 0 0;
+            transform-origin: bottom;
+            animation: grow 1.4s cubic-bezier(.2, .7, .3, 1) both, glow 3s ease-in-out infinite alternate;
+            animation-delay: var(--d)
+        }
+
+        .bar:nth-child(even) {
+            background: linear-gradient(180deg, #eee, #888)
+        }
+
+        .chart-foot {
+            font-size: 10px;
+            color: #999;
+            text-align: center;
+            margin-top: 13px
+        }
+
+        .bubble {
+            position: absolute;
+            right: -5px;
+            top: 25px;
+            background: #fff;
+            color: #111;
+            border-radius: 11px;
+            padding: 14px 18px;
+            box-shadow: 0 12px 35px #0007;
+            font-size: 11px;
+            font-weight: 700;
+            animation: bob 4s ease-in-out infinite
+        }
+
+        .bubble strong {
+            display: block;
+            color: #bc5c00;
+            font-size: 17px
+        }
+
+        .code-tag {
+            position: absolute;
+            left: -3px;
+            bottom: 12px;
+            background: #2b2b2b;
+            border: 1px solid #555;
+            color: #eee;
+            border-radius: 10px;
+            padding: 13px 17px;
+            font: 12px Consolas, monospace;
+            box-shadow: 0 15px 30px #0007
+        }
+
+        .code-tag span {
+            color: var(--orange)
+        }
+
+        @keyframes grow {
+            from {
+                transform: scaleY(.05)
+            }
+
+            to {
+                transform: scaleY(1)
+            }
+        }
+
+        @keyframes glow {
+            to {
+                filter: brightness(1.22)
+            }
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-14px)
+            }
+        }
+
+        @keyframes bob {
+            50% {
+                transform: translateY(12px)
+            }
+        }
+
+        section {
+            padding: 95px 0
+        }
+
+        .eyebrow {
+            color: #cc6500;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase
+        }
+
+        h2 {
+            font-size: clamp(32px, 4.3vw, 51px);
+            letter-spacing: -2px;
+            line-height: 1.14;
+            margin: 15px 0 20px
+        }
+
+        h2 span {
+            color: #d66a00
+        }
+
+        .intro {
+            color: #686868;
+            line-height: 1.8;
+            max-width: 710px
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 35px
+        }
+
+        .feature {
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            background: #fff;
+            transition: transform .3s, border-color .3s, box-shadow .3s
+        }
+
+        .feature:hover {
+            transform: translateY(-9px);
+            border-color: var(--orange);
+            box-shadow: 0 18px 35px #00000012
+        }
+
+        .feature .num {
+            color: #dc6e00;
+            font-size: 30px;
+            font-weight: 900
+        }
+
+        .feature h3 {
+            font-size: 19px
+        }
+
+        .feature p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.75
+        }
+
+        .curriculum {
+            background: #f7f7f7
+        }
+
+        .curr-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 13px;
+            margin-top: 35px;
+            align-items: start
+        }
+
+        .day-card {
+            border: 1px solid #e4e4e4;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color .25s, box-shadow .25s
+        }
+
+        .day-card.open {
+            border-color: var(--orange);
+            box-shadow: 0 12px 30px #0000000a
+        }
+
+        .day-head {
+            width: 100%;
+            border: 0;
+            background: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 20px;
+            color: #111
+        }
+
+        .day-id {
+            color: #c96100;
+            font-size: 11px;
+            font-weight: 900;
+            white-space: nowrap
+        }
+
+        .day-name {
+            flex: 1;
+            font-size: 14px;
+            font-weight: 800
+        }
+
+        .plus {
+            font-size: 22px;
+            color: #c96100;
+            transition: transform .25s
+        }
+
+        .day-card.open .plus {
+            transform: rotate(45deg)
+        }
+
+        .day-content {
+            padding: 0 20px 20px;
+            border-top: 1px solid #eee
+        }
+
+        .day-content p {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #666
+        }
+
+        .meta {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        .meta span {
+            background: #fff2e5;
+            color: #9f4b00;
+            border-radius: 25px;
+            padding: 8px 10px;
+            font-size: 10px;
+            font-weight: 800
+        }
+
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px
+        }
+
+        .role {
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            padding: 14px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: background .3s, color .3s
+        }
+
+        .role:hover {
+            background: #111;
+            color: #fff
+        }
+
+        .cta {
+            background: #111;
+            color: white;
+            text-align: center
+        }
+
+        .cta h2 {
+            max-width: 750px;
+            margin: 16px auto
+        }
+
+        .cta h2 span {
+            color: var(--orange)
+        }
+
+        .cta p {
+            max-width: 620px;
+            color: #bbb;
+            line-height: 1.85;
+            margin: 0 auto 30px
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity .75s ease, transform .75s ease
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .features .feature:nth-child(2) {
+            transition-delay: .08s
+        }
+
+        .features .feature:nth-child(3) {
+            transition-delay: .16s
+        }
+
+        @media(max-width:850px) {
+            .hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .hero {
+                padding: 70px 0
+            }
+
+            .visual {
+                min-height: 370px;
+                max-width: 480px;
+                margin: auto;
+                width: 100%
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:580px) {
+            section {
+                padding: 65px 0
+            }
+
+            h1 {
+                letter-spacing: -2px
+            }
+
+            .features,
+            .curr-grid {
+                grid-template-columns: 1fr
+            }
+
+            .visual {
+                min-height: 310px
+            }
+
+            .chart {
+                height: 270px
+            }
+
+            .plot {
+                height: 165px
+            }
+
+            .bubble {
+                right: 0
+            }
+
+            .code-tag {
+                left: 0
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *:before,
+            *:after {
+                animation: none !important;
+                transition: none !important
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+    <main>
+        <div class="hero">
+            <div class="container hero-grid">
+                <div class="reveal">
+                    <div class="tag">Bioscience Program · Course 06</div>
+                    <h1>Make Sense of <em>Life Science Data.</em></h1>
+                    <p class="lead">Learn R programming, visualize biological datasets, apply statistical methods and
+                        explore reproducible omics analysis workflows.</p>
+                    <div class="facts">
+                        <div><strong>20 Days</strong><small>Duration</small></div>
+                        <div><strong>R + RStudio</strong><small>Core Tools</small></div>
+                        <div><strong>Capstone</strong><small>Final Project</small></div>
+                    </div><a class="btn" href="./Enroll.html">Enroll Now ↗</a>
+                </div>
+                <div class="visual" role="img"
+                    aria-label="Animated orange and white bar chart illustrating biological data visualization">
+                    <div class="chart">
+                        <div class="chart-head"><b>Life Sciences / Data Analysis</b><span
+                                class="chart-dots"><i></i><i></i><i></i></span></div>
+                        <div class="plot">
+                            <div class="bar" style="--h:42%;--d:0.0s"></div>
+                            <div class="bar" style="--h:72%;--d:0.13s"></div>
+                            <div class="bar" style="--h:56%;--d:0.26s"></div>
+                            <div class="bar" style="--h:91%;--d:0.39s"></div>
+                            <div class="bar" style="--h:67%;--d:0.52s"></div>
+                            <div class="bar" style="--h:83%;--d:0.65s"></div>
+                        </div>
+                        <div class="chart-foot">Expression level · Sample groups</div>
+                    </div>
+                    <div class="bubble"><strong>ggplot2</strong>Visualise the data</div>
+                    <div class="code-tag"><span>library</span>(ggplot2)<br>ggplot(data) + geom_col()</div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <div class="eyebrow reveal">✦ What you'll master</div>
+                <h2 class="reveal">From Raw Data to <span>Research Insights.</span></h2>
+                <p class="intro reveal">Learn essential R workflows for data wrangling, publication-quality graphics,
+                    statistical analysis and biological research.</p>
+                <div class="features">
+                    <div class="feature reveal">
+                        <div class="num">01 /</div>
+                        <h3>Biological Data Wrangling</h3>
+                        <p>Import and tidy datasets using readr, readxl, dplyr and tidyr.</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="num">02 /</div>
+                        <h3>Visualisation &amp; Statistics</h3>
+                        <p>Create ggplot2 figures and apply descriptive statistics, hypothesis tests and regression
+                            models.</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="num">03 /</div>
+                        <h3>Omics Analysis</h3>
+                        <p>Explore Bioconductor, differential expression, enrichment analysis and reproducible reports.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="curriculum">
+            <div class="container">
+                <div class="eyebrow reveal">✦ Course Planner</div>
+                <h2 class="reveal">Your <span>20-Day</span> Curriculum</h2>
+                <p class="intro reveal">Click each day to view its topic, sub-topics, tools and practical activity.</p>
+                <div class="curr-grid">
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 01</span><span class="day-name">R Setup &amp; Basics</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>RStudio, objects, vectors</p>
+                            <div class="meta"><span>TOOLS: R + RStudio</span><span>ACTIVITY: Environment setup</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 02</span><span class="day-name">Data Structures</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>lists, matrices, data frames</p>
+                            <div class="meta"><span>TOOLS: R</span><span>ACTIVITY: Coding lab</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 03</span><span class="day-name">Control Flow</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>conditions, loops, apply family</p>
+                            <div class="meta"><span>TOOLS: R</span><span>ACTIVITY: Logic drills</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 04</span><span class="day-name">Functions &amp; Packages</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>custom functions, CRAN</p>
+                            <div class="meta"><span>TOOLS: R</span><span>ACTIVITY: Function lab</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 05</span><span class="day-name">Importing Data</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>CSV, Excel, text files</p>
+                            <div class="meta"><span>TOOLS: readr / readxl</span><span>ACTIVITY: Data import</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 06</span><span class="day-name">Data Wrangling I</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>filter, select, mutate</p>
+                            <div class="meta"><span>TOOLS: dplyr</span><span>ACTIVITY: Wrangling lab</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 07</span><span class="day-name">Data Wrangling II</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>joins, reshape, tidy data</p>
+                            <div class="meta"><span>TOOLS: tidyr / dplyr</span><span>ACTIVITY: Tidy dataset</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 08</span><span class="day-name">Visualisation I</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>ggplot2 grammar, scatter, bar</p>
+                            <div class="meta"><span>TOOLS: ggplot2</span><span>ACTIVITY: Plot making</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 09</span><span class="day-name">Visualisation II</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>boxplots, themes, facets</p>
+                            <div class="meta"><span>TOOLS: ggplot2</span><span>ACTIVITY: Figure design</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 10</span><span class="day-name">Mid-Course Project</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>clean and plot a dataset</p>
+                            <div class="meta"><span>TOOLS: R</span><span>ACTIVITY: Mid-course review</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 11</span><span class="day-name">Descriptive Statistics</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>mean, SD, distributions</p>
+                            <div class="meta"><span>TOOLS: R</span><span>ACTIVITY: Summary stats</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 12</span><span class="day-name">Hypothesis Testing</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>t-test, ANOVA, chi-square</p>
+                            <div class="meta"><span>TOOLS: R</span><span>ACTIVITY: Test lab</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 13</span><span class="day-name">Regression</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>linear, logistic models</p>
+                            <div class="meta"><span>TOOLS: R (lm, glm)</span><span>ACTIVITY: Model fitting</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 14</span><span class="day-name">Heatmaps &amp; Clustering</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>hierarchical, k-means, PCA</p>
+                            <div class="meta"><span>TOOLS: pheatmap / factoextra</span><span>ACTIVITY: Cluster
+                                    lab</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 15</span><span class="day-name">Bioconductor Intro</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>Bioconductor, objects</p>
+                            <div class="meta"><span>TOOLS: Bioconductor</span><span>ACTIVITY: Package tour</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 16</span><span class="day-name">Expression Analysis</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>limma / DESeq2 basics</p>
+                            <div class="meta"><span>TOOLS: limma / DESeq2</span><span>ACTIVITY: DE analysis</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 17</span><span class="day-name">Enrichment Analysis</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>GO, KEGG results</p>
+                            <div class="meta"><span>TOOLS: clusterProfiler</span><span>ACTIVITY: Enrichment lab</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 18</span><span class="day-name">Reports</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>R Markdown, reproducibility</p>
+                            <div class="meta"><span>TOOLS: R Markdown</span><span>ACTIVITY: Report build</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 19</span><span class="day-name">Capstone Build</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>full omics analysis project</p>
+                            <div class="meta"><span>TOOLS: Full toolset</span><span>ACTIVITY: Capstone
+                                    development</span></div>
+                        </div>
+                    </article>
+                    <article class="day-card reveal"><button class="day-head" type="button" aria-expanded="false"><span
+                                class="day-id">DAY 20</span><span class="day-name">Capstone + Placement</span><span
+                                class="plus">+</span></button>
+                        <div class="day-content" hidden>
+                            <p>demo, portfolio, interview prep</p>
+                            <div class="meta"><span>TOOLS: All tools</span><span>ACTIVITY: Final assessment + mock
+                                    interview</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="eyebrow reveal">✦ Career Pathways</div>
+                <h2 class="reveal">Build Skills for <span>Life Science Roles.</span></h2>
+                <p class="intro reveal">Develop practical experience relevant to entry-level research and biological
+                    data analysis opportunities.</p>
+                <div class="roles reveal"><span class="role">Bioinformatics Analyst Trainee</span><span
+                        class="role">Research Data Analyst</span><span class="role">Biostatistics Assistant</span><span
+                        class="role">Omics Data Associate</span></div>
+            </div>
+        </section>
+        <section class="cta">
+            <div class="container reveal">
+                <div class="eyebrow">✦ Begin your journey</div>
+                <h2>Bring Biological Data to <span>Life with R.</span></h2>
+                <p>Learn R from the ground up and complete an end-to-end omics analysis capstone with reporting and
+                    interview preparation.</p><a class="btn" href="./Enroll.html">Enroll Now ↗</a>
+            </div>
+        </section>
+    </main>
+    <script>
+        (() => {
+            const els = document.querySelectorAll('.reveal'); if ('IntersectionObserver' in window) { const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } }), { threshold: .08 }); els.forEach(e => io.observe(e)); } else { els.forEach(e => e.classList.add('visible')); }
+            const cards = document.querySelectorAll('.day-card'); cards.forEach(card => { const btn = card.querySelector('.day-head'), content = card.querySelector('.day-content'); btn.addEventListener('click', () => { const opening = content.hidden; cards.forEach(c => { c.classList.remove('open'); c.querySelector('.day-content').hidden = true; c.querySelector('.day-head').setAttribute('aria-expanded', 'false') }); if (opening) { content.hidden = false; card.classList.add('open'); btn.setAttribute('aria-expanded', 'true') } }) });
+        })();
+    </script>
+
+    <!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+
+</html>

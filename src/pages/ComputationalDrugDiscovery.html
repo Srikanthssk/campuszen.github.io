@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Computational Drug Discovery Course in Coimbatore | CampusZen</title>
+    <meta name="description"
+        content="Study computational drug discovery in 20 days with CampusZen. Learn AutoDock Vina, PyMOL, virtual screening, ADMET and QSAR.">
+    <meta name="keywords"
+        content="computational drug discovery course Coimbatore, cheminformatics, RDKit, ChEMBL, AutoDock Vina, ADMET, QSAR, GROMACS, CampusZen">
+    <meta name="author" content="CampusZen Learning Solutions">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="IN-TN">
+        <link rel="stylesheet" href="../css/common.css">
+
+    <meta name="geo.placename" content="Coimbatore">
+    <link rel="canonical" href="https://www.campuszen.in/courses/ComputationalDrugDiscovery.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Computational Drug Discovery | CampusZen">
+    <meta property="og:description" content="20-day practical computational drug discovery program.">
+    <meta property="og:url" content="https://www.campuszen.in/courses/ComputationalDrugDiscovery.html">
+    <meta property="og:site_name" content="CampusZen Learning Solutions">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Computational Drug Discovery — CampusZen">
+    <meta name="twitter:description" content="20-day computational drug discovery course in Coimbatore.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "Computational Drug Discovery", "description": "20-day training in cheminformatics, target identification, docking, virtual screening, ADMET, QSAR, molecular dynamics and lead optimisation.", "provider": {"@type": "EducationalOrganization", "name": "CampusZen Learning Solutions", "url": "https://www.campuszen.in/"}, "url": "https://www.campuszen.in/courses/ComputationalDrugDiscovery.html", "timeRequired": "P20D", "teaches": ["Drug Discovery Overview", "Cheminformatics Basics", "Chemical Databases", "Target Identification", "Protein Structure", "Structure Preparation", "Ligand Preparation", "Molecular Docking", "Docking Analysis", "Mid-Course Project", "Virtual Screening", "ADMET Prediction", "Pharmacophore", "QSAR Modelling", "ML in Drug Discovery", "MD Simulation I", "MD Simulation II", "Lead Optimisation", "Capstone Build", "Capstone + Placement"]}</script>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --purple: #111111;
+            --purple-hover: #111111;
+            --white: #ffffff;
+            --orange: #fe8007;
+            --border: rgba(41, 40, 40, .222);
+            --dot-color: rgba(36, 35, 35, .292)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            font-family: 'Inter', sans-serif;
+            color: #111
+        }
+
+        button,
+        a {
+            font-family: inherit
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        .wrap {
+            width: min(1160px, 92%);
+            margin: auto
+        }
+
+        .hero {
+            background: #101010;
+            color: white;
+            overflow: hidden;
+            position: relative;
+            min-height: 660px;
+            display: flex;
+            align-items: center;
+            padding: 85px 0
+        }
+
+        .hero:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(#ffffff20 1px, transparent 1px);
+            background-size: 27px 27px;
+            opacity: .45
+        }
+
+        .hero-inner {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 40px;
+            align-items: center
+        }
+
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #ffffff4a;
+            border-radius: 30px;
+            padding: 10px 17px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase
+        }
+
+        .kicker i {
+            background: var(--orange);
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            box-shadow: 0 0 14px var(--orange)
+        }
+
+        h1 {
+            font-size: clamp(42px, 5.4vw, 78px);
+            line-height: 1.06;
+            letter-spacing: -3px;
+            margin: 28px 0 20px
+        }
+
+        h1 span,
+        .accent {
+            color: var(--orange)
+        }
+
+        .lead {
+            font-size: 16px;
+            color: #c8c8c8;
+            line-height: 1.9;
+            max-width: 590px
+        }
+
+        .facts {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+            margin: 30px 0
+        }
+
+        .facts strong {
+            display: block;
+            font-size: 22px
+        }
+
+        .facts small {
+            font-size: 11px;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--orange);
+            color: #111;
+            padding: 16px 25px;
+            border-radius: 9px;
+            font-weight: 800;
+            transition: transform .25s, box-shadow .25s
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px #fe800755
+        }
+
+        .molecule {
+            width: min(440px, 100%);
+            aspect-ratio: 1;
+            position: relative;
+            margin: auto;
+            animation: float 5s ease-in-out infinite
+        }
+
+        .molecule:before {
+            content: "";
+            position: absolute;
+            inset: 8%;
+            border: 1px solid #fe800744;
+            border-radius: 50%;
+            box-shadow: 0 0 80px #fe80071a, inset 0 0 70px #fe800713
+        }
+
+        .orbit {
+            position: absolute;
+            inset: 15%;
+            border: 2px solid #fe800780;
+            border-radius: 50%;
+            transform-style: preserve-3d;
+            animation: spin 12s linear infinite
+        }
+
+        .orbit:nth-child(2) {
+            transform: rotate(65deg);
+            animation-name: spin2;
+            animation-duration: 15s
+        }
+
+        .orbit:nth-child(3) {
+            transform: rotate(-65deg);
+            animation-name: spin3;
+            animation-duration: 18s
+        }
+
+        .atom {
+            position: absolute;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            background: var(--orange);
+            box-shadow: 0 0 20px var(--orange);
+            top: -10px;
+            left: calc(50% - 10px)
+        }
+
+        .core {
+            position: absolute;
+            inset: 40%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 30%, #ffd09e, var(--orange) 48%, #a94900);
+            box-shadow: 0 0 38px #fe8007b0, 0 0 95px #fe80074d;
+            animation: pulse 3s ease-in-out infinite
+        }
+
+        .molecule-label {
+            position: absolute;
+            bottom: 2%;
+            right: 0;
+            border: 1px solid #ffffff35;
+            border-radius: 12px;
+            background: #1e1e1eea;
+            padding: 15px 20px;
+            font-size: 12px;
+            box-shadow: 0 12px 30px #0007
+        }
+
+        .molecule-label b {
+            display: block;
+            color: var(--orange);
+            font-size: 16px;
+            margin-bottom: 5px
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes spin2 {
+            to {
+                transform: rotate(425deg)
+            }
+        }
+
+        @keyframes spin3 {
+            to {
+                transform: rotate(295deg)
+            }
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-15px)
+            }
+        }
+
+        @keyframes pulse {
+            50% {
+                transform: scale(1.14);
+                filter: brightness(1.3)
+            }
+        }
+
+        section {
+            padding: 95px 0
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: #de6900
+        }
+
+        h2 {
+            font-size: clamp(32px, 4vw, 51px);
+            line-height: 1.14;
+            letter-spacing: -1.8px;
+            margin: 15px 0 20px
+        }
+
+        .section-intro {
+            color: #666;
+            line-height: 1.8;
+            max-width: 680px
+        }
+
+        .capabilities {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 35px
+        }
+
+        .cap {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            background: #fff;
+            transition: transform .3s, border-color .3s, box-shadow .3s
+        }
+
+        .cap:hover {
+            transform: translateY(-8px);
+            border-color: var(--orange);
+            box-shadow: 0 15px 40px #00000010
+        }
+
+        .cap .num {
+            font-size: 30px;
+            color: var(--orange);
+            font-weight: 900
+        }
+
+        .cap h3 {
+            font-size: 18px
+        }
+
+        .cap p {
+            color: #666;
+            line-height: 1.75;
+            font-size: 14px
+        }
+
+        .curriculum {
+            background: #f7f7f7
+        }
+
+        .days {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 35px
+        }
+
+        .day {
+            background: white;
+            border: 1px solid #e3e3e3;
+            border-radius: 14px;
+            padding: 23px;
+            transition: transform .25s, border-color .25s
+        }
+
+        .day:hover {
+            transform: translateY(-4px);
+            border-color: var(--orange)
+        }
+
+        .day-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap
+        }
+
+        .day-num {
+            font-size: 12px;
+            color: #dc6a00;
+            font-weight: 900;
+            letter-spacing: 1px
+        }
+
+        .day-tool {
+            font-size: 11px;
+            color: #777;
+            background: #f3f3f3;
+            border-radius: 20px;
+            padding: 7px 10px
+        }
+
+        .day h3 {
+            font-size: 19px;
+            margin: 15px 0 9px
+        }
+
+        .day p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0
+        }
+
+        .activity {
+            border-top: 1px solid #eee;
+            margin-top: 16px;
+            padding-top: 14px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #bb5d00
+        }
+
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-top: 30px
+        }
+
+        .role {
+            border: 1px solid #d4d4d4;
+            border-radius: 50px;
+            padding: 14px 18px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: background .25s, color .25s
+        }
+
+        .role:hover {
+            background: #111;
+            color: #fff
+        }
+
+        .cta {
+            background: #111;
+            color: white;
+            text-align: center
+        }
+
+        .cta p {
+            color: #bbb;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto 28px
+        }
+
+        .cta h2 {
+            max-width: 800px;
+            margin: 15px auto 20px
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity .7s ease, transform .7s ease
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .capabilities .cap:nth-child(2),
+        .days .day:nth-child(even) {
+            transition-delay: .08s
+        }
+
+        @media(max-width:850px) {
+            .hero-inner {
+                grid-template-columns: 1fr
+            }
+
+            .hero {
+                padding: 70px 0
+            }
+
+            .molecule {
+                max-width: 350px
+            }
+
+            .capabilities {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:580px) {
+            h1 {
+                letter-spacing: -2px
+            }
+
+            .capabilities,
+            .days {
+                grid-template-columns: 1fr
+            }
+
+            section {
+                padding: 65px 0
+            }
+
+            .hero {
+                min-height: auto
+            }
+
+            .molecule {
+                max-width: 270px
+            }
+
+            .molecule-label {
+                right: -4px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *:before,
+            *:after {
+                animation: none !important;
+                transition: none !important
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        .molecule::after {
+            content: "";
+            position: absolute;
+            inset: 3%;
+            border: 1px dashed #fe800755;
+            border-radius: 50%;
+            animation: spin 35s linear infinite;
+            pointer-events: none
+        }
+
+        .molecule .pipeline {
+            position: absolute;
+            inset: 0;
+            animation: spin 22s linear infinite;
+            pointer-events: none
+        }
+
+        .molecule .pipeline span {
+            position: absolute;
+            display: grid;
+            place-items: center;
+            width: 64px;
+            height: 64px;
+            border: 1px solid #fe8007a0;
+            background: #171717;
+            border-radius: 15px;
+            color: #fe8007;
+            font-weight: 900;
+            font-size: 11px;
+            box-shadow: 0 0 30px #fe800728;
+            animation: counterspin 22s linear infinite
+        }
+
+        .molecule .pipeline span:nth-child(1) {
+            left: 0;
+            top: 18%
+        }
+
+        .molecule .pipeline span:nth-child(2) {
+            right: 0;
+            top: 18%
+        }
+
+        .molecule .pipeline span:nth-child(3) {
+            left: calc(50% - 32px);
+            bottom: -4%
+        }
+
+        @keyframes counterspin {
+            to {
+                transform: rotate(-360deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+    <main>
+        <div class="hero">
+            <div class="wrap hero-inner">
+                <div class="reveal">
+                    <div class="kicker"><i></i> Bioscience Program · Course 04</div>
+                    <h1>From Data to <span>Drug Discovery.</span></h1>
+                    <p class="lead">Explore the computational drug discovery pipeline — from chemical databases and
+                        target selection to docking, virtual screening, molecular dynamics, and lead optimisation.</p>
+                    <div class="facts">
+                        <div><strong>20 Days</strong><small>Course Duration</small></div>
+                        <div><strong>Hands-on</strong><small>Practical Labs</small></div>
+                        <div><strong>Capstone</strong><small>Final Project</small></div>
+                    </div>
+                    <a class="btn" href="./Enroll.html">Enroll Now &nbsp; ↗</a>
+                </div>
+                <div class="molecule" role="img" aria-label="Animated orange drug discovery molecular orbitals">
+                    <div class="orbit"><span class="atom"></span></div>
+                    <div class="orbit"><span class="atom"></span></div>
+                    <div class="orbit"><span class="atom"></span></div>
+                    <div class="core"></div>
+                    <div class="pipeline"><span>DATA</span><span>DOCK</span><span>LEAD</span></div>
+                    <div class="molecule-label"><b>DRUG DISCOVERY</b> Target · Screen · Optimise</div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="wrap">
+                <div class="eyebrow reveal">✦ What you'll learn</div>
+                <h2 class="reveal">From Chemical Data<br>to <span class="accent">Drug Candidates.</span></h2>
+                <p class="section-intro reveal">Build practical skills across cheminformatics, target selection,
+                    molecular docking, virtual screening, ADMET, QSAR and molecular dynamics.</p>
+                <div class="capabilities">
+                    <div class="cap reveal">
+                        <div class="num">01</div>
+                        <h3>Cheminformatics &amp; Targets</h3>
+                        <p>Explore ChEMBL, PubChem, RDKit, UniProt, and protein structure workflows.</p>
+                    </div>
+                    <div class="cap reveal">
+                        <div class="num">02</div>
+                        <h3>Screening &amp; Prediction</h3>
+                        <p>Perform docking, virtual screening, ADMET prediction, pharmacophore modelling, and QSAR.</p>
+                    </div>
+                    <div class="cap reveal">
+                        <div class="num">03</div>
+                        <h3>Simulation &amp; Optimisation</h3>
+                        <p>Study molecular dynamics with GROMACS and lead optimisation with RDKit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="curriculum">
+            <div class="wrap">
+                <div class="eyebrow reveal">✦ Course Planner</div>
+                <h2 class="reveal">Your <span class="accent">20-Day</span> Learning Journey</h2>
+                <p class="section-intro reveal">Day-by-day topics, tools, and activities from the CampusZen bioscience
+                    course planner.</p>
+                <div class="days">
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 01</span><span class="day-tool">ChEMBL</span>
+                        </div>
+                        <h3>Drug Discovery Overview</h3>
+                        <p>pipeline, target to lead</p>
+                        <div class="activity">↗ Case study</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 02</span><span class="day-tool">RDKit</span>
+                        </div>
+                        <h3>Cheminformatics Basics</h3>
+                        <p>SMILES, fingerprints</p>
+                        <div class="activity">↗ Molecule handling</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 03</span><span class="day-tool">PubChem /
+                                ChEMBL</span></div>
+                        <h3>Chemical Databases</h3>
+                        <p>PubChem, ChEMBL, ZINC</p>
+                        <div class="activity">↗ Data retrieval</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 04</span><span class="day-tool">UniProt /
+                                OpenTargets</span></div>
+                        <h3>Target Identification</h3>
+                        <p>omics, disease genes</p>
+                        <div class="activity">↗ Target selection</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 05</span><span
+                                class="day-tool">SWISS-MODEL</span></div>
+                        <h3>Protein Structure</h3>
+                        <p>PDB, homology modelling</p>
+                        <div class="activity">↗ Model building</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 06</span><span class="day-tool">PyMOL /
+                                Chimera</span></div>
+                        <h3>Structure Preparation</h3>
+                        <p>pockets, cleaning</p>
+                        <div class="activity">↗ Protein prep</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 07</span><span class="day-tool">Open Babel</span>
+                        </div>
+                        <h3>Ligand Preparation</h3>
+                        <p>3D conformers, minimisation</p>
+                        <div class="activity">↗ Ligand prep</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 08</span><span class="day-tool">AutoDock
+                                Vina</span></div>
+                        <h3>Molecular Docking</h3>
+                        <p>Vina setup, scoring</p>
+                        <div class="activity">↗ Docking run</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 09</span><span class="day-tool">PyMOL /
+                                LigPlot+</span></div>
+                        <h3>Docking Analysis</h3>
+                        <p>poses, interactions</p>
+                        <div class="activity">↗ Pose analysis</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 10</span><span class="day-tool">Vina</span></div>
+                        <h3>Mid-Course Project</h3>
+                        <p>dock and rank a ligand set</p>
+                        <div class="activity">↗ Mid-course review</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 11</span><span class="day-tool">PyRx</span></div>
+                        <h3>Virtual Screening</h3>
+                        <p>library filtering, ranking</p>
+                        <div class="activity">↗ Screening run</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 12</span><span class="day-tool">SwissADME /
+                                pkCSM</span></div>
+                        <h3>ADMET Prediction</h3>
+                        <p>Lipinski, toxicity</p>
+                        <div class="activity">↗ ADMET report</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 13</span><span class="day-tool">PharmaGist</span>
+                        </div>
+                        <h3>Pharmacophore</h3>
+                        <p>models, screening</p>
+                        <div class="activity">↗ Pharmacophore lab</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 14</span><span class="day-tool">RDKit +
+                                Python</span></div>
+                        <h3>QSAR Modelling</h3>
+                        <p>descriptors, regression</p>
+                        <div class="activity">↗ QSAR model</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 15</span><span
+                                class="day-tool">scikit-learn</span></div>
+                        <h3>ML in Drug Discovery</h3>
+                        <p>activity prediction</p>
+                        <div class="activity">↗ Activity model</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 16</span><span class="day-tool">GROMACS</span>
+                        </div>
+                        <h3>MD Simulation I</h3>
+                        <p>system setup, force fields</p>
+                        <div class="activity">↗ MD setup</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 17</span><span class="day-tool">GROMACS /
+                                VMD</span></div>
+                        <h3>MD Simulation II</h3>
+                        <p>RMSD, RMSF, analysis</p>
+                        <div class="activity">↗ Trajectory analysis</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 18</span><span class="day-tool">RDKit</span>
+                        </div>
+                        <h3>Lead Optimisation</h3>
+                        <p>scaffold ideas, SAR</p>
+                        <div class="activity">↗ Analog design</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 19</span><span class="day-tool">Full
+                                toolset</span></div>
+                        <h3>Capstone Build</h3>
+                        <p>target-to-lead discovery study</p>
+                        <div class="activity">↗ Capstone development</div>
+                    </article>
+                    <article class="day reveal">
+                        <div class="day-top"><span class="day-num">DAY 20</span><span class="day-tool">All tools</span>
+                        </div>
+                        <h3>Capstone + Placement</h3>
+                        <p>demo, portfolio, interview prep</p>
+                        <div class="activity">↗ Final assessment + mock interview</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="wrap">
+                <div class="eyebrow reveal">✦ Career Pathways</div>
+                <h2 class="reveal">Roles You Can <span class="accent">Explore.</span></h2>
+                <p class="section-intro reveal">Explore career paths in computational drug discovery, cheminformatics,
+                    and research and development.</p>
+                <div class="roles reveal"><span class="role">Computational Drug Discovery Associate</span><span
+                        class="role">CADD Research Associate</span><span class="role">Cheminformatics
+                        Analyst</span><span class="role">R&amp;D Trainee</span></div>
+            </div>
+        </section>
+        <section class="cta">
+            <div class="wrap reveal">
+                <div class="eyebrow">✦ Begin Your Journey</div>
+                <h2>Turn Molecular Data into <span class="accent">Discovery.</span></h2>
+                <p>Build a target-to-lead discovery study using computational methods and present your capstone
+                    portfolio.</p>
+                <a class="btn" href="./Enroll.html">Enroll Now &nbsp; ↗</a>
+            </div>
+        </section>
+    </main>
+    <script>
+        (function () {
+            const els = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('visible')); return; }
+            const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }), { threshold: .1 });
+            els.forEach(e => observer.observe(e));
+        })();
+    </script>
+    <!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+
+</html>
