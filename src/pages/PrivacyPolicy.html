@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Privacy Policy | CampusZen Learning Solutions</title>
+    <meta name="description"
+        content="Read the CampusZen Learning Solutions Privacy Policy to understand how information provided through our training and course website is handled.">
+    <meta name="robots" content="index,follow"><link rel="stylesheet" href="../css/common.css">
+
+    <link rel="canonical" href="https://www.campuszen.in/PrivacyPolicy.html">
+    <meta property="og:title" content="Privacy Policy | CampusZen Learning Solutions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.campuszen.in/PrivacyPolicy.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #111111;
+            --orange: #fe8007;
+            --white: #ffffff;
+            --border: #e7e7e7
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            color: var(--black);
+            font-family: Inter, Arial, sans-serif;
+            background: #fff
+        }
+
+        a {
+            color: #b85500;
+            text-underline-offset: 3px
+        }
+
+        .hero {
+            background: #111;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            padding: 95px 24px 88px
+        }
+
+        .hero:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(#ffffff24 1px, transparent 1px) 0 0/26px 26px;
+            mask-image: linear-gradient(90deg, transparent, #000)
+        }
+
+        .hero .inner {
+            position: relative;
+            max-width: 1090px;
+            margin: auto
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--orange);
+            font-weight: 800
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 82px);
+            letter-spacing: -4px;
+            line-height: 1.06;
+            margin: 22px 0
+        }
+
+        .hero h1 span {
+            color: var(--orange)
+        }
+
+        .hero p {
+            color: #c7c7c7;
+            line-height: 1.8;
+            max-width: 690px
+        }
+
+        .date {
+            display: inline-flex;
+            border: 1px solid #666;
+            border-radius: 50px;
+            padding: 10px 16px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 17px
+        }
+
+        .layout {
+            max-width: 1090px;
+            margin: 0 auto;
+            padding: 70px 24px 100px;
+            display: grid;
+            grid-template-columns: 250px minmax(0, 1fr);
+            gap: 65px
+        }
+
+        .toc {
+            position: sticky;
+            top: 30px;
+            align-self: start;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 23px
+        }
+
+        .toc h2 {
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin: 0 0 15px
+        }
+
+        .toc a {
+            display: block;
+            text-decoration: none;
+            color: #555;
+            font-size: 13px;
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f1f1;
+            transition: color .2s
+        }
+
+        .toc a:hover {
+            color: #d36600
+        }
+
+        .intro {
+            background: #fff6ed;
+            border-left: 4px solid var(--orange);
+            padding: 22px 25px;
+            border-radius: 0 12px 12px 0;
+            line-height: 1.8;
+            color: #333
+        }
+
+        .policy section {
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 25px
+        }
+
+        .policy h2 {
+            font-size: clamp(22px, 3vw, 29px);
+            letter-spacing: -.8px;
+            margin: 0 0 18px
+        }
+
+        .policy h2 .num {
+            color: #d56a00;
+            font-size: 13px;
+            letter-spacing: 0;
+            margin-right: 12px
+        }
+
+        .policy p,
+        .policy li {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.95
+        }
+
+        .policy ul {
+            padding-left: 22px
+        }
+
+        .policy li {
+            margin: 6px 0
+        }
+
+        .contact {
+            background: #111;
+            color: white;
+            padding: 27px;
+            border-radius: 16px;
+            margin-top: 26px
+        }
+
+        .contact h3 {
+            margin: 0 0 12px
+        }
+
+        .contact p {
+            color: #c7c7c7;
+            margin: 5px 0
+        }
+
+        .contact a {
+            color: #ffa64d
+        }
+
+        .note {
+            font-size: 12px;
+            color: #777;
+            margin-top: 28px;
+            line-height: 1.8
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity .6s ease, transform .6s ease
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none
+        }
+
+        @media(max-width:760px) {
+            .layout {
+                display: block;
+                padding: 40px 20px 70px
+            }
+
+            .toc {
+                position: static;
+                margin-bottom: 28px
+            }
+
+            .hero {
+                padding: 75px 20px
+            }
+
+            .hero h1 {
+                letter-spacing: -2px
+            }
+
+            .policy section {
+                padding: 25px 0
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#programs">Programs</a></li>
+      <li><a href="../../index.html#courses">Courses</a></li>
+      <li><a href="./Career.html">Career Services</a></li>
+      <li><a href="./About.html">About</a></li>
+      <li><a href="../../index.html#contact">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <a href="../../index.html" class="logo"><img src="../Image/logos.png" alt="CampusZen" /></a>
+    <button class="drawer-close" id="drawerClose">&#10005;</button>
+  </div>
+  <ul class="drawer-links">
+    <li><a href="../../index.html#programs" class="drawer-link">Programs</a></li>
+    <li><a href="../../index.html#courses" class="drawer-link">Courses</a></li>
+    <li><a href="./Career.html" class="drawer-link">Career Services</a></li>
+    <li><a href="./About.html" class="drawer-link">About</a></li>
+    <li><a href="../../index.html#contact" class="drawer-link">Contacts</a></li>
+  </ul>
+  <div class="drawer-footer">
+    <a href="./Enroll.html" class="btn-enroll">Enroll Now</a>
+  </div>
+</div>
+
+    <main>
+        <header class="hero">
+            <div class="inner">
+                <div class="eyebrow">✦ CampusZen Learning Solutions / Legal</div>
+                <h1>Your Privacy.<br><span>Our Responsibility.</span></h1>
+                <p>Learn what information CampusZen may collect through its website and training services, why it is
+                    used, and how to contact us about your privacy.</p>
+                <div class="date">Last updated: 13 November 2026</div>
+            </div>
+        </header>
+        <div class="layout">
+            <aside class="toc" aria-label="On this page">
+                <h2>On this page</h2><a href="#overview">Overview</a><a href="#collection">Information we collect</a><a
+                    href="#use">How we use information</a><a href="#sharing">Sharing and disclosures</a><a
+                    href="#cookies">Cookies and analytics</a><a href="#security">Security and retention</a><a
+                    href="#rights">Your choices and rights</a><a href="#children">Children's privacy</a><a
+                    href="#external">External websites</a><a href="#updates">Policy updates</a><a
+                    href="#contact">Contact us</a>
+            </aside>
+            <div class="policy">
+                <div class="intro reveal">This Privacy Policy describes how <strong>CampusZen Learning
+                        Solutions</strong> (“CampusZen”, “we”, “us”, or “our”) handles personal information in
+                    connection with <a href="https://www.campuszen.in/">www.campuszen.in</a>, course enquiries,
+                    enrollment requests, and related training communications. Please read it before submitting personal
+                    information.</div>
+                <section id="overview" class="reveal">
+                    <h2><span class="num">01</span>Overview and scope</h2>
+                    <p>This policy applies to information you provide when browsing our website, contacting our team,
+                        enquiring about programs, registering interest in training, or communicating with us. It does
+                        not automatically apply to independently operated third-party services that have their own
+                        privacy policies.</p>
+                </section>
+                <section id="collection" class="reveal">
+                    <h2><span class="num">02</span>Information we collect</h2>
+                    <p>Depending on how you interact with CampusZen, the information involved may include:</p>
+                    <ul>
+                        <li><strong>Contact details:</strong> name, email address, phone number, and messages submitted
+                            through our website or other communication channels.</li>
+                        <li><strong>Enrollment details:</strong> the program you are interested in and information you
+                            choose to provide when requesting admission, mentorship, or training support.</li>
+                        <li><strong>Communication records:</strong> questions, feedback, and correspondence with our
+                            team.</li>
+                        <li><strong>Technical information:</strong> browser, device, IP address, and website usage
+                            information, if collected by our hosting, security, or analytics services.</li>
+                    </ul>
+                    <p>Please avoid sending sensitive personal information unless it is specifically required and an
+                        appropriate secure process has been provided.</p>
+                </section>
+                <section id="use" class="reveal">
+                    <h2><span class="num">03</span>How we use information</h2>
+                    <p>We may use relevant information to respond to enquiries; provide course, enrollment, scheduling,
+                        and mentorship information; communicate about requested training services; administer and
+                        improve our website and programs; protect our systems; and meet applicable legal obligations.
+                        Where required, we will obtain consent for optional promotional communications.</p>
+                </section>
+                <section id="sharing" class="reveal">
+                    <h2><span class="num">04</span>Sharing and disclosures</h2>
+                    <p>We may share information with service providers that support website hosting, communications,
+                        registration, or program delivery, subject to appropriate safeguards. We may also disclose
+                        information when legally required or necessary to protect rights, safety, or security. We do not
+                        authorize third parties to use information provided to us for unrelated purposes. Any actual
+                        third-party integrations and data-sharing arrangements should be reflected in this policy before
+                        publication.</p>
+                </section>
+                <section id="cookies" class="reveal">
+                    <h2><span class="num">05</span>Cookies and analytics</h2>
+                    <p>Our website or services used to operate it may use cookies or similar technologies for essential
+                        functionality, performance, or analytics. Browser settings may allow you to manage or block
+                        cookies. Blocking certain cookies could affect website features. If non-essential analytics or
+                        advertising cookies are enabled, we will provide notices and choices as required by applicable
+                        law.</p>
+                </section>
+                <section id="security" class="reveal">
+                    <h2><span class="num">06</span>Data security and retention</h2>
+                    <p>We aim to apply reasonable administrative and technical measures appropriate to the information
+                        we handle. No internet transmission or storage system can be guaranteed completely secure. We
+                        retain personal information only for as long as reasonably necessary for the purposes described
+                        in this policy, subject to legal, operational, or dispute-resolution requirements, and then
+                        delete or de-identify it where appropriate.</p>
+                </section>
+                <section id="rights" class="reveal">
+                    <h2><span class="num">07</span>Your choices and privacy rights</h2>
+                    <p>You may contact us to ask about personal information you have submitted, request correction or
+                        deletion where applicable, or withdraw consent for optional communications. Some requests may be
+                        limited by applicable legal obligations or legitimate retention needs. To stop promotional
+                        emails, follow any unsubscribe instructions provided or email us directly.</p>
+                </section>
+                <section id="children" class="reveal">
+                    <h2><span class="num">08</span>Children's privacy</h2>
+                    <p>Our services are primarily intended for learners seeking educational and career-development
+                        programs. If a minor seeks to enroll or submit personal information, involvement of a parent or
+                        legal guardian may be required under applicable law. If you believe a child's information was
+                        submitted without appropriate authorization, please contact us.</p>
+                </section>
+                <section id="external" class="reveal">
+                    <h2><span class="num">09</span>External websites and services</h2>
+                    <p>Our website may link to third-party websites, learning platforms, or communication services. We
+                        are not responsible for the privacy practices of those independent services. Please review their
+                        privacy policies before sharing information with them.</p>
+                </section>
+                <section id="updates" class="reveal">
+                    <h2><span class="num">10</span>Changes to this policy</h2>
+                    <p>We may update this Privacy Policy to reflect changes in our services, data practices, or
+                        applicable law. Any updated version will be posted on this page with a revised “Last updated”
+                        date. Material changes may be communicated through additional notices where required.</p>
+                </section>
+                <section id="contact" class="reveal">
+                    <h2><span class="num">11</span>Contact us</h2>
+                    <p>For questions, corrections, privacy requests, or concerns, please contact:</p>
+                    <div class="contact">
+                        <h3>CampusZen Learning Solutions</h3>
+                        <p>Coimbatore, Tamil Nadu – 641001, India</p>
+                        <p>Email: <a href="mailto:info@campuszen.in">info@campuszen.in</a></p>
+                        <p>Phone: <a href="tel:+919360405503">+91 93604 05503</a></p>
+                        <p>Website: <a href="https://www.campuszen.in/">www.campuszen.in</a></p>
+                    </div>
+                </section>
+                <p class="note"><strong>Publication checklist:</strong> This is a website-specific draft, not a verified
+                    statement of CampusZen's internal data practices. Before publishing, confirm the actual
+                    form-processing services, analytics/cookies, payment providers, student-record retention periods,
+                    children's enrollment practices, and any legally required grievance or data-protection contact
+                    details. Have the final wording reviewed for applicable Indian privacy law.</p>
+            </div>
+        </div>
+    </main>
+    <script>const items = document.querySelectorAll('.reveal'); if ('IntersectionObserver' in window) { const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } }), { threshold: .07 }); items.forEach(e => io.observe(e)) } else items.forEach(e => e.classList.add('visible'));</script>
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h5>CAMPUSZEN LEARNING SOLUTIONS</h5>
+        <p>Empowering professionals with cutting-edge training and comprehensive career support to succeed in the technology industry.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/campuszenin/" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../../index.html#programs">Programs</a></li>
+          <li><a href="../../index.html#courses">Courses</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="./Career.html">Career Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Coimbatore, Tamil Nadu – 641001
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 18a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 93604 05503
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@campuszen.in
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Office Hours</h5>
+        <p style="font-size:13.5px;color:#666;line-height:1.75;">Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 CAMPUSZEN LEARNING SOLUTIONS. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── NAV DRAWER ── */
+  const btn = document.getElementById('hamburgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  function openDrawer() { drawer.classList.add('open'); overlay.classList.add('active'); btn.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('active'); btn.classList.remove('open'); document.body.style.overflow = ''; }
+  btn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ── STAGGER grids ── */
+  document.querySelectorAll('.build-grid, .tools-grid, .projects-grid, .role-badges').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.transitionDelay = (i * 0.08) + 's';
+    });
+  });
+
+  /* ── ACCORDION ── */
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+
+</body>
+
+</html>
